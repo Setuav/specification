@@ -1,0 +1,55 @@
+site_name: Setuav Standard
+site_description: Setuav Standard documentation
+repo_url: https://github.com/<your-org-or-user>/<your-repo>
+edit_uri: edit/main/setuav-spec/docs/
+
+theme:
+  name: material
+  logo: false
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: amber
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: amber
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - content.action.edit
+
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: en
+          name: English
+          default: true
+        - locale: tr
+          name: Türkçe
+          nav_translations:
+            Introduction: Giriş
+            Conventions: Sözleşmeler
+            Geometry: Geometri
+            Wing: Kanat
+            Fuselage: Gövde
+            Propulsion: İtki
+
+nav:
+  - Introduction: index.md
+  - Conventions: conventions.md
+  - Geometry:
+    - Wing: wing.md
+    - Fuselage: fuselage.md
+  - Propulsion: propulsion.md

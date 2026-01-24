@@ -18,6 +18,18 @@ Bu modül, motor-pervane kombinasyonunun **statik (yer testi)** performans veril
 | **thrust_to_weight** | `-` | İtki / Ağırlık oranı. >1 değerler sınırsız dikey tırmanış yeteneğini gösterir. |
 | **pitch_speed** | `m/s` | Pervane hatvesine bağlı teorik hava akış hızı. Genellikle maksimum uçuş hızını sınırlar. |
 
+## Performans Eğrileri (Curves)
+
+`curves` nesnesi, gaz değişimine bağlı performansı gösteren dizileri içerir.
+
+| Parametre | Birim | Açıklama |
+| :--- | :--- | :--- |
+| **rpm** | `RPM` | Motor devir değerleri (X ekseni). |
+| **thrust** | `g` | İlgili devirdeki itki. |
+| **power** | `W` | İlgili devirdeki güç tüketimi. |
+| **current** | `A` | İlgili devirdeki akım tüketimi. |
+| **efficiency** | `g/W` | İlgili devirdeki verimlilik. |
+
 ## Örnek Konfigürasyon
 
 ```yaml

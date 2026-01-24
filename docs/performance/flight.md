@@ -25,6 +25,14 @@ Expected values at cruise speed (`cruise_speed`):
 
 Power and thrust requirements calculated for various flight speeds are presented as arrays under the `curves` object. These data are used to plot "Power Required vs Speed" graphs.
 
+| Parameter | Unit | Description |
+| :--- | :--- | :--- |
+| **velocities** | `m/s` | Array of velocities (X-axis). |
+| **power_required** | `W` | Power required at each velocity step (Y-axis). |
+| **power_available** | `W` | Maximum power available at each velocity step. |
+| **thrust_required** | `N` | Thrust required (equal to Drag) at each velocity step. |
+| **thrust_available** | `N` | Maximum thrust available at each velocity step. |
+
 ## Example Configuration
 
 ```yaml

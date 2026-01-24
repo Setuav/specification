@@ -18,6 +18,18 @@ This module contains **static (ground test)** performance data and overall syste
 | **thrust_to_weight** | `-` | Thrust / Weight ratio. Values >1 indicate unlimited vertical climb capability. |
 | **pitch_speed** | `m/s` | Theoretical air speed based on propeller pitch. typically limits the maximum flight speed. |
 
+## Performance Curves
+
+The `curves` object contains arrays representing performance across the throttle/RPM range.
+
+| Parameter | Unit | Description |
+| :--- | :--- | :--- |
+| **rpm** | `RPM` | Motor revolution per minute values (X-axis). |
+| **thrust** | `g` | Thrust at the corresponding RPM. |
+| **power** | `W` | Power consumption at the corresponding RPM. |
+| **current** | `A` | Current draw at the corresponding RPM. |
+| **efficiency** | `g/W` | Efficiency at the corresponding RPM. |
+
 ## Example Configuration
 
 ```yaml

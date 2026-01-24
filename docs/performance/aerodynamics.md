@@ -27,6 +27,13 @@ Reference values used for non-dimensionalizing coefficients:
 
 The variation of aerodynamic coefficients with respect to angle of attack (alpha) is stored as arrays.
 
+| Parameter | Unit | Description |
+| :--- | :--- | :--- |
+| **alphas** | `deg` | Array of angle of attack values. |
+| **cl_values** | `-` | Lift coefficients (CL) at corresponding alphas. |
+| **cd_values** | `-` | Drag coefficients (CD) at corresponding alphas. |
+| **ld_values** | `-` | Lift-to-drag ratios (L/D) at corresponding alphas. |
+
 ## Example Configuration
 
 ```yaml

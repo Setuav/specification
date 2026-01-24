@@ -25,6 +25,14 @@ Seyir hızında (cruise_speed) beklenen değerler:
 
 Farklı uçuş hızları için hesaplanan güç ve itki gereksinimleri `curves` nesnesi altında diziler halinde sunulur. Bu veriler "Güç Gereksinimi vs Hız" grafikleri çizmek için kullanılır.
 
+| Parametre | Birim | Açıklama |
+| :--- | :--- | :--- |
+| **velocities** | `m/s` | Hız değerlerini içeren X ekseni dizisi. |
+| **power_required** | `W` | İlgili hızlarda gereken güç (Y ekseni). |
+| **power_available** | `W` | İlgili hızlarda sistemin sağlayabileceği maksimum güç. |
+| **thrust_required** | `N` | İlgili hızlarda gereken itki (Drag'a eşit). |
+| **thrust_available** | `N` | İlgili hızlarda sistemin sağlayabileceği maksimum itki. |
+
 ## Örnek Konfigürasyon
 
 ```yaml

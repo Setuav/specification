@@ -27,6 +27,13 @@ Katsayıların boyutsuzlaştırılmasında kullanılan referans değerler:
 
 Hücum açısına (alpha) bağlı aerodinamik katsayıların değişimi diziler halinde saklanır.
 
+| Parametre | Birim | Açıklama |
+| :--- | :--- | :--- |
+| **alphas** | `deg` | Hücum açısı değerlerini içeren dizi. |
+| **cl_values** | `-` | İlgili açılardaki kaldırma katsayıları (CL). |
+| **cd_values** | `-` | İlgili açılardaki sürükleme katsayıları (CD). |
+| **ld_values** | `-` | İlgili açılardaki süzülme oranları (L/D). |
+
 ## Örnek Konfigürasyon
 
 ```yaml

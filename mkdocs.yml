@@ -67,6 +67,11 @@ plugins:
             ESC: ESC
             Battery: Pil
             Mass and Additional Parts: Kütle ve Ek Parçalar
+            Performance and Analysis Reports: Performans ve Analiz Raporları
+            Aerodynamics: Aerodinamik
+            Stability: Stabilite
+            Flight Performance: Uçuş Performansı
+            Propulsion Performance: İtki Performansı
 
 nav:
   - Introduction: index.md
@@ -83,3 +88,9 @@ nav:
     - Propeller: propulsion/propeller.md
     - Battery: propulsion/battery.md
   - Mass and Additional Parts: mass.md
+  - Performance and Analysis Reports:
+    - Overview: performance/index.md
+    - Aerodynamics: performance/aerodynamics.md
+    - Stability: performance/stability.md
+    - Flight Performance: performance/flight.md
+    - Propulsion Performance: performance/propulsion.md

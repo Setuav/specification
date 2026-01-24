@@ -28,14 +28,6 @@
             "type": "number",
             "description": "Thrust to weight ratio"
         },
-        "hover_throttle": {
-            "type": "number",
-            "description": "Throttle required for hover (0-100)"
-        },
-        "hover_time": {
-            "type": "number",
-            "description": "Estimated hover time (minutes)"
-        },
         "curves": {
             "type": "object",
             "properties": {

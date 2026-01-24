@@ -22,7 +22,7 @@ Setuav Standardı, **sabit kanatlı İHA** tasarımlarını hedefler ve tasarım
 - **Geometri**: Gövde (fuselage), kanatlar, kuyruklar ve kontrol yüzeylerini içeren hava aracı bileşenlerinin parametrik tanımı.
 - **İtki**: İtki sistemleri (motorlar, ESC'ler, pervaneler) ve güç sistemleri (piller) için teknik özellikler.
 - **Kütle**: Geometri ve itki bileşenleri için doğrudan kütle belirtimleri, artı ek parçaların (elektronikler, iniş takımı, vb.) takibi.
-- **Performans**: Uçuş performans analizi, stabilite sonuçları ve görev simülasyon verilerinin depolanması için standart format.
+- **Performans ve Analiz**: Tasarım girdilerinden bağımsız olarak, analiz araçları tarafından üretilen aerodinamik, stabilite, uçuş ve itki performansı **sonuçlarının** standart bir formatta raporlanması.
 
 ## Kapsam dışı
 
@@ -40,3 +40,4 @@ Standart, birkaç temel ilke etrafında tasarlanmıştır:
 - **Modülerlik**: Büyük tasarımlar daha küçük, tekrar kullanılabilir bileşen dosyalarına bölünebilir.
 - **İnsan Tarafından Okunabilirlik**: YAML formatı, verilerin insanlar tarafından okunmasını ve düzenlenmesini kolaylaştırır.
 - **Sıkı Doğrulama**: JSON Schema'lar, veri yapısı ve tipleri için net kurallar sağlar.
+- **Girdi/Çıktı Ayrımı**: Fiziksel tasarım parametreleri (girdi) ile analiz sonuçları (çıktı) farklı şemalarla yönetilir.

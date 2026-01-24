@@ -46,6 +46,7 @@ Tüm rotasyonlar sağ el kuralını takip eder.
 
 ## Birimler
 
+
 Belirsizliği önlemek için, standart bir dosyadaki tüm sayısal değerler (şemada aksi belirtilmedikçe) şu birimleri kullanmalıdır:
 
 | Nicelik | Birim | Sembol |
@@ -55,6 +56,10 @@ Belirsizliği önlemek için, standart bir dosyadaki tüm sayısal değerler (ş
 | Kütle | Gram | `g` |
 | Kuvvet | Newton | `N` |
 | Hız | Metre / saniye | `m/s` |
+| Güç | Watt | `W` |
+| Akım | Amper | `A` |
+| Enerji | Watt-saat | `Wh` |
+| Zaman (Endurance) | Saat | `h` |
 
 ## Modüler Dosyalar ve Referanslar
 
@@ -70,3 +75,12 @@ geometry:
   fuselage:
     ref: "./parts/fuselage_v1.yaml"
 ```
+
+## Dosya Tipleri ve Ayrımı
+
+Setuav Standardı iki ana dosya tipi tanımlar:
+
+1.  **Tasarım Dosyaları (`design.yaml`)**: Aracın fiziksel özelliklerini, geometrisini ve bileşenlerini tanımlar. Normative şema: `schemas/design.json`.
+2.  **Rapor Dosyaları (`report.yaml`)**: Bir tasarım üzerinde yapılan analizlerin sayısal sonuçlarını içerir. Normative şema: `schemas/report.json`.
+
+Bu ayrım, mühendislik girdisi ile analiz çıktısını net bir şekilde birbirinden ayırır.

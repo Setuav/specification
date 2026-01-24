@@ -8,12 +8,25 @@ Unlike a design file (`design.yaml`), performance reports (`report.yaml`) repres
 
 ## Report Structure
 
-A Setuav performance report (`report.json` schema) consists of **pure numerical data** gathered into four main categories:
+A Setuav performance report (`report.json` schema) consists of five main components:
 
-1.  **Aerodynamics (`aerodynamics`)**: Basic aerodynamic coefficients and polars.
-2.  **Stability (`stability`)**: Static stability metrics and derivatives.
-3.  **Flight Performance (`flight`)**: Speeds, climb rates, range, and endurance.
-4.  **Propulsion Performance (`propulsion`)**: Static thrust, power consumption, and efficiency.
+1.  **Analysis Conditions (`conditions`)**: The physical (mass, CG) and atmospheric (altitude, temperature) environment in which the analysis was performed.
+2.  **Aerodynamics (`aerodynamics`)**: Basic aerodynamic coefficients and polars.
+3.  **Stability (`stability`)**: Static stability metrics and derivatives.
+4.  **Flight Performance (`flight`)**: Speeds, climb rates, range, and endurance.
+5.  **Propulsion Performance (`propulsion`)**: Static thrust, power consumption, and efficiency.
+
+## Analysis Conditions
+
+Every report must include context specifying the conditions under which the results are valid:
+
+| Parameter | Unit | Required | Description |
+| :--- | :--- | :--- | :--- |
+| **total_mass** | `g` | Yes | Total flight weight at the time of analysis. |
+| **cg_position_x** | `mm` | Yes | Center of Gravity (CG) position used in analysis. |
+| **altitude_msl** | `m` | No | Analysis altitude (Default: 0). |
+| **temperature** | `C` | No | Ambient temperature (Default: 15). |
+| **air_density** | `kg/m³` | No | Air density (Default: 1.225). |
 
 ## Interpretation and Flags
 

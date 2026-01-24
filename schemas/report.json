@@ -14,6 +14,36 @@
             "type": "string",
             "description": "Reference to the design file or tag"
         },
+        "conditions": {
+            "type": "object",
+            "description": "Environmental and physical conditions used during the analysis",
+            "properties": {
+                "altitude_msl": {
+                    "type": "number",
+                    "description": "Analysis altitude above mean sea level (m), default 0"
+                },
+                "temperature": {
+                    "type": "number",
+                    "description": "Ambient air temperature (C), default 15"
+                },
+                "air_density": {
+                    "type": "number",
+                    "description": "Air density (kg/m^3), default 1.225"
+                },
+                "total_mass": {
+                    "type": "number",
+                    "description": "Total aircraft mass used in analysis (g)"
+                },
+                "cg_position_x": {
+                    "type": "number",
+                    "description": "Center of Gravity position from nose (mm)"
+                }
+            },
+            "required": [
+                "total_mass",
+                "cg_position_x"
+            ]
+        },
         "aerodynamics": {
             "$ref": "performance/aerodynamics.json"
         },
@@ -28,6 +58,7 @@
         }
     },
     "required": [
-        "setuav_report"
+        "setuav_report",
+        "conditions"
     ]
 }

@@ -68,6 +68,7 @@ plugins:
             Battery: Pil
             Mass and Additional Parts: Kütle ve Ek Parçalar
             Performance and Analysis Reports: Performans ve Analiz Raporları
+            Analysis Conditions: Analiz Koşulları
             Aerodynamics: Aerodinamik
             Stability: Stabilite
             Flight Performance: Uçuş Performansı
@@ -90,6 +91,7 @@ nav:
   - Mass and Additional Parts: mass.md
   - Performance and Analysis Reports:
     - Overview: performance/index.md
+    - Analysis Conditions: performance/conditions.md
     - Aerodynamics: performance/aerodynamics.md
     - Stability: performance/stability.md
     - Flight Performance: performance/flight.md

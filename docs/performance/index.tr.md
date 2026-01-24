@@ -8,12 +8,25 @@ Bir tasarım dosyasından (`design.yaml`) farklı olarak, performans raporları 
 
 ## Rapor Yapısı
 
-Bir Setuav performans raporu (`report.json` şeması), dört ana kategoride toplanan **saf sayısal verilerden** oluşur:
+Bir Setuav performans raporu (`report.json` şeması), beş ana bileşenden oluşur:
 
-1.  **Aerodinamik (`aerodynamics`)**: Temel aerodinamik katsayılar ve polarlar.
-2.  **Stabilite (`stability`)**: Statik stabilite metrikleri ve türevler.
-3.  **Uçuş Performansı (`flight`)**: Hızlar, tırmanma oranları, menzil ve dayanım.
-4.  **İtki Performansı (`propulsion`)**: Statik itki, güç tüketimi ve verimlilik.
+1.  **Analiz Koşulları (`conditions`)**: Analizin yapıldığı fiziksel (kütle, CG) ve atmosferik (irtifa, sıcaklık) ortam.
+2.  **Aerodinamik (`aerodynamics`)**: Temel aerodinamik katsayılar ve polarlar.
+3.  **Stabilite (`stability`)**: Statik stabilite metrikleri ve türevler.
+4.  **Uçuş Performansı (`flight`)**: Hızlar, tırmanma oranları, menzil ve dayanım.
+5.  **İtki Performansı (`propulsion`)**: Statik itki, güç tüketimi ve verimlilik.
+
+## Analiz Koşulları
+
+Her rapor, sonuçların hangi şartlar altında geçerli olduğunu belirten bir bağlam içermelidir:
+
+| Parametre | Birim | Zorunlu | Açıklama |
+| :--- | :--- | :--- | :--- |
+| **total_mass** | `g` | Evet | Analiz anındaki toplam uçuş ağırlığı. |
+| **cg_position_x** | `mm` | Evet | Analiz anındaki Ağırlık Merkezi (CG) konumu. |
+| **altitude_msl** | `m` | Hayır | Analiz irtifası (Varsayılan: 0). |
+| **temperature** | `C` | Hayır | Ortam sıcaklığı (Varsayılan: 15). |
+| **air_density** | `kg/m³` | Hayır | Hava yoğunluğu (Varsayılan: 1.225). |
 
 ## Yorumlama ve Bayraklar
 

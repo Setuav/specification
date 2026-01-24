@@ -18,8 +18,6 @@ Tüm yerleşim koordinatları `SETUAV_BODY` çerçevesine göre tanımlanır (ba
 
 ### Konum
 
-### Konum
-
 | Parametre | Birim | Açıklama |
 | :--- | :--- | :--- |
 | **position** | `object` | Kanat yerleşimi pozisyonu (zorunlu). |

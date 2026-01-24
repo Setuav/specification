@@ -18,8 +18,6 @@ All attachment coordinates are relative to the `SETUAV_BODY` frame (origin at fu
 
 ### Position
 
-### Position
-
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
 | **position** | `object` | Wing attachment position (required). |

@@ -48,6 +48,7 @@ plugins:
             Fuselage: Gövde
             Propulsion: İtki
             Motor: Motor
+            Propeller: Pervane
 
 nav:
   - Introduction: index.md
@@ -60,3 +61,4 @@ nav:
   - Propulsion: 
     - Overview: propulsion/index.md
     - Motor: propulsion/motor.md
+    - Propeller: propulsion/propeller.md

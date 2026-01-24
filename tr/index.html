@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setuav-standard-introduction" class="md-skip">
+        <a href="#setuav-standard-giris" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -282,10 +282,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#amac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Purpose
+        Amaç
       
     </span>
   </a>
@@ -293,10 +293,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
+  <a href="#kapsam" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scope
+        Kapsam
       
     </span>
   </a>
@@ -304,10 +304,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#out-of-scope" class="md-nav__link">
+  <a href="#kapsam-ds" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Out of scope
+        Kapsam dışı
       
     </span>
   </a>
@@ -315,10 +315,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-principles" class="md-nav__link">
+  <a href="#temel-ilkeler" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Principles
+        Temel İlkeler
       
     </span>
   </a>
@@ -784,10 +784,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#amac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Purpose
+        Amaç
       
     </span>
   </a>
@@ -795,10 +795,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
+  <a href="#kapsam" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scope
+        Kapsam
       
     </span>
   </a>
@@ -806,10 +806,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#out-of-scope" class="md-nav__link">
+  <a href="#kapsam-ds" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Out of scope
+        Kapsam dışı
       
     </span>
   </a>
@@ -817,10 +817,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-principles" class="md-nav__link">
+  <a href="#temel-ilkeler" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Principles
+        Temel İlkeler
       
     </span>
   </a>
@@ -844,39 +844,40 @@
 
 
 
-<h1 id="setuav-standard-introduction">Setuav Standard — Introduction</h1>
-<h2 id="purpose">Purpose</h2>
-<p>The Setuav Standard defines a tool-agnostic format for describing UAV designs.</p>
-<p>This repository contains only:</p>
+<h1 id="setuav-standard-giris">Setuav Standard — Giriş</h1>
+<h2 id="amac">Amaç</h2>
+<p>Setuav Standard, bir İHA tasarımını araç bağımsız şekilde tanımlamak için kullanılan bir formattır.</p>
+<p>Bu repo yalnızca:</p>
 <ul>
-<li>the standard text,</li>
-<li>JSON Schemas,</li>
-<li>YAML examples,</li>
-<li>validation guidance.</li>
+<li>standart metni,</li>
+<li>JSON Schema’lar,</li>
+<li>YAML örnekler,</li>
+<li>doğrulama rehberi</li>
 </ul>
-<p>Plugin APIs and any application-specific details are out of scope for this repository.</p>
-<h2 id="scope">Scope</h2>
-<p>The Setuav Standard targets <strong>fixed-wing UAV</strong> designs and provides a comprehensive data model covering the entire design lifecycle:</p>
+<p>içerir.</p>
+<p>Uygulamaya özgü ayrıntılar bu reponun kapsamı dışındadır.</p>
+<h2 id="kapsam">Kapsam</h2>
+<p>Setuav Standardı, <strong>sabit kanatlı İHA</strong> tasarımlarını hedefler ve tasarım yaşam döngüsünün tamamını kapsayan kapsamlı bir veri modeli sunar:</p>
 <ul>
-<li><strong>Geometry</strong>: Parametric definition of airframe components including fuselage, wings, tails, and control surfaces.</li>
-<li><strong>Propulsion</strong>: Specifications for propulsion systems (motors, ESCs, propellers) and power systems (batteries).</li>
-<li><strong>Mass</strong>: Direct mass specifications for geometry and propulsion components, plus tracking of additional parts (electronics, landing gear, etc.).</li>
-<li><strong>Performance</strong>: Standardized format for storing flight performance analysis, stability results, and mission simulation data.</li>
+<li><strong>Geometri</strong>: Gövde (fuselage), kanatlar, kuyruklar ve kontrol yüzeylerini içeren hava aracı bileşenlerinin parametrik tanımı.</li>
+<li><strong>İtki</strong>: İtki sistemleri (motorlar, ESC'ler, pervaneler) ve güç sistemleri (piller) için teknik özellikler.</li>
+<li><strong>Kütle</strong>: Geometri ve itki bileşenleri için doğrudan kütle belirtimleri, artı ek parçaların (elektronikler, iniş takımı, vb.) takibi.</li>
+<li><strong>Performans</strong>: Uçuş performans analizi, stabilite sonuçları ve görev simülasyon verilerinin depolanması için standart format.</li>
 </ul>
-<h2 id="out-of-scope">Out of scope</h2>
-<p>To maintain focus on the design definition, the following areas are out of scope:</p>
+<h2 id="kapsam-ds">Kapsam dışı</h2>
+<p>Tasarım tanımına odaklanmak amacıyla, aşağıdaki alanlar kapsam dışı bırakılmıştır:</p>
 <ul>
-<li><strong>Rotorcraft</strong>: Multirotor and helicopter configurations, and their specific parameters (rotor disks, collective/cyclic pitch, etc.).</li>
-<li><strong>Avionics Internal Logic</strong>: Detailed control laws, PID gains, or specific autopilot firmware code.</li>
-<li><strong>Detailed Structural Analysis</strong>: Raw FEA mesh data or internal stress/strain tensors (the standard focuses on high-level material properties and mass distribution).</li>
-<li><strong>Operational Data</strong>: Maintenance logs, flight logs, operator licensing, and real-time mission telemetry.</li>
+<li><strong>Döner Kanat</strong>: Multirotor ve helikopter konfigürasyonları ve bunlara özgü parametreler (rotor diskleri, kolektif/çevrimsel hatve vb.).</li>
+<li><strong>Aviyonik İç Mantığı</strong>: Detaylı kontrol yasaları, PID kazanımları veya otopilot yazılımına özgü kodlar.</li>
+<li><strong>Detaylı Yapısal Analiz</strong>: Ham FEA ağ (mesh) verileri veya iç gerilme/zorlanma tensörleri (standart, yüksek seviyeli malzeme özellikleri ve kütle dağılımına odaklanır).</li>
+<li><strong>Operasyonel Veriler</strong>: Bakım kayıtları, uçuş günlükleri, operatör lisansları ve anlık görev telemetri verileri.</li>
 </ul>
-<h2 id="key-principles">Key Principles</h2>
-<p>The standard is designed around several key principles:</p>
+<h2 id="temel-ilkeler">Temel İlkeler</h2>
+<p>Standart, birkaç temel ilke etrafında tasarlanmıştır:</p>
 <ul>
-<li><strong>Modularity</strong>: Large designs can be split into smaller, reusable component files.</li>
-<li><strong>Human-Readable</strong>: YAML format ensures that the data is easy to read and edit by humans.</li>
-<li><strong>Strict Validation</strong>: JSON Schemas provide clear rules for data structure and types.</li>
+<li><strong>Modülerlik</strong>: Büyük tasarımlar daha küçük, tekrar kullanılabilir bileşen dosyalarına bölünebilir.</li>
+<li><strong>İnsan Tarafından Okunabilirlik</strong>: YAML formatı, verilerin insanlar tarafından okunmasını ve düzenlenmesini kolaylaştırır.</li>
+<li><strong>Sıkı Doğrulama</strong>: JSON Schema'lar, veri yapısı ve tipleri için net kurallar sağlar.</li>
 </ul>
 
 

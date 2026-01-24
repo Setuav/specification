@@ -15,32 +15,11 @@
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/conventions/"/>
     </url>
     <url>
-        <loc>Noneconventions.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneconventions.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/conventions.tr/"/>
-    </url>
-    <url>
-        <loc>Noneindex.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneindex.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/index.tr/"/>
-    </url>
-    <url>
         <loc>Nonemass/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonemass/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/mass/"/>
-    </url>
-    <url>
-        <loc>Nonemass.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemass.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/mass.tr/"/>
     </url>
     <url>
         <loc>Nonegeometry/</loc>
@@ -57,20 +36,6 @@
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/fuselage/"/>
     </url>
     <url>
-        <loc>Nonegeometry/fuselage.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/fuselage.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/fuselage.tr/"/>
-    </url>
-    <url>
-        <loc>Nonegeometry/index.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/index.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/index.tr/"/>
-    </url>
-    <url>
         <loc>Nonegeometry/wing/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
@@ -78,25 +43,11 @@
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing/"/>
     </url>
     <url>
-        <loc>Nonegeometry/wing.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing.tr/"/>
-    </url>
-    <url>
         <loc>Nonegeometry/wing_attachment/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing_attachment/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing_attachment/"/>
-    </url>
-    <url>
-        <loc>Nonegeometry/wing_attachment.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing_attachment.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing_attachment.tr/"/>
     </url>
     <url>
         <loc>Nonepropulsion/</loc>
@@ -113,32 +64,11 @@
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/battery/"/>
     </url>
     <url>
-        <loc>Nonepropulsion/battery.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/battery.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/battery.tr/"/>
-    </url>
-    <url>
         <loc>Nonepropulsion/esc/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/esc/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/esc/"/>
-    </url>
-    <url>
-        <loc>Nonepropulsion/esc.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/esc.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/esc.tr/"/>
-    </url>
-    <url>
-        <loc>Nonepropulsion/index.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/index.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/index.tr/"/>
     </url>
     <url>
         <loc>Nonepropulsion/motor/</loc>
@@ -148,25 +78,11 @@
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/motor/"/>
     </url>
     <url>
-        <loc>Nonepropulsion/motor.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/motor.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/motor.tr/"/>
-    </url>
-    <url>
         <loc>Nonepropulsion/propeller/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/propeller/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/propeller/"/>
-    </url>
-    <url>
-        <loc>Nonepropulsion/propeller.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/propeller.tr/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/propeller.tr/"/>
     </url>
     <url>
         <loc>Nonetr/</loc>
@@ -183,32 +99,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneconventions/"/>
     </url>
     <url>
-        <loc>Nonetr/conventions.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/conventions.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneconventions.tr/"/>
-    </url>
-    <url>
-        <loc>Nonetr/index.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/index.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneindex.tr/"/>
-    </url>
-    <url>
         <loc>Nonetr/mass/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/mass/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonemass/"/>
-    </url>
-    <url>
-        <loc>Nonetr/mass.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/mass.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemass.tr/"/>
     </url>
     <url>
         <loc>Nonetr/geometry/</loc>
@@ -225,20 +120,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/fuselage/"/>
     </url>
     <url>
-        <loc>Nonetr/geometry/fuselage.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/fuselage.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/fuselage.tr/"/>
-    </url>
-    <url>
-        <loc>Nonetr/geometry/index.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/index.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/index.tr/"/>
-    </url>
-    <url>
         <loc>Nonetr/geometry/wing/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
@@ -246,25 +127,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing/"/>
     </url>
     <url>
-        <loc>Nonetr/geometry/wing.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing.tr/"/>
-    </url>
-    <url>
         <loc>Nonetr/geometry/wing_attachment/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing_attachment/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing_attachment/"/>
-    </url>
-    <url>
-        <loc>Nonetr/geometry/wing_attachment.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing_attachment.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing_attachment.tr/"/>
     </url>
     <url>
         <loc>Nonetr/propulsion/</loc>
@@ -281,32 +148,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/battery/"/>
     </url>
     <url>
-        <loc>Nonetr/propulsion/battery.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/battery.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/battery.tr/"/>
-    </url>
-    <url>
         <loc>Nonetr/propulsion/esc/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/esc/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/esc/"/>
-    </url>
-    <url>
-        <loc>Nonetr/propulsion/esc.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/esc.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/esc.tr/"/>
-    </url>
-    <url>
-        <loc>Nonetr/propulsion/index.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/index.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/index.tr/"/>
     </url>
     <url>
         <loc>Nonetr/propulsion/motor/</loc>
@@ -316,24 +162,10 @@
         <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/motor/"/>
     </url>
     <url>
-        <loc>Nonetr/propulsion/motor.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/motor.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/motor.tr/"/>
-    </url>
-    <url>
         <loc>Nonetr/propulsion/propeller/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/propeller/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/propeller/"/>
-    </url>
-    <url>
-        <loc>Nonetr/propulsion/propeller.tr/</loc>
-        <lastmod>2026-01-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/propeller.tr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/propeller.tr/"/>
     </url>
 </urlset>

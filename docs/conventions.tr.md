@@ -3,10 +3,12 @@
 Bu bölüm, Setuav Standardı boyunca kullanılan teknik standartları tanımlar ve farklı uygulamalar arasında tutarlılık sağlar.
 
 ## Terminoloji: Normative ve Non-normative
+
 - **Normative**: Bir dosyanın standartla uyumlu sayılması için izlenmesi zorunlu olan kurallar.
 - **Non-normative**: Açıklayıcı notlar, örnekler veya uygulama tavsiyeleri; bağlam sağlar ancak zorunlu değildir.
 
 ## Koordinat Sistemi
+
 Setuav, sabit bir gövde koordinat çerçevesi kullanır (dokümantasyonda genellikle `SETUAV_BODY` olarak anılır):
 
 | Eksen | Yön | Açıklama |
@@ -43,6 +45,7 @@ rotation:
 Tüm rotasyonlar sağ el kuralını takip eder.
 
 ## Birimler
+
 Belirsizliği önlemek için, standart bir dosyadaki tüm sayısal değerler (şemada aksi belirtilmedikçe) şu birimleri kullanmalıdır:
 
 | Nicelik | Birim | Sembol |
@@ -54,12 +57,14 @@ Belirsizliği önlemek için, standart bir dosyadaki tüm sayısal değerler (ş
 | Hız | Metre / saniye | `m/s` |
 
 ## Modüler Dosyalar ve Referanslar
+
 Projeler, tekrar kullanılabilirlik için birden fazla dosyaya bölünebilir.
 
 - **Referans Özelliği**: `ref` anahtarı harici bir dosyayı işaret etmek için kullanılır.
 - **Yol Çözümleme (Path Resolution)**: Yol, her zaman **referansı içeren dosyanın bulunduğu dizine göre** relative olarak çözülür.
 
 Örnek:
+
 ```yaml
 geometry:
   fuselage:

@@ -112,10 +112,12 @@ $$
 $$
 
 Burada:
+
 - $m_i$, $i$ bileşeninin kütlesi
 - $\vec{r}_i$, SETUAV_BODY çerçevesinde $i$ bileşeninin pozisyon vektörü
 
 **CG'ye katkıda bulunan bileşenler:**
+
 - Gövde (eğer mass belirtilmişse)
 - Kanatlar (kanat bağlantısından pozisyon, aynalama varsa mass × 2)
 - Motorlar (placement'tan)

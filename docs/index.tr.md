@@ -1,6 +1,7 @@
 # Setuav Standard — Giriş
 
 ## Amaç
+
 Setuav Standard, bir İHA tasarımını araç bağımsız şekilde tanımlamak için kullanılan bir formattır.
 
 Bu repo yalnızca:
@@ -15,6 +16,7 @@ içerir.
 Uygulamaya özgü ayrıntılar bu reponun kapsamı dışındadır.
 
 ## Kapsam
+
 Setuav Standardı, **sabit kanatlı İHA** tasarımlarını hedefler ve tasarım yaşam döngüsünün tamamını kapsayan kapsamlı bir veri modeli sunar:
 
 - **Geometri**: Gövde (fuselage), kanatlar, kuyruklar ve kontrol yüzeylerini içeren hava aracı bileşenlerinin parametrik tanımı.
@@ -23,6 +25,7 @@ Setuav Standardı, **sabit kanatlı İHA** tasarımlarını hedefler ve tasarım
 - **Performans**: Uçuş performans analizi, stabilite sonuçları ve görev simülasyon verilerinin depolanması için standart format.
 
 ## Kapsam dışı
+
 Tasarım tanımına odaklanmak amacıyla, aşağıdaki alanlar kapsam dışı bırakılmıştır:
 
 - **Döner Kanat**: Multirotor ve helikopter konfigürasyonları ve bunlara özgü parametreler (rotor diskleri, kolektif/çevrimsel hatve vb.).
@@ -31,7 +34,9 @@ Tasarım tanımına odaklanmak amacıyla, aşağıdaki alanlar kapsam dışı b�
 - **Operasyonel Veriler**: Bakım kayıtları, uçuş günlükleri, operatör lisansları ve anlık görev telemetri verileri.
 
 ## Temel İlkeler
+
 Standart, birkaç temel ilke etrafında tasarlanmıştır:
+
 - **Modülerlik**: Büyük tasarımlar daha küçük, tekrar kullanılabilir bileşen dosyalarına bölünebilir.
 - **İnsan Tarafından Okunabilirlik**: YAML formatı, verilerin insanlar tarafından okunmasını ve düzenlenmesini kolaylaştırır.
 - **Sıkı Doğrulama**: JSON Schema'lar, veri yapısı ve tipleri için net kurallar sağlar.

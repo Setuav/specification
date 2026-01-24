@@ -112,10 +112,12 @@ $$
 $$
 
 Where:
+
 - $m_i$ is the mass of component $i$
 - $\vec{r}_i$ is the position vector of component $i$ in SETUAV_BODY frame
 
 **Components contributing to CG:**
+
 - Fuselage (if mass specified)
 - Wings (position from wing attachment, mass × 2 if mirrored)
 - Motors (from placement)

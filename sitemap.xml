@@ -1,171 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
+        <loc>https://setuav.github.io/specification/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/"/>
     </url>
     <url>
-        <loc>Noneconventions/</loc>
+        <loc>https://setuav.github.io/specification/conventions/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneconventions/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/conventions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/conventions/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/conventions/"/>
     </url>
     <url>
-        <loc>Nonemass/</loc>
+        <loc>https://setuav.github.io/specification/mass/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemass/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/mass/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/mass/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/mass/"/>
     </url>
     <url>
-        <loc>Nonegeometry/</loc>
+        <loc>https://setuav.github.io/specification/geometry/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/"/>
     </url>
     <url>
-        <loc>Nonegeometry/fuselage/</loc>
+        <loc>https://setuav.github.io/specification/geometry/fuselage/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/fuselage/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/fuselage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/fuselage/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/fuselage/"/>
     </url>
     <url>
-        <loc>Nonegeometry/wing/</loc>
+        <loc>https://setuav.github.io/specification/geometry/wing/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing/"/>
     </url>
     <url>
-        <loc>Nonegeometry/wing_attachment/</loc>
+        <loc>https://setuav.github.io/specification/geometry/wing_attachment/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing_attachment/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing_attachment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing_attachment/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing_attachment/"/>
     </url>
     <url>
-        <loc>Nonepropulsion/</loc>
+        <loc>https://setuav.github.io/specification/propulsion/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/"/>
     </url>
     <url>
-        <loc>Nonepropulsion/battery/</loc>
+        <loc>https://setuav.github.io/specification/propulsion/battery/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/battery/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/battery/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/battery/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/battery/"/>
     </url>
     <url>
-        <loc>Nonepropulsion/esc/</loc>
+        <loc>https://setuav.github.io/specification/propulsion/esc/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/esc/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/esc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/esc/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/esc/"/>
     </url>
     <url>
-        <loc>Nonepropulsion/motor/</loc>
+        <loc>https://setuav.github.io/specification/propulsion/motor/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/motor/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/motor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/motor/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/motor/"/>
     </url>
     <url>
-        <loc>Nonepropulsion/propeller/</loc>
+        <loc>https://setuav.github.io/specification/propulsion/propeller/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/propeller/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/propeller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/propeller/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/propeller/"/>
     </url>
     <url>
-        <loc>Nonetr/</loc>
+        <loc>https://setuav.github.io/specification/tr/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/"/>
     </url>
     <url>
-        <loc>Nonetr/conventions/</loc>
+        <loc>https://setuav.github.io/specification/tr/conventions/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/conventions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneconventions/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/conventions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/conventions/"/>
     </url>
     <url>
-        <loc>Nonetr/mass/</loc>
+        <loc>https://setuav.github.io/specification/tr/mass/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/mass/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonemass/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/mass/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/mass/"/>
     </url>
     <url>
-        <loc>Nonetr/geometry/</loc>
+        <loc>https://setuav.github.io/specification/tr/geometry/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/"/>
     </url>
     <url>
-        <loc>Nonetr/geometry/fuselage/</loc>
+        <loc>https://setuav.github.io/specification/tr/geometry/fuselage/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/fuselage/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/fuselage/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/fuselage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/fuselage/"/>
     </url>
     <url>
-        <loc>Nonetr/geometry/wing/</loc>
+        <loc>https://setuav.github.io/specification/tr/geometry/wing/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing/"/>
     </url>
     <url>
-        <loc>Nonetr/geometry/wing_attachment/</loc>
+        <loc>https://setuav.github.io/specification/tr/geometry/wing_attachment/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/geometry/wing_attachment/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonegeometry/wing_attachment/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing_attachment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing_attachment/"/>
     </url>
     <url>
-        <loc>Nonetr/propulsion/</loc>
+        <loc>https://setuav.github.io/specification/tr/propulsion/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/"/>
     </url>
     <url>
-        <loc>Nonetr/propulsion/battery/</loc>
+        <loc>https://setuav.github.io/specification/tr/propulsion/battery/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/battery/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/battery/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/battery/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/battery/"/>
     </url>
     <url>
-        <loc>Nonetr/propulsion/esc/</loc>
+        <loc>https://setuav.github.io/specification/tr/propulsion/esc/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/esc/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/esc/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/esc/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/esc/"/>
     </url>
     <url>
-        <loc>Nonetr/propulsion/motor/</loc>
+        <loc>https://setuav.github.io/specification/tr/propulsion/motor/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/motor/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/motor/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/motor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/motor/"/>
     </url>
     <url>
-        <loc>Nonetr/propulsion/propeller/</loc>
+        <loc>https://setuav.github.io/specification/tr/propulsion/propeller/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/propeller/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/propeller/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/propeller/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/propeller/"/>
     </url>
 </urlset>

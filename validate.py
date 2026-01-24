@@ -60,6 +60,12 @@ def validate(data_path, schema_path, schemas_root):
 
     try:
         resolver = jsonschema.RefResolver(base_uri=schema_uri, referrer=schema, store=store)
+        handlers = {
+            "http": lambda uri: store[uri],
+            "https": lambda uri: store[uri],
+            "file": lambda uri: store[uri]
+        }
+        resolver = jsonschema.RefResolver(base_uri=schema_uri, referrer=schema, store=store, handlers=handlers)
         
         jsonschema.validate(instance=data, schema=schema, resolver=resolver)
         print(f"Validation SUCCESS: {data_path} is valid against {schema_path}")

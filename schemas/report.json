@@ -45,16 +45,16 @@
             ]
         },
         "aerodynamics": {
-            "$ref": "performance/aerodynamics.json"
+            "$ref": "https://setuav.com/schemas/performance/aerodynamics.json"
         },
         "stability": {
-            "$ref": "performance/stability.json"
+            "$ref": "https://setuav.com/schemas/performance/stability.json"
         },
         "flight": {
-            "$ref": "performance/flight.json"
+            "$ref": "https://setuav.com/schemas/performance/flight.json"
         },
         "propulsion": {
-            "$ref": "performance/propulsion.json"
+            "$ref": "https://setuav.com/schemas/performance/propulsion.json"
         }
     },
     "required": [

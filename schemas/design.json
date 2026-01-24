@@ -14,20 +14,20 @@
             "type": "object",
             "properties": {
                 "fuselage": {
-                    "$ref": "geometry/fuselage.json"
+                    "$ref": "https://setuav.com/schemas/geometry/fuselage.json"
                 },
                 "wings": {
                     "type": "array",
                     "items": {
                         "allOf": [
                             {
-                                "$ref": "geometry/wing.json"
+                                "$ref": "https://setuav.com/schemas/geometry/wing.json"
                             },
                             {
                                 "type": "object",
                                 "properties": {
                                     "attachment": {
-                                        "$ref": "geometry/wing_attachment.json"
+                                        "$ref": "https://setuav.com/schemas/geometry/wing_attachment.json"
                                     }
                                 },
                                 "required": [
@@ -48,25 +48,25 @@
                 "motors": {
                     "type": "array",
                     "items": {
-                        "$ref": "propulsion/motor.json"
+                        "$ref": "https://setuav.com/schemas/propulsion/motor.json"
                     }
                 },
                 "escs": {
                     "type": "array",
                     "items": {
-                        "$ref": "propulsion/esc.json"
+                        "$ref": "https://setuav.com/schemas/propulsion/esc.json"
                     }
                 },
                 "batteries": {
                     "type": "array",
                     "items": {
-                        "$ref": "propulsion/battery.json"
+                        "$ref": "https://setuav.com/schemas/propulsion/battery.json"
                     }
                 },
                 "propellers": {
                     "type": "array",
                     "items": {
-                        "$ref": "propulsion/propeller.json"
+                        "$ref": "https://setuav.com/schemas/propulsion/propeller.json"
                     }
                 }
             }
@@ -77,16 +77,16 @@
                 "type": "object",
                 "properties": {
                     "tag": {
-                        "$ref": "common.json#/definitions/tag"
+                        "$ref": "https://setuav.com/schemas/common.json#/definitions/tag"
                     },
                     "description": {
                         "type": "string"
                     },
                     "mass": {
-                        "$ref": "common.json#/definitions/mass"
+                        "$ref": "https://setuav.com/schemas/common.json#/definitions/mass"
                     },
                     "placement": {
-                        "$ref": "common.json#/definitions/placement"
+                        "$ref": "https://setuav.com/schemas/common.json#/definitions/placement"
                     }
                 },
                 "required": [

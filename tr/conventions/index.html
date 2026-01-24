@@ -367,6 +367,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dosya-tipleri-ve-ayrm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dosya Tipleri ve Ayrımı
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -772,6 +783,233 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performans ve Analiz Raporları
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Performans ve Analiz Raporları
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genel Bakış
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analiz Koşulları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/aerodynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aerodinamik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/stability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stabilite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/flight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uçuş Performansı
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/propulsion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    İtki Performansı
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -847,6 +1085,17 @@
     <span class="md-ellipsis">
       
         Modüler Dosyalar ve Referanslar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dosya-tipleri-ve-ayrm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dosya Tipleri ve Ayrımı
       
     </span>
   </a>
@@ -966,6 +1215,26 @@ rotation:
 <td style="text-align: left;">Metre / saniye</td>
 <td style="text-align: left;"><code>m/s</code></td>
 </tr>
+<tr>
+<td style="text-align: left;">Güç</td>
+<td style="text-align: left;">Watt</td>
+<td style="text-align: left;"><code>W</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Akım</td>
+<td style="text-align: left;">Amper</td>
+<td style="text-align: left;"><code>A</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Enerji</td>
+<td style="text-align: left;">Watt-saat</td>
+<td style="text-align: left;"><code>Wh</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Zaman (Endurance)</td>
+<td style="text-align: left;">Saat</td>
+<td style="text-align: left;"><code>h</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="moduler-dosyalar-ve-referanslar">Modüler Dosyalar ve Referanslar</h2>
@@ -979,6 +1248,13 @@ rotation:
   fuselage:
     ref: &quot;./parts/fuselage_v1.yaml&quot;
 </code></pre>
+<h2 id="dosya-tipleri-ve-ayrm">Dosya Tipleri ve Ayrımı</h2>
+<p>Setuav Standardı iki ana dosya tipi tanımlar:</p>
+<ol>
+<li><strong>Tasarım Dosyaları (<code>design.yaml</code>)</strong>: Aracın fiziksel özelliklerini, geometrisini ve bileşenlerini tanımlar. Normative şema: <code>schemas/design.json</code>.</li>
+<li><strong>Rapor Dosyaları (<code>report.yaml</code>)</strong>: Bir tasarım üzerinde yapılan analizlerin sayısal sonuçlarını içerir. Normative şema: <code>schemas/report.json</code>.</li>
+</ol>
+<p>Bu ayrım, mühendislik girdisi ile analiz çıktısını net bir şekilde birbirinden ayırır.</p>
 
 
 

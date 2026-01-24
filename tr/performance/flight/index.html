@@ -10,17 +10,17 @@
       
       
       
-        <link rel="canonical" href="https://setuav.github.io/specification/tr/propulsion/battery/">
+        <link rel="canonical" href="https://setuav.github.io/specification/tr/performance/flight/">
       
       
-        <link rel="prev" href="../propeller/">
+        <link rel="prev" href="../stability/">
       
       
-        <link rel="next" href="../../mass/">
+        <link rel="next" href="../propulsion/">
       
       
         
-          <link rel="alternate" href="../../../propulsion/battery/" hreflang="en">
+          <link rel="alternate" href="../../../performance/flight/" hreflang="en">
         
           <link rel="alternate" href="./" hreflang="tr">
         
@@ -31,7 +31,7 @@
     
     
       
-        <title>Pil - Setuav Standard</title>
+        <title>Uçuş Performansı - Setuav Standard</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pil-batarya" class="md-skip">
+        <a href="#ucus-performans" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pil
+              Uçuş Performansı
             
           </span>
         </div>
@@ -166,7 +166,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../propulsion/battery/" hreflang="en" class="md-select__link">
+            <a href="../../../performance/flight/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -448,8 +448,6 @@
       
   
   
-    
-  
   
   
     
@@ -462,11 +460,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -487,7 +485,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -505,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../propulsion/" class="md-nav__link">
         
   
   
@@ -533,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../motor/" class="md-nav__link">
+      <a href="../../propulsion/motor/" class="md-nav__link">
         
   
   
@@ -561,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../esc/" class="md-nav__link">
+      <a href="../../propulsion/esc/" class="md-nav__link">
         
   
   
@@ -589,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../propeller/" class="md-nav__link">
+      <a href="../../propulsion/propeller/" class="md-nav__link">
         
   
   
@@ -614,37 +612,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pil
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../propulsion/battery/" class="md-nav__link">
         
   
   
@@ -660,109 +631,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#genel-baks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Genel Bakış
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parametreler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parametreler
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parametreler">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tanmlama" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tanımlama
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#elektriksel-ozellikler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Elektriksel Özellikler
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fiziksel-ozellikler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fiziksel Özellikler
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#yerlesim" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Yerleşim
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ornek-konfigurasyon" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Örnek Konfigürasyon
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -806,8 +674,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -818,11 +688,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -843,7 +713,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -861,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -889,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/conditions/" class="md-nav__link">
+      <a href="../conditions/" class="md-nav__link">
         
   
   
@@ -917,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/aerodynamics/" class="md-nav__link">
+      <a href="../aerodynamics/" class="md-nav__link">
         
   
   
@@ -945,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/stability/" class="md-nav__link">
+      <a href="../stability/" class="md-nav__link">
         
   
   
@@ -970,10 +840,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../performance/flight/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uçuş Performansı
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -989,6 +886,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hzlar-v-speeds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hızlar (V-Speeds)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seyir-performans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seyir Performansı
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performans-egrileri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performans Eğrileri
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ornek-konfigurasyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Örnek Konfigürasyon
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1001,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/propulsion/" class="md-nav__link">
+      <a href="../propulsion/" class="md-nav__link">
         
   
   
@@ -1056,10 +1017,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#genel-baks" class="md-nav__link">
+  <a href="#hzlar-v-speeds" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Genel Bakış
+        Hızlar (V-Speeds)
       
     </span>
   </a>
@@ -1067,63 +1028,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parametreler" class="md-nav__link">
+  <a href="#seyir-performans" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parametreler
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parametreler">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tanmlama" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tanımlama
+        Seyir Performansı
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#elektriksel-ozellikler" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#performans-egrileri" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Elektriksel Özellikler
+        Performans Eğrileri
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fiziksel-ozellikler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fiziksel Özellikler
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#yerlesim" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Yerleşim
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1155,39 +1077,9 @@
 
 
 
-<h1 id="pil-batarya">Pil (Batarya)</h1>
-<p>Bu bölüm, İHA itki ve aviyonik sistemlerini beslemek için kullanılan pilleri tanımlar. Piller, elektriksel özellikleri, kimya tipi ve fiziksel özellikleriyle belirtilir.</p>
-<h2 id="genel-baks">Genel Bakış</h2>
-<p>Setuav Standardındaki piller, elektriksel özellikleri ve yerleşim bilgileriyle bağımsız olarak tanımlanır. Pil tanımı, güç sistemi tasarımı ve ağırlık dağılımı için gerekli kapasite, voltaj özellikleri, deşarj kabiliyetleri ve fiziksel özellikleri içerir.</p>
-<h2 id="parametreler">Parametreler</h2>
-<h3 id="tanmlama">Tanımlama</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parametre</th>
-<th style="text-align: left;">Tip</th>
-<th style="text-align: left;">Açıklama</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>tag</strong></td>
-<td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">Pilin benzersiz tanımlayıcısı (örn: "main_battery", "aux_battery").</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>manufacturer</strong></td>
-<td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">Üretici adı (opsiyonel, örn: "Tattu", "Turnigy", "GensAce").</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>model</strong></td>
-<td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">Model tanımlaması (opsiyonel, örn: "R-Line 4S 1550mAh", "Graphene 3S 5000mAh").</td>
-</tr>
-</tbody>
-</table>
-<h3 id="elektriksel-ozellikler">Elektriksel Özellikler</h3>
+<h1 id="ucus-performans">Uçuş Performansı</h1>
+<p>Bu modül, aracın uçuş zarfını (envelope) ve görev performansını tanımlayan metrikleri içerir.</p>
+<h2 id="hzlar-v-speeds">Hızlar (V-Speeds)</h2>
 <table>
 <thead>
 <tr>
@@ -1198,58 +1090,24 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>chemistry</strong></td>
-<td style="text-align: left;"><code>enum</code></td>
-<td style="text-align: left;">Pil kimyası: <code>LiPo</code>, <code>LiHV</code>, <code>LiFe</code>, <code>Li-ion</code>, <code>NiMH</code>, <code>NiCd</code>.</td>
+<td style="text-align: left;"><strong>stall_speed</strong></td>
+<td style="text-align: left;"><code>m/s</code></td>
+<td style="text-align: left;">Ağırlığı taşıyamadığı minimum hız (CL_max'ta).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>cells</strong></td>
-<td style="text-align: left;"><code>int</code></td>
-<td style="text-align: left;">Seri bağlı hücre sayısı (örn: 3S için 3, 4S için 4).</td>
+<td style="text-align: left;"><strong>cruise_speed</strong></td>
+<td style="text-align: left;"><code>m/s</code></td>
+<td style="text-align: left;">Verimli seyir hızı (genellikle L/D max civarı).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>voltage_nominal</strong></td>
-<td style="text-align: left;"><code>V</code></td>
-<td style="text-align: left;">Nominal voltaj (LiPo için tipik olarak hücre × 3.7V, LiHV için hücre × 3.8V).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>voltage_full</strong></td>
-<td style="text-align: left;"><code>V</code></td>
-<td style="text-align: left;">Tam şarj voltajı (LiPo için tipik olarak hücre × 4.2V, LiHV için hücre × 4.35V).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>voltage_cutoff</strong></td>
-<td style="text-align: left;"><code>V</code></td>
-<td style="text-align: left;">Minimum güvenli deşarj voltajı (LiPo için tipik olarak hücre × 3.0V).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>capacity</strong></td>
-<td style="text-align: left;"><code>mAh</code></td>
-<td style="text-align: left;">Miliamper-saat cinsinden pil kapasitesi.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>discharge_rate</strong></td>
-<td style="text-align: left;"><code>C</code></td>
-<td style="text-align: left;">Maksimum sürekli deşarj oranı (örn: 75C için 75).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>discharge_burst</strong></td>
-<td style="text-align: left;"><code>C</code></td>
-<td style="text-align: left;">Maksimum anlık deşarj oranı (opsiyonel, genellikle 10-30 saniye).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>charge_rate</strong></td>
-<td style="text-align: left;"><code>C</code></td>
-<td style="text-align: left;">Maksimum şarj oranı (opsiyonel, varsayılan: 1C).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>resistance</strong></td>
-<td style="text-align: left;"><code>mΩ</code></td>
-<td style="text-align: left;">İç direnç (opsiyonel).</td>
+<td style="text-align: left;"><strong>max_speed</strong></td>
+<td style="text-align: left;"><code>m/s</code></td>
+<td style="text-align: left;">Motor gücünün sürüklemeyi yenebildiği maksimum düz uçuş hızı.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="fiziksel-ozellikler">Fiziksel Özellikler</h3>
+<h2 id="seyir-performans">Seyir Performansı</h2>
+<p>Seyir hızında (cruise_speed) beklenen değerler:</p>
 <table>
 <thead>
 <tr>
@@ -1260,145 +1118,46 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>mass</strong></td>
-<td style="text-align: left;"><code>g</code></td>
-<td style="text-align: left;">Pil ağırlığı.</td>
+<td style="text-align: left;"><strong>power_required</strong></td>
+<td style="text-align: left;"><code>W</code></td>
+<td style="text-align: left;">Seyir için gereken motor/pervane çıkış gücü.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>dimensions</strong></td>
-<td style="text-align: left;"><code>object</code></td>
-<td style="text-align: left;">Fiziksel boyutlar.</td>
+<td style="text-align: left;"><strong>current_draw</strong></td>
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Bataryadan çekilen akım.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>dimensions.length</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Uzunluk.</td>
+<td style="text-align: left;"><strong>endurance_hours</strong></td>
+<td style="text-align: left;"><code>saat</code></td>
+<td style="text-align: left;">Toplam havada kalış süresi.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>dimensions.width</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Genişlik.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>dimensions.height</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Yükseklik/kalınlık.</td>
+<td style="text-align: left;"><strong>range_km</strong></td>
+<td style="text-align: left;"><code>km</code></td>
+<td style="text-align: left;">Toplam uçuş menzili.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="yerlesim">Yerleşim</h3>
-<p>Piller placement nesnesi kullanılarak airframe'de konumlandırılır:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parametre</th>
-<th style="text-align: left;">Birim</th>
-<th style="text-align: left;">Açıklama</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>placement</strong></td>
-<td style="text-align: left;"><code>object</code></td>
-<td style="text-align: left;">Pilin airframe'deki yerleşimi (opsiyonel).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.position</strong></td>
-<td style="text-align: left;"><code>object</code></td>
-<td style="text-align: left;">Pilin SETUAV_BODY çerçevesindeki pozisyonu.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.position.x</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Boylamsal pozisyon (burun ucundan mesafe).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.position.y</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Yanal pozisyon (0 = merkez hattı, pozitif = sağ).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.position.z</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Dikey pozisyon (pozitif = yukarı).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.rotation</strong></td>
-<td style="text-align: left;"><code>object</code></td>
-<td style="text-align: left;">Pil yönelimi.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.rotation.x</strong></td>
-<td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">X-ekseni etrafında rotasyon (roll, opsiyonel, varsayılan: 0).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.rotation.y</strong></td>
-<td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Y-ekseni etrafında rotasyon (pitch, opsiyonel, varsayılan: 0).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>placement.rotation.z</strong></td>
-<td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Z-ekseni etrafında rotasyon (yaw, opsiyonel, varsayılan: 0).</td>
-</tr>
-</tbody>
-</table>
+<h2 id="performans-egrileri">Performans Eğrileri</h2>
+<p>Farklı uçuş hızları için hesaplanan güç ve itki gereksinimleri <code>curves</code> nesnesi altında diziler halinde sunulur. Bu veriler "Güç Gereksinimi vs Hız" grafikleri çizmek için kullanılır.</p>
 <h2 id="ornek-konfigurasyon">Örnek Konfigürasyon</h2>
-<pre><code class="language-yaml">batteries:
-  - tag: &quot;main_battery&quot;
-    manufacturer: &quot;Tattu&quot;
-    model: &quot;R-Line 4S 1550mAh&quot;
-    chemistry: &quot;LiHV&quot;
-    cells: 4
-    voltage_nominal: 15.2
-    voltage_full: 17.4
-    voltage_cutoff: 12.0
-    capacity: 1550
-    discharge_rate: 95
-    discharge_burst: 190
-    charge_rate: 5
-    resistance: 12
-    mass: 185
-    dimensions:
-      length: 78
-      width: 36
-      height: 36
-    placement:
-      position:
-        x: 350
-        y: 0
-        z: -15
-      rotation:
-        x: 0
-        y: 0
-        z: 0
-
-  - tag: &quot;long_range_battery&quot;
-    manufacturer: &quot;Turnigy&quot;
-    model: &quot;Graphene 3S 5000mAh&quot;
-    chemistry: &quot;LiPo&quot;
-    cells: 3
-    voltage_nominal: 11.1
-    voltage_full: 12.6
-    voltage_cutoff: 9.0
-    capacity: 5000
-    discharge_rate: 45
-    discharge_burst: 90
-    mass: 382
-    dimensions:
-      length: 138
-      width: 43
-      height: 29
-    placement:
-      position:
-        x: 420
-        y: 0
-        z: -25
-      rotation:
-        x: 0
-        y: 0
-        z: 0
+<pre><code class="language-yaml">flight:
+  stall_speed: 12.0
+  cruise_speed: 18.0
+  max_speed: 32.0
+  max_climb_rate: 6.5
+  cruise_performance:
+    power_required: 145
+    current_draw: 6.5
+    endurance_hours: 1.8
+    range_km: 110
+  curves:
+    velocities: [10, 12, 14, 16, 18, 20, 25, 30]
+    power_required: [200, 160, 140, 135, 145, 170, 250, 400]
+    power_available: [600, 580, 560, 540, 520, 500, 450, 400]
+    thrust_required: [15, 11, 9, 8, 8, 9, 12, 18]
+    thrust_available: [40, 35, 30, 25, 20, 18, 15, 10]
 </code></pre>
 
 

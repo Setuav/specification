@@ -49,6 +49,7 @@ plugins:
             Propulsion: İtki
             Motor: Motor
             Propeller: Pervane
+            ESC: ESC
 
 nav:
   - Introduction: index.md
@@ -61,4 +62,5 @@ nav:
   - Propulsion: 
     - Overview: propulsion/index.md
     - Motor: propulsion/motor.md
+    - ESC: propulsion/esc.md
     - Propeller: propulsion/propeller.md

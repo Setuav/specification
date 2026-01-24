@@ -1,4 +1,4 @@
-# Sözleşmeler (Conventions)
+# Temel Esaslar
 
 Bu bölüm, Setuav Standardı boyunca kullanılan teknik standartları tanımlar ve farklı uygulamalar arasında tutarlılık sağlar.
 
@@ -11,7 +11,7 @@ Setuav, sabit bir gövde koordinat çerçevesi kullanır (dokümantasyonda genel
 
 | Eksen | Yön | Açıklama |
 | :--- | :--- | :--- |
-| **Origin** | Burun Ucu | Gövdenin en uç ön noktası. |
+| **Origin** | Burun Ucu | Gövdenin en uç ön noktası (x=0, y=0, z=0). |
 | **+X** | Arka (Aft) | Burun ucundan kuyruğa doğru artar. |
 | **+Y** | Sağ | Sağ taraf (sağ el kuralı). |
 | **+Z** | Yukarı | Dikey olarak yukarı doğru artar. |

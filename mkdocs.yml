@@ -1,25 +1,27 @@
 site_name: Setuav Standard
 site_description: Setuav Standard documentation
-repo_url: https://github.com/<your-org-or-user>/<your-repo>
-edit_uri: edit/main/setuav-spec/docs/
 
 theme:
   name: material
-  logo: false
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: amber
-      accent: amber
+      primary: white
+      accent: deep-orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: amber
-      accent: amber
+      primary: black
+      accent: deep-orange
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -27,10 +29,8 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.sections
-    - content.action.edit
 
 plugins:
-  - search
   - i18n:
       languages:
         - locale: en
@@ -40,9 +40,11 @@ plugins:
           name: Türkçe
           nav_translations:
             Introduction: Giriş
-            Conventions: Sözleşmeler
+            Conventions: Temel Esaslar
             Geometry: Geometri
+            Overview: Genel Bakış
             Wing: Kanat
+            Wing Attachment: Kanat Yerleşimi
             Fuselage: Gövde
             Propulsion: İtki
 
@@ -50,6 +52,9 @@ nav:
   - Introduction: index.md
   - Conventions: conventions.md
   - Geometry:
-    - Wing: wing.md
-    - Fuselage: fuselage.md
-  - Propulsion: propulsion.md
+    - Overview: geometry/index.md
+    - Fuselage: geometry/fuselage.md
+    - Wing: geometry/wing.md
+    - Wing Attachment: geometry/wing_attachment.md
+  - Propulsion: 
+    - Overview: propulsion/index.md

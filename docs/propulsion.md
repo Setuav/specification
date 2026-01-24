@@ -16,7 +16,7 @@ Motors are defined by their physical constants and performance data.
 | **No-Load Current** | `A` | Current at zero torque (at specified voltage). |
 
 ## Propeller
-Propellers are referenced from a library or defined by their geometry and performance coefficients ($C_T$, $C_P$).
+Propellers are referenced from a library or defined by their geometry and performance coefficients (CT, CP).
 
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |

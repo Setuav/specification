@@ -16,7 +16,7 @@ Motorlar, fiziksel sabitleri ve performans verileriyle tanımlanır.
 | **Boşta Akım** | `A` | Belirli bir voltajda sıfır torktaki akım. |
 
 ## Pervane
-Pervaneler bir kütüphaneden referans alınır veya geometrileri ve performans katsayıları ($C_T$, $C_P$) ile tanımlanır.
+Pervaneler bir kütüphaneden referans alınır veya geometrileri ve performans katsayıları (CT, CP) ile tanımlanır.
 
 | Parametre | Birim | Açıklama |
 | :--- | :--- | :--- |

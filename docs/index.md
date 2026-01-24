@@ -16,7 +16,7 @@ Plugin APIs and any application-specific details are out of scope for this repos
 The Setuav Standard targets **fixed-wing UAV** designs and provides a comprehensive data model covering the entire design lifecycle:
 
 - **Geometry**: Parametric definition of airframe components including fuselage, wings, tails, and control surfaces.
-- **Electronics**: Specifications for propulsion systems (motors, ESCs, propellers) and power systems (batteries).
+- **Propulsion**: Specifications for propulsion systems (motors, ESCs, propellers) and power systems (batteries).
 - **Manufacturing**: Mapping of physical parts to weight, material properties, and assembly data.
 - **Performance**: Standardized format for storing flight performance analysis, stability results, and mission simulation data.
 

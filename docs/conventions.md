@@ -11,7 +11,7 @@ Setuav uses a fixed-body coordinate frame (often referred to as `SETUAV_BODY` in
 
 | Axis | Direction | Description |
 | :--- | :--- | :--- |
-| **Origin** | Nose Tip | The very front point of the fuselage. |
+| **Origin** | Nose Tip | The very front point of the fuselage (x=0, y=0, z=0). |
 | **+X** | Aft | Increases from the nose tip toward the tail. |
 | **+Y** | Right | Starboard side (right-hand rule). |
 | **+Z** | Up | Increases vertically upward. |

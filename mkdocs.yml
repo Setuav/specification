@@ -1,5 +1,7 @@
 site_name: Setuav Standard
 site_description: Setuav Standard documentation
+site_url: https://setuav.github.io/specification/
+use_directory_urls: true
 
 theme:
   name: material
@@ -44,6 +46,7 @@ extra_css:
 
 plugins:
   - i18n:
+      docs_structure: suffix
       languages:
         - locale: en
           name: English

@@ -1,0 +1,93 @@
+setuav: "1.0"
+
+airframe:
+  fuselage:
+    tag: "fuselage_main"
+    mass: 350
+    type: "fuselage"
+    geometry:
+      blending:
+        ruled: false
+      sections:
+        - position: {x: 0, y: 0, z: 0}
+          profile: {type: "circle", diameter: 20}
+        - position: {x: 200, y: 0, z: 0}
+          profile: {type: "ellipse", width: 80, height: 100}
+        - position: {x: 800, y: 0, z: 0}
+          profile: {type: "circle", diameter: 10}
+
+  wings:
+    - tag: "wing_main"
+      mass: 450
+      type: "wing"
+      attachment:
+        position: {x: 350, y: 0, z: 50}
+        rotation: {x: 2.0, y: 0, z: 0}
+        mirror: true
+        fairing:
+          scale: 1.2
+      geometry:
+        profiles:
+          - position: {x: 0, y: 0, z: 0}
+            chord: 240
+            airfoil: "naca2412"
+          - position: {x: 80, y: 900, z: 0}
+            chord: 140
+            airfoil: "naca0012"
+        control_surfaces:
+          - tag: "aileron_left"
+            type: "aileron"
+            span_start: 600
+            span_end: 850
+            chord: 45
+
+propulsion:
+  motors:
+    - tag: "motor_front"
+      mass: 65
+      type: "motor"
+      kv: 1200
+      voltage_min: 14.0
+      voltage_max: 22.2
+      current_max: 35
+      resistance: 0.05
+      placement:
+        position: {x: 0, y: 0, z: 0}
+  
+  escs:
+    - tag: "esc_main"
+      mass: 25
+      type: "esc"
+      current_max: 40
+      voltage_min: 10.0
+      voltage_max: 25.0
+  
+  batteries:
+    - tag: "lipo_4s"
+      mass: 350
+      type: "battery"
+      chemistry: "LiPo"
+      cells: 4
+      capacity: 4000
+      voltage_nominal: 14.8
+      voltage_full: 16.8
+      voltage_cutoff: 12.0
+      discharge_rate: 30
+      dimensions: {length: 140, width: 45, height: 40}
+      placement:
+        position: {x: 250, y: 0, z: 0}
+
+  propellers:
+    - tag: "prop_10x6"
+      mass: 12
+      type: "propeller"
+      diameter: 254
+      pitch: 152
+      blade_count: 2
+      direction: "CW"
+
+additional_parts:
+  - tag: "payload_camera"
+    description: "FPV Camera"
+    mass: 15
+    placement: {position: {x: 50, y: 0, z: 0}}

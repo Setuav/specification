@@ -1,0 +1,70 @@
+setuav_report: "1.0"
+design_ref: "design_example.yaml"
+
+conditions:
+  total_mass: 1267.0
+  cg_position_x: 310.5
+  altitude_msl: 100
+  temperature: 20
+  air_density: 1.20
+
+aerodynamics:
+  cl_max: 1.35
+  cl_max_alpha: 14.5
+  cd_min: 0.035
+  ld_max: 18.2
+  ld_max_alpha: 6.0
+  span: 1800
+  area: 380000
+  mean_chord: 210
+  operating_velocity: 18.0
+  reynolds_number: 250000
+  polars:
+    alphas: [-4, 0, 4, 8, 12]
+    cl_values: [-0.1, 0.35, 0.8, 1.2, 1.3]
+    cd_values: [0.03, 0.02, 0.04, 0.08, 0.12]
+    ld_values: [-3.3, 17.5, 20.0, 15.0, 10.8]
+
+stability:
+  neutral_point_x: 355.0
+  static_margin: 15.2
+  trim_alpha: 2.1
+  trim_elevator: -1.5
+  derivatives:
+    cm_alpha: -0.9
+    cn_beta: 0.15
+    cl_beta: -0.04
+    cl_alpha: 4.5
+    cy_beta: -0.3
+
+flight:
+  stall_speed: 11.5
+  cruise_speed: 16.0
+  max_speed: 28.0
+  max_climb_rate: 5.5
+  cruise_performance:
+    power_required: 110
+    current_draw: 7.4
+    throttle: 45
+    endurance_hours: 0.9
+    range_km: 25.0
+  curves:
+    velocities: [10, 15, 20, 25, 30]
+    power_required: [150, 100, 140, 220, 350]
+    power_available: [450, 430, 410, 380, 350]
+    thrust_required: [12, 8, 9, 13, 20]
+    thrust_available: [30, 25, 20, 15, 10]
+
+propulsion:
+  static_thrust_max: 1800
+  static_power_max: 380
+  static_current_max: 26.5
+  static_efficiency: 4.7
+  pitch_speed: 32.0
+  thrust_to_weight: 1.42
+  curves:
+    rpm: [2000, 6000, 10000]
+    thrust: [150, 800, 1800]
+    power: [20, 150, 380]
+    current: [1.5, 10.5, 26.5]
+    efficiency: [7.5, 5.3, 4.7]

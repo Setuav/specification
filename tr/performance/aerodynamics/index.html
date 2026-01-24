@@ -1151,6 +1151,37 @@
 </table>
 <h2 id="polarlar">Polarlar</h2>
 <p>Hücum açısına (alpha) bağlı aerodinamik katsayıların değişimi diziler halinde saklanır.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parametre</th>
+<th style="text-align: left;">Birim</th>
+<th style="text-align: left;">Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>alphas</strong></td>
+<td style="text-align: left;"><code>deg</code></td>
+<td style="text-align: left;">Hücum açısı değerlerini içeren dizi.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cl_values</strong></td>
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">İlgili açılardaki kaldırma katsayıları (CL).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cd_values</strong></td>
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">İlgili açılardaki sürükleme katsayıları (CD).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ld_values</strong></td>
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">İlgili açılardaki süzülme oranları (L/D).</td>
+</tr>
+</tbody>
+</table>
 <h2 id="ornek-konfigurasyon">Örnek Konfigürasyon</h2>
 <pre><code class="language-yaml">aerodynamics:
   cl_max: 1.45

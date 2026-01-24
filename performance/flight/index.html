@@ -1141,6 +1141,42 @@
 </table>
 <h2 id="performance-curves">Performance Curves</h2>
 <p>Power and thrust requirements calculated for various flight speeds are presented as arrays under the <code>curves</code> object. These data are used to plot "Power Required vs Speed" graphs.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>velocities</strong></td>
+<td style="text-align: left;"><code>m/s</code></td>
+<td style="text-align: left;">Array of velocities (X-axis).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>power_required</strong></td>
+<td style="text-align: left;"><code>W</code></td>
+<td style="text-align: left;">Power required at each velocity step (Y-axis).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>power_available</strong></td>
+<td style="text-align: left;"><code>W</code></td>
+<td style="text-align: left;">Maximum power available at each velocity step.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>thrust_required</strong></td>
+<td style="text-align: left;"><code>N</code></td>
+<td style="text-align: left;">Thrust required (equal to Drag) at each velocity step.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>thrust_available</strong></td>
+<td style="text-align: left;"><code>N</code></td>
+<td style="text-align: left;">Maximum thrust available at each velocity step.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="example-configuration">Example Configuration</h2>
 <pre><code class="language-yaml">flight:
   stall_speed: 12.0

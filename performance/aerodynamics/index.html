@@ -1151,6 +1151,37 @@
 </table>
 <h2 id="polars">Polars</h2>
 <p>The variation of aerodynamic coefficients with respect to angle of attack (alpha) is stored as arrays.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>alphas</strong></td>
+<td style="text-align: left;"><code>deg</code></td>
+<td style="text-align: left;">Array of angle of attack values.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cl_values</strong></td>
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">Lift coefficients (CL) at corresponding alphas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cd_values</strong></td>
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">Drag coefficients (CD) at corresponding alphas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ld_values</strong></td>
+<td style="text-align: left;"><code>-</code></td>
+<td style="text-align: left;">Lift-to-drag ratios (L/D) at corresponding alphas.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="example-configuration">Example Configuration</h2>
 <pre><code class="language-yaml">aerodynamics:
   cl_max: 1.45

@@ -951,6 +951,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#performance-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Curves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1019,6 +1030,17 @@
     <span class="md-ellipsis">
       
         System Metrics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Curves
       
     </span>
   </a>
@@ -1106,6 +1128,44 @@
 <td style="text-align: left;"><strong>pitch_speed</strong></td>
 <td style="text-align: left;"><code>m/s</code></td>
 <td style="text-align: left;">Theoretical air speed based on propeller pitch. typically limits the maximum flight speed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="performance-curves">Performance Curves</h2>
+<p>The <code>curves</code> object contains arrays representing performance across the throttle/RPM range.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>rpm</strong></td>
+<td style="text-align: left;"><code>RPM</code></td>
+<td style="text-align: left;">Motor revolution per minute values (X-axis).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>thrust</strong></td>
+<td style="text-align: left;"><code>g</code></td>
+<td style="text-align: left;">Thrust at the corresponding RPM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>power</strong></td>
+<td style="text-align: left;"><code>W</code></td>
+<td style="text-align: left;">Power consumption at the corresponding RPM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>current</strong></td>
+<td style="text-align: left;"><code>A</code></td>
+<td style="text-align: left;">Current draw at the corresponding RPM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>efficiency</strong></td>
+<td style="text-align: left;"><code>g/W</code></td>
+<td style="text-align: left;">Efficiency at the corresponding RPM.</td>
 </tr>
 </tbody>
 </table>

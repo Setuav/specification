@@ -20,4 +20,4 @@ Aşağıdaki bölümlerde şunları inceleyeceğiz:
 
 ## Koordinat Entegrasyonu
 
-Tüm bileşenler `SETUAV_BODY` referans çerçevesinde konumlandırılır (orijin burun ucunda, X+ arka, Y+ sağ, Z+ yukarı). Kanatlar lokal koordinat sistemleri kullanır ve daha sonra Kanat Yerleşimi parametreleri (position_x, position_y, position_z, pitch_rotation, roll_rotation, yaw_rotation) ile yerleştirilir. Bu, nihai modelin aerodinamik ve yapısal analize hazır, birleşik bir birim olmasını sağlar.
+Tüm bileşenler `SETUAV_BODY` referans çerçevesinde konumlandırılır (orijin burun ucunda, X+ arka, Y+ sağ, Z+ yukarı). Kanatlar lokal koordinat sistemleri kullanır ve daha sonra Kanat Yerleşimi parametreleri aracılığıyla nested `position` ve `rotation` nesneleri kullanılarak yerleştirilir. Position nesnesi `x`, `y` ve `z` koordinatlarını içerirken, rotation nesnesi `x` (roll), `y` (pitch) ve `z` (yaw) açılarını içerir. Bu, nihai modelin aerodinamik ve yapısal analize hazır, birleşik bir birim olmasını sağlar.

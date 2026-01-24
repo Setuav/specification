@@ -20,4 +20,4 @@ In the following sections, we will explore:
 
 ## Coordinate Integration
 
-All components are positioned in the `SETUAV_BODY` reference frame (origin at nose tip, X+ aft, Y+ right, Z+ up). Wings use local coordinate systems that are then placed via Wing Attachment parameters (position_x, position_y, position_z, pitch_rotation, roll_rotation, yaw_rotation). This ensures the final model is a cohesive unit ready for aerodynamic and structural analysis.
+All components are positioned in the `SETUAV_BODY` reference frame (origin at nose tip, X+ aft, Y+ right, Z+ up). Wings use local coordinate systems that are then placed via Wing Attachment parameters using nested `position` and `rotation` objects. The position object contains `x`, `y`, and `z` coordinates, while the rotation object contains `x` (roll), `y` (pitch), and `z` (yaw) angles. This ensures the final model is a cohesive unit ready for aerodynamic and structural analysis.

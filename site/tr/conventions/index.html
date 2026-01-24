@@ -331,6 +331,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pozisyon-ve-rotasyon-yaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozisyon ve Rotasyon Yapısı
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#birimler" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -611,6 +622,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propulsion/motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -660,6 +699,17 @@
     <span class="md-ellipsis">
       
         Koordinat Sistemi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pozisyon-ve-rotasyon-yaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pozisyon ve Rotasyon Yapısı
       
     </span>
   </a>
@@ -746,6 +796,25 @@
 </tbody>
 </table>
 <p><strong>Aynalama (Mirroring)</strong>: Varsayılan olarak, <strong>XZ-düzlemi</strong> (Y = 0) boyunca simetri varsayılır.</p>
+<h2 id="pozisyon-ve-rotasyon-yaps">Pozisyon ve Rotasyon Yapısı</h2>
+<p>Standart boyunca, bileşen pozisyonları ve rotasyonları tutarlı bir iç içe (nested) yapı kullanılarak tanımlanır:</p>
+<pre><code class="language-yaml">position:
+  x: 0    # mm, X-ekseni boyunca pozisyon
+  y: 0    # mm, Y-ekseni boyunca pozisyon
+  z: 0    # mm, Z-ekseni boyunca pozisyon
+
+rotation:
+  x: 0    # deg, X-ekseni etrafında rotasyon (roll)
+  y: 0    # deg, Y-ekseni etrafında rotasyon (pitch)
+  z: 0    # deg, Z-ekseni etrafında rotasyon (yaw)
+</code></pre>
+<p><strong>Rotasyon Konvansiyonu</strong>: Rotasyonlar her eksen etrafındaki açılar olarak belirtilir:</p>
+<ul>
+<li><strong>rotation.x</strong> (roll): X-ekseni (boylamsal) etrafında rotasyon</li>
+<li><strong>rotation.y</strong> (pitch): Y-ekseni (yanal) etrafında rotasyon</li>
+<li><strong>rotation.z</strong> (yaw): Z-ekseni (dikey) etrafında rotasyon</li>
+</ul>
+<p>Tüm rotasyonlar sağ el kuralını takip eder.</p>
 <h2 id="birimler">Birimler</h2>
 <p>Belirsizliği önlemek için, standart bir dosyadaki tüm sayısal değerler (şemada aksi belirtilmedikçe) şu birimleri kullanmalıdır:</p>
 <table>

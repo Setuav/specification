@@ -23,9 +23,10 @@ Each section has the following properties:
 
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
-| **position_x** | `mm` | Longitudinal position from the nose tip (required). |
-| **position_y** | `mm` | Lateral offset from the XZ-plane (optional, default: 0). Fixed-wing UAVs typically use 0 (centerline). |
-| **position_z** | `mm` | Vertical offset from the XY-plane (optional, default: 0). |
+| **position** | `object` | Section position (required). |
+| **position.x** | `mm` | Longitudinal position from the nose tip. |
+| **position.y** | `mm` | Lateral offset from the XZ-plane (optional, default: 0). Fixed-wing UAVs typically use 0 (centerline). |
+| **position.z** | `mm` | Vertical offset from the XY-plane (optional, default: 0). |
 | **profile** | `object` | Cross-section shape definition (required). |
 | **pitch** | `deg` | Section tilt relative to X-axis (optional, default: 0). |
 | **roll** | `deg` | Profile rotation about X-axis (optional, default: 0). |
@@ -88,33 +89,37 @@ geometry:
     max_degree: 3     # Cubic B-spline
   
   sections:
-    - position_x: 0
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 0
+        y: 0
+        z: 0
       profile:
         type: "circle"  # Nose tip
         diameter: 1
     
-    - position_x: 150
-      position_y: 0
-      position_z: 10     # Raised cockpit
+    - position:
+        x: 150
+        y: 0
+        z: 10     # Raised cockpit
       profile:
         type: "ellipse"
         width: 80
         height: 100
       pitch: 0.0
     
-    - position_x: 600
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 600
+        y: 0
+        z: 0
       profile:
         type: "ellipse"
         width: 80
         height: 100
     
-    - position_x: 1200
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 1200
+        y: 0
+        z: 0
       profile:
         type: "circle"
         diameter: 20  # Tail boom

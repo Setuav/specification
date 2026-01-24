@@ -519,6 +519,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#konum_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yonelim" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -691,6 +702,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../propulsion/motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -760,6 +799,17 @@
         
           <li class="md-nav__item">
   <a href="#konum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#konum_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Konum
@@ -876,6 +926,7 @@
 </ul>
 <h2 id="yerlesim-parametreleri">Yerleşim Parametreleri</h2>
 <h3 id="konum">Konum</h3>
+<h3 id="konum_1">Konum</h3>
 <table>
 <thead>
 <tr>
@@ -886,17 +937,22 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>position_x</strong></td>
+<td style="text-align: left;"><strong>position</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Kanat yerleşimi pozisyonu (zorunlu).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>position.x</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Gövde boyunca boylamsal konum (burun ucundan mesafe).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_y</strong></td>
+<td style="text-align: left;"><strong>position.y</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Merkez hattından yanal ofset. Genellikle V-kuyruk veya asimetrik konfigürasyonlar için sıfırdan farklıdır.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_z</strong></td>
+<td style="text-align: left;"><strong>position.z</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Gövde referans hattından dikey ofset. Pozitif değerler kanadı yukarı kaldırır.</td>
 </tr>
@@ -913,19 +969,24 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>pitch_rotation</strong></td>
-<td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Y-ekseni (yanal eksen) etrafında rotasyon. Kanadın hücum açısını ayarlar (opsiyonel, varsayılan: 0).</td>
+<td style="text-align: left;"><strong>rotation</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Kanat yerleşimi rotasyonu (opsiyonel).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>roll_rotation</strong></td>
+<td style="text-align: left;"><strong>rotation.x</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">X-ekseni (boylamsal eksen) etrafında rotasyon. V-açı veya V-kuyruk konfigürasyonları için kullanılır. Pozitif rotasyon sağ kanadı yukarı doğru eğer (opsiyonel, varsayılan: 0).</td>
+<td style="text-align: left;">X-ekseni (boylamsal eksen, roll) etrafında rotasyon. V-açı veya V-kuyruk konfigürasyonları için kullanılır. Pozitif rotasyon sağ kanadı yukarı doğru eğer (opsiyonel, varsayılan: 0).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>yaw_rotation</strong></td>
+<td style="text-align: left;"><strong>rotation.y</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Z-ekseni (dikey eksen) etrafında rotasyon. Tüm kanat için global bir ok açısı etkisi yaratır (opsiyonel, varsayılan: 0).</td>
+<td style="text-align: left;">Y-ekseni (yanal eksen, pitch) etrafında rotasyon. Kanadın hücum açısını ayarlar (opsiyonel, varsayılan: 0).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rotation.z</strong></td>
+<td style="text-align: left;"><code>deg</code></td>
+<td style="text-align: left;">Z-ekseni (dikey eksen, yaw) etrafında rotasyon. Tüm kanat için global bir ok açısı etkisi yaratır (opsiyonel, varsayılan: 0).</td>
 </tr>
 </tbody>
 </table>
@@ -1003,14 +1064,16 @@
 <p>Tipik olarak, hücum kenarları hafif pozitif eğri (dışbükey) kullanırken, firar kenarları optimal aerodinamik için hafif negatif eğri (içbükey) kullanır.</p>
 <h2 id="ornek-konfigurasyon">Örnek Konfigürasyon</h2>
 <pre><code class="language-yaml">wings:
-  - name: &quot;Ana Kanat&quot;
+  - tag: &quot;main_wing&quot;
     attachment:
-      position_x: 450    # Burundan 450mm
-      position_y: 0      # Merkez hattı
-      position_z: 50     # Referanstan 50mm yukarı
-      pitch_rotation: 0  # Hücum açısı ofseti yok
-      roll_rotation: 2.0 # 2° V-açı
-      yaw_rotation: 0    # Global ok açısı yok
+      position:
+        x: 450    # Burundan 450mm
+        y: 0      # Merkez hattı
+        z: 50     # Referanstan 50mm yukarı
+      rotation:
+        x: 2.0    # 2° V-açı
+        y: 0      # Hücum açısı ofseti yok
+        z: 0      # Global ok açısı yok
       mirror: true       # Simetrik çift
       fairing:
         scale: 1.2
@@ -1024,22 +1087,26 @@
         max_degree: 3
         continuity: &quot;G2&quot;
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 240
-          pitch_rotation: 2.0
+          rotation:
+            y: 2.0
           airfoil: &quot;naca2412&quot;
         # Ek profiller...
 
-  - name: &quot;Yatay Stabilizer&quot;
+  - tag: &quot;horizontal_stabilizer&quot;
     attachment:
-      position_x: 1200   # Kuyruk yakını
-      position_y: 0
-      position_z: 120
-      pitch_rotation: 0
-      roll_rotation: 0
-      yaw_rotation: 0
+      position:
+        x: 1200   # Kuyruk yakını
+        y: 0
+        z: 120
+      rotation:
+        x: 0
+        y: 0
+        z: 0
       mirror: true       # Simetrik çift
       fairing:
         scale: 1.15
@@ -1053,11 +1120,13 @@
         max_degree: 3
         continuity: &quot;G2&quot;
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 150
-          pitch_rotation: 0
+          rotation:
+            y: 0
           airfoil: &quot;naca0012&quot;
         # Ek profiller...
 </code></pre>

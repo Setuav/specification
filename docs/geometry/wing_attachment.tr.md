@@ -18,19 +18,23 @@ Tüm yerleşim koordinatları `SETUAV_BODY` çerçevesine göre tanımlanır (ba
 
 ### Konum
 
+### Konum
+
 | Parametre | Birim | Açıklama |
 | :--- | :--- | :--- |
-| **position_x** | `mm` | Gövde boyunca boylamsal konum (burun ucundan mesafe). |
-| **position_y** | `mm` | Merkez hattından yanal ofset. Genellikle V-kuyruk veya asimetrik konfigürasyonlar için sıfırdan farklıdır. |
-| **position_z** | `mm` | Gövde referans hattından dikey ofset. Pozitif değerler kanadı yukarı kaldırır. |
+| **position** | `object` | Kanat yerleşimi pozisyonu (zorunlu). |
+| **position.x** | `mm` | Gövde boyunca boylamsal konum (burun ucundan mesafe). |
+| **position.y** | `mm` | Merkez hattından yanal ofset. Genellikle V-kuyruk veya asimetrik konfigürasyonlar için sıfırdan farklıdır. |
+| **position.z** | `mm` | Gövde referans hattından dikey ofset. Pozitif değerler kanadı yukarı kaldırır. |
 
 ### Yönelim
 
 | Parametre | Birim | Açıklama |
 | :--- | :--- | :--- |
-| **pitch_rotation** | `deg` | Y-ekseni (yanal eksen) etrafında rotasyon. Kanadın hücum açısını ayarlar (opsiyonel, varsayılan: 0). |
-| **roll_rotation** | `deg` | X-ekseni (boylamsal eksen) etrafında rotasyon. V-açı veya V-kuyruk konfigürasyonları için kullanılır. Pozitif rotasyon sağ kanadı yukarı doğru eğer (opsiyonel, varsayılan: 0). |
-| **yaw_rotation** | `deg` | Z-ekseni (dikey eksen) etrafında rotasyon. Tüm kanat için global bir ok açısı etkisi yaratır (opsiyonel, varsayılan: 0). |
+| **rotation** | `object` | Kanat yerleşimi rotasyonu (opsiyonel). |
+| **rotation.x** | `deg` | X-ekseni (boylamsal eksen, roll) etrafında rotasyon. V-açı veya V-kuyruk konfigürasyonları için kullanılır. Pozitif rotasyon sağ kanadı yukarı doğru eğer (opsiyonel, varsayılan: 0). |
+| **rotation.y** | `deg` | Y-ekseni (yanal eksen, pitch) etrafında rotasyon. Kanadın hücum açısını ayarlar (opsiyonel, varsayılan: 0). |
+| **rotation.z** | `deg` | Z-ekseni (dikey eksen, yaw) etrafında rotasyon. Tüm kanat için global bir ok açısı etkisi yaratır (opsiyonel, varsayılan: 0). |
 
 ### Simetri
 
@@ -75,12 +79,14 @@ Tipik olarak, hücum kenarları hafif pozitif eğri (dışbükey) kullanırken, 
 wings:
   - tag: "main_wing"
     attachment:
-      position_x: 450    # Burundan 450mm
-      position_y: 0      # Merkez hattı
-      position_z: 50     # Referanstan 50mm yukarı
-      pitch_rotation: 0  # Hücum açısı ofseti yok
-      roll_rotation: 2.0 # 2° V-açı
-      yaw_rotation: 0    # Global ok açısı yok
+      position:
+        x: 450    # Burundan 450mm
+        y: 0      # Merkez hattı
+        z: 50     # Referanstan 50mm yukarı
+      rotation:
+        x: 2.0    # 2° V-açı
+        y: 0      # Hücum açısı ofseti yok
+        z: 0      # Global ok açısı yok
       mirror: true       # Simetrik çift
       fairing:
         scale: 1.2
@@ -94,22 +100,26 @@ wings:
         max_degree: 3
         continuity: "G2"
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 240
-          pitch_rotation: 2.0
+          rotation:
+            y: 2.0
           airfoil: "naca2412"
         # Ek profiller...
 
   - tag: "horizontal_stabilizer"
     attachment:
-      position_x: 1200   # Kuyruk yakını
-      position_y: 0
-      position_z: 120
-      pitch_rotation: 0
-      roll_rotation: 0
-      yaw_rotation: 0
+      position:
+        x: 1200   # Kuyruk yakını
+        y: 0
+        z: 120
+      rotation:
+        x: 0
+        y: 0
+        z: 0
       mirror: true       # Simetrik çift
       fairing:
         scale: 1.15
@@ -123,11 +133,13 @@ wings:
         max_degree: 3
         continuity: "G2"
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 150
-          pitch_rotation: 0
+          rotation:
+            y: 0
           airfoil: "naca0012"
         # Ek profiller...
 ```

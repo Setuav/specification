@@ -331,6 +331,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#position-and-rotation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Position and Rotation Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#units" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -611,6 +622,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propulsion/motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -660,6 +699,17 @@
     <span class="md-ellipsis">
       
         Coordinate System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#position-and-rotation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Position and Rotation Structure
       
     </span>
   </a>
@@ -746,6 +796,25 @@
 </tbody>
 </table>
 <p><strong>Mirroring</strong>: By default, symmetry is assumed across the <strong>XZ-plane</strong> (Y = 0).</p>
+<h2 id="position-and-rotation-structure">Position and Rotation Structure</h2>
+<p>Throughout the standard, component positions and rotations are defined using a consistent nested structure:</p>
+<pre><code class="language-yaml">position:
+  x: 0    # mm, position along X-axis
+  y: 0    # mm, position along Y-axis
+  z: 0    # mm, position along Z-axis
+
+rotation:
+  x: 0    # deg, rotation around X-axis (roll)
+  y: 0    # deg, rotation around Y-axis (pitch)
+  z: 0    # deg, rotation around Z-axis (yaw)
+</code></pre>
+<p><strong>Rotation Convention</strong>: Rotations are specified as angles around each axis:</p>
+<ul>
+<li><strong>rotation.x</strong> (roll): Rotation around the X-axis (longitudinal)</li>
+<li><strong>rotation.y</strong> (pitch): Rotation around the Y-axis (lateral)</li>
+<li><strong>rotation.z</strong> (yaw): Rotation around the Z-axis (vertical)</li>
+</ul>
+<p>All rotations follow the right-hand rule.</p>
 <h2 id="units">Units</h2>
 <p>To avoid ambiguity, all numeric values in a standard file must use the following units unless explicitly specified otherwise in the schema:</p>
 <table>

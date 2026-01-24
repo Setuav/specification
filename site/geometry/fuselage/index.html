@@ -691,6 +691,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../propulsion/motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -887,17 +915,22 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>position_x</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Longitudinal position from the nose tip (required).</td>
+<td style="text-align: left;"><strong>position</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Section position (required).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_y</strong></td>
+<td style="text-align: left;"><strong>position.x</strong></td>
+<td style="text-align: left;"><code>mm</code></td>
+<td style="text-align: left;">Longitudinal position from the nose tip.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>position.y</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Lateral offset from the XZ-plane (optional, default: 0). Fixed-wing UAVs typically use 0 (centerline).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_z</strong></td>
+<td style="text-align: left;"><strong>position.z</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Vertical offset from the XY-plane (optional, default: 0).</td>
 </tr>
@@ -974,7 +1007,7 @@
 </table>
 <p><strong>Determinism Guarantee</strong>: Given identical sections and blend parameters, all compliant implementations must produce surfaces with equivalent cross-sections at any given x position (within tolerance ±0.1%).</p>
 <h2 id="example-configuration">Example Configuration</h2>
-<pre><code class="language-yaml">name: &quot;Main Fuselage&quot;
+<pre><code class="language-yaml">tag: &quot;main_fuselage&quot;
 type: &quot;fuselage&quot;
 geometry:
   blending:
@@ -982,33 +1015,37 @@ geometry:
     max_degree: 3     # Cubic B-spline
 
   sections:
-    - position_x: 0
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 0
+        y: 0
+        z: 0
       profile:
         type: &quot;circle&quot;  # Nose tip
         diameter: 1
 
-    - position_x: 150
-      position_y: 0
-      position_z: 10     # Raised cockpit
+    - position:
+        x: 150
+        y: 0
+        z: 10     # Raised cockpit
       profile:
         type: &quot;ellipse&quot;
         width: 80
         height: 100
       pitch: 0.0
 
-    - position_x: 600
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 600
+        y: 0
+        z: 0
       profile:
         type: &quot;ellipse&quot;
         width: 80
         height: 100
 
-    - position_x: 1200
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 1200
+        y: 0
+        z: 0
       profile:
         type: &quot;circle&quot;
         diameter: 20  # Tail boom

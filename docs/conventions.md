@@ -18,6 +18,30 @@ Setuav uses a fixed-body coordinate frame (often referred to as `SETUAV_BODY` in
 
 **Mirroring**: By default, symmetry is assumed across the **XZ-plane** (Y = 0).
 
+## Position and Rotation Structure
+
+Throughout the standard, component positions and rotations are defined using a consistent nested structure:
+
+```yaml
+position:
+  x: 0    # mm, position along X-axis
+  y: 0    # mm, position along Y-axis
+  z: 0    # mm, position along Z-axis
+
+rotation:
+  x: 0    # deg, rotation around X-axis (roll)
+  y: 0    # deg, rotation around Y-axis (pitch)
+  z: 0    # deg, rotation around Z-axis (yaw)
+```
+
+**Rotation Convention**: Rotations are specified as angles around each axis:
+
+- **rotation.x** (roll): Rotation around the X-axis (longitudinal)
+- **rotation.y** (pitch): Rotation around the Y-axis (lateral)
+- **rotation.z** (yaw): Rotation around the Z-axis (vertical)
+
+All rotations follow the right-hand rule.
+
 ## Units
 To avoid ambiguity, all numeric values in a standard file must use the following units unless explicitly specified otherwise in the schema:
 

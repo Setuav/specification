@@ -519,6 +519,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#position_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#orientation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -691,6 +702,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../propulsion/motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -760,6 +799,17 @@
         
           <li class="md-nav__item">
   <a href="#position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Position
@@ -876,6 +926,7 @@
 </ul>
 <h2 id="attachment-parameters">Attachment Parameters</h2>
 <h3 id="position">Position</h3>
+<h3 id="position_1">Position</h3>
 <table>
 <thead>
 <tr>
@@ -886,17 +937,22 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>position_x</strong></td>
+<td style="text-align: left;"><strong>position</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Wing attachment position (required).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>position.x</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Longitudinal position along fuselage (distance from nose tip).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_y</strong></td>
+<td style="text-align: left;"><strong>position.y</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Lateral offset from centerline. Typically non-zero for V-tail or asymmetric configurations.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_z</strong></td>
+<td style="text-align: left;"><strong>position.z</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Vertical offset from fuselage reference line. Positive values raise the wing.</td>
 </tr>
@@ -913,19 +969,24 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>pitch_rotation</strong></td>
-<td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Rotation around Y-axis (lateral axis). Adjusts wing incidence angle (optional, default: 0).</td>
+<td style="text-align: left;"><strong>rotation</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Wing attachment rotation (optional).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>roll_rotation</strong></td>
+<td style="text-align: left;"><strong>rotation.x</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Rotation around X-axis (longitudinal axis). Used for dihedral angle or V-tail configurations. Positive rotation tilts the right wing upward (optional, default: 0).</td>
+<td style="text-align: left;">Rotation around X-axis (longitudinal axis, roll). Used for dihedral angle or V-tail configurations. Positive rotation tilts the right wing upward (optional, default: 0).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>yaw_rotation</strong></td>
+<td style="text-align: left;"><strong>rotation.y</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Rotation around Z-axis (vertical axis). Creates a global sweep effect for the entire wing (optional, default: 0).</td>
+<td style="text-align: left;">Rotation around Y-axis (lateral axis, pitch). Adjusts wing incidence angle (optional, default: 0).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rotation.z</strong></td>
+<td style="text-align: left;"><code>deg</code></td>
+<td style="text-align: left;">Rotation around Z-axis (vertical axis, yaw). Creates a global sweep effect for the entire wing (optional, default: 0).</td>
 </tr>
 </tbody>
 </table>
@@ -1003,14 +1064,16 @@
 <p>Typically, leading edges use slight positive curve (convex) while trailing edges use slight negative curve (concave) for optimal aerodynamics.</p>
 <h2 id="example-configuration">Example Configuration</h2>
 <pre><code class="language-yaml">wings:
-  - name: &quot;Main Wing&quot;
+  - tag: &quot;main_wing&quot;
     attachment:
-      position_x: 450    # 450mm from nose
-      position_y: 0      # Centerline
-      position_z: 50     # 50mm above reference
-      pitch_rotation: 0  # No incidence offset
-      roll_rotation: 2.0 # 2° dihedral
-      yaw_rotation: 0    # No global sweep
+      position:
+        x: 450    # 450mm from nose
+        y: 0      # Centerline
+        z: 50     # 50mm above reference
+      rotation:
+        x: 2.0    # 2° dihedral
+        y: 0      # No incidence offset
+        z: 0      # No global sweep
       mirror: true       # Symmetric pair
       fairing:
         scale: 1.2
@@ -1024,22 +1087,26 @@
         max_degree: 3
         continuity: &quot;G2&quot;
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 240
-          pitch_rotation: 2.0
+          rotation:
+            y: 2.0
           airfoil: &quot;naca2412&quot;
         # Additional profiles...
 
-  - name: &quot;Horizontal Stabilizer&quot;
+  - tag: &quot;horizontal_stabilizer&quot;
     attachment:
-      position_x: 1200   # Near tail
-      position_y: 0
-      position_z: 120
-      pitch_rotation: 0
-      roll_rotation: 0
-      yaw_rotation: 0
+      position:
+        x: 1200   # Near tail
+        y: 0
+        z: 120
+      rotation:
+        x: 0
+        y: 0
+        z: 0
       mirror: true       # Symmetric pair
       fairing:
         scale: 1.15
@@ -1053,11 +1120,13 @@
         max_degree: 3
         continuity: &quot;G2&quot;
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 150
-          pitch_rotation: 0
+          rotation:
+            y: 0
           airfoil: &quot;naca0012&quot;
         # Additional profiles...
 </code></pre>

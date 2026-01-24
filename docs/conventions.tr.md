@@ -18,6 +18,30 @@ Setuav, sabit bir gövde koordinat çerçevesi kullanır (dokümantasyonda genel
 
 **Aynalama (Mirroring)**: Varsayılan olarak, **XZ-düzlemi** (Y = 0) boyunca simetri varsayılır.
 
+## Pozisyon ve Rotasyon Yapısı
+
+Standart boyunca, bileşen pozisyonları ve rotasyonları tutarlı bir iç içe (nested) yapı kullanılarak tanımlanır:
+
+```yaml
+position:
+  x: 0    # mm, X-ekseni boyunca pozisyon
+  y: 0    # mm, Y-ekseni boyunca pozisyon
+  z: 0    # mm, Z-ekseni boyunca pozisyon
+
+rotation:
+  x: 0    # deg, X-ekseni etrafında rotasyon (roll)
+  y: 0    # deg, Y-ekseni etrafında rotasyon (pitch)
+  z: 0    # deg, Z-ekseni etrafında rotasyon (yaw)
+```
+
+**Rotasyon Konvansiyonu**: Rotasyonlar her eksen etrafındaki açılar olarak belirtilir:
+
+- **rotation.x** (roll): X-ekseni (boylamsal) etrafında rotasyon
+- **rotation.y** (pitch): Y-ekseni (yanal) etrafında rotasyon
+- **rotation.z** (yaw): Z-ekseni (dikey) etrafında rotasyon
+
+Tüm rotasyonlar sağ el kuralını takip eder.
+
 ## Birimler
 Belirsizliği önlemek için, standart bir dosyadaki tüm sayısal değerler (şemada aksi belirtilmedikçe) şu birimleri kullanmalıdır:
 

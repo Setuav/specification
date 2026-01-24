@@ -57,6 +57,13 @@
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/"/>
     </url>
     <url>
+        <loc>Nonepropulsion/motor/</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/motor/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/motor/"/>
+    </url>
+    <url>
         <loc>Nonetr/</loc>
         <lastmod>2026-01-24</lastmod>
         <changefreq>daily</changefreq>
@@ -111,5 +118,12 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/"/>
+    </url>
+    <url>
+        <loc>Nonetr/propulsion/motor/</loc>
+        <lastmod>2026-01-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="tr" href="Nonetr/propulsion/motor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonepropulsion/motor/"/>
     </url>
 </urlset>

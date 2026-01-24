@@ -32,14 +32,16 @@ A wing is defined by a list of stations (profiles). Each station fully specifies
 
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
-| **position_x** | `mm` | Longitudinal position in wing-local frame (typically 0 for leading edge with no sweep angle, positive = aft). |
-| **position_y** | `mm` | Spanwise position from wing root (0 = root, increases toward tip). |
-| **position_z** | `mm` | Vertical position from wing reference plane (0 = reference, positive = up). |
+| **position** | `object` | Station position (required). |
+| **position.x** | `mm` | Longitudinal position in wing-local frame (typically 0 for leading edge with no sweep angle, positive = aft). |
+| **position.y** | `mm` | Spanwise position from wing root (0 = root, increases toward tip). |
+| **position.z** | `mm` | Vertical position from wing reference plane (0 = reference, positive = up). |
 | **chord** | `mm` | Chord length at this station. |
 | **airfoil** | `str\|obj` | Airfoil definition. Supports simple string format (e.g., `"naca2412"`) or detailed object format. See Airfoil Definition section for details. |
-| **pitch_rotation** | `deg` | Rotation around Y-axis (incidence/twist angle at this station, optional, default: 0). |
-| **roll_rotation** | `deg` | Rotation around X-axis (optional, default: 0). |
-| **yaw_rotation** | `deg` | Rotation around Z-axis (optional, default: 0). |
+| **rotation** | `object` | Station rotation (optional). |
+| **rotation.x** | `deg` | Rotation around X-axis (roll, optional, default: 0). |
+| **rotation.y** | `deg` | Rotation around Y-axis (pitch/incidence/twist angle at this station, optional, default: 0). |
+| **rotation.z** | `deg` | Rotation around Z-axis (yaw, optional, default: 0). |
 
 ### Airfoil Definition
 
@@ -136,27 +138,33 @@ geometry:
     continuity: "G2"
   
   profiles:
-    - position_x: 0        # Root profile at leading edge
-      position_y: 0
-      position_z: 0
+    - position:            # Root profile at leading edge
+        x: 0
+        y: 0
+        z: 0
       chord: 240
-      pitch_rotation: 2.0
+      rotation:
+        y: 2.0
       airfoil: "naca2412"  # Simple format
     
-    - position_x: 0        # Mid-span profile
-      position_y: 400
-      position_z: 0
+    - position:            # Mid-span profile
+        x: 0
+        y: 400
+        z: 0
       chord: 240
-      pitch_rotation: 2.0
+      rotation:
+        y: 2.0
       airfoil:              # Detailed format
         type: "naca"
         code: "2412"
     
-    - position_x: 35       # Tip profile (swept and dihedral)
-      position_y: 800
-      position_z: 35
+    - position:            # Tip profile (swept and dihedral)
+        x: 35
+        y: 800
+        z: 35
       chord: 180
-      pitch_rotation: -1.0  # Washout
+      rotation:
+        y: -1.0  # Washout
       airfoil:
         type: "naca"
         code: "0012"

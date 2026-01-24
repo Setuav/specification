@@ -39,11 +39,38 @@ Setuav Standardındaki motorlar, montajlarından bağımsız olarak tanımlanır
 | **mounting_screw** | `str` | Montaj vida tipi (opsiyonel, örn: "M2", "M3"). |
 | **mounting_spacing** | `str` | Montaj delik aralığı deseni (opsiyonel, örn: "16x16", "12x12", "19x19"). |
 
+## Motor Entegrasyonu
+
+### Bileşen Referansları
+
+| Parametre | Tip | Açıklama |
+| :--- | :--- | :--- |
+| **esc_ref** | `str` | Bu motoru kontrol eden ESC bileşeninin tag referansı (opsiyonel). |
+| **propeller_ref** | `str` | Bu motora monte edilen pervane bileşeninin tag referansı (opsiyonel). |
+
+### Yerleşim
+
+Motorlar placement nesnesi kullanılarak airframe'de konumlandırılır:
+
+| Parametre | Birim | Açıklama |
+| :--- | :--- | :--- |
+| **placement** | `object` | Motorun airframe'deki yerleşimi (opsiyonel). |
+| **placement.position** | `object` | Motorun SETUAV_BODY çerçevesindeki pozisyonu. |
+| **placement.position.x** | `mm` | Boylamsal pozisyon (burun ucundan mesafe). |
+| **placement.position.y** | `mm` | Yanal pozisyon (0 = merkez hattı, pozitif = sağ). |
+| **placement.position.z** | `mm` | Dikey pozisyon (pozitif = yukarı). |
+| **placement.rotation** | `object` | Motor yönelimi (itki vektörü yönü). |
+| **placement.rotation.x** | `deg` | X-ekseni etrafında rotasyon (roll, opsiyonel, varsayılan: 0). |
+| **placement.rotation.y** | `deg` | Y-ekseni etrafında rotasyon (pitch, opsiyonel, varsayılan: 0). |
+| **placement.rotation.z** | `deg` | Z-ekseni etrafında rotasyon (yaw, opsiyonel, varsayılan: 0). |
+
 ## Örnek Konfigürasyon
 
 ```yaml
 motors:
   - tag: "main_motor"
+    esc_ref: "main_esc"
+    propeller_ref: "main_prop"
     manufacturer: "Emax"
     model: "RS2205"
     kv: 2300
@@ -59,8 +86,19 @@ motors:
     shaft_length: 12
     mounting_screw: "M3"
     mounting_spacing: "16x16"
+    placement:
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
   
   - tag: "pusher_motor"
+    esc_ref: "pusher_esc"
+    propeller_ref: "pusher_prop"
     manufacturer: "T-Motor"
     model: "F60 PRO IV"
     kv: 1750
@@ -71,4 +109,13 @@ motors:
     mass: 62
     diameter: 28
     length: 37.3
+    placement:
+      position:
+        x: 1200
+        y: 0
+        z: 50
+      rotation:
+        x: 0
+        y: 0
+        z: 180  # Pusher konfigürasyonu
 ```

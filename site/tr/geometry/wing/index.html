@@ -691,6 +691,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../propulsion/motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -897,17 +925,22 @@ Kesitler, 3D kanat yüzeyini oluşturmak için parametrik yüzeylerle birbirine 
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>position_x</strong></td>
+<td style="text-align: left;"><strong>position</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Kesit pozisyonu (zorunlu).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>position.x</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Kanat-lokal çerçevede boylamsal konum (tipik olarak ok açısı olmayan hücum kenarı için 0, pozitif = arka).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_y</strong></td>
+<td style="text-align: left;"><strong>position.y</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Kanat kökünden açıklık yönünde konum (0 = kök, uca doğru artar).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>position_z</strong></td>
+<td style="text-align: left;"><strong>position.z</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
 <td style="text-align: left;">Kanat referans düzleminden dikey konum (0 = referans, pozitif = yukarı).</td>
 </tr>
@@ -922,19 +955,24 @@ Kesitler, 3D kanat yüzeyini oluşturmak için parametrik yüzeylerle birbirine 
 <td style="text-align: left;">Kanat profili tanımı. Basit string formatı (örn: <code>"naca2412"</code>) veya detaylı obje formatı desteklenir. Detaylar için Kanat Profili Tanımı bölümüne bakın.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>pitch_rotation</strong></td>
-<td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Y-ekseni etrafında rotasyon (bu istasyondaki hücum/burulma açısı, opsiyonel, varsayılan: 0).</td>
+<td style="text-align: left;"><strong>rotation</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Kesit rotasyonu (opsiyonel).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>roll_rotation</strong></td>
+<td style="text-align: left;"><strong>rotation.x</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">X-ekseni etrafında rotasyon (opsiyonel, varsayılan: 0).</td>
+<td style="text-align: left;">X-ekseni etrafında rotasyon (roll, opsiyonel, varsayılan: 0).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>yaw_rotation</strong></td>
+<td style="text-align: left;"><strong>rotation.y</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Z-ekseni etrafında rotasyon (opsiyonel, varsayılan: 0).</td>
+<td style="text-align: left;">Y-ekseni etrafında rotasyon (pitch/hücum/burulma açısı, opsiyonel, varsayılan: 0).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rotation.z</strong></td>
+<td style="text-align: left;"><code>deg</code></td>
+<td style="text-align: left;">Z-ekseni etrafında rotasyon (yaw, opsiyonel, varsayılan: 0).</td>
 </tr>
 </tbody>
 </table>
@@ -1038,9 +1076,9 @@ airfoil:
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>name</strong></td>
+<td style="text-align: left;"><strong>tag</strong></td>
 <td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">Kontrol yüzeyinin adı (örn: "Sol Aileron", "Flap").</td>
+<td style="text-align: left;">Kontrol yüzeyinin benzersiz tanımlayıcısı (örn: "left_aileron", "flap").</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>type</strong></td>
@@ -1067,20 +1105,20 @@ airfoil:
 <p><strong>Not</strong>: Menteşe hattı, kontrol yüzeyi başlangıcında (firar kenarından <code>chord</code> mm mesafede) implicit olarak tanımlanır.</p>
 <h3 id="ornek-kontrol-yuzeyi-tanm">Örnek Kontrol Yüzeyi Tanımı</h3>
 <pre><code class="language-yaml">control_surfaces:
-  - name: &quot;Sol Aileron&quot;
+  - tag: &quot;left_aileron&quot;
     type: &quot;aileron&quot;
     span_start: 500    # Kökten 500mm'de başlar
     span_end: 800      # Kökten 800mm'de biter
     chord: 60          # 60mm veter uzunluğu
 
-  - name: &quot;Flap&quot;
+  - tag: &quot;flap&quot;
     type: &quot;flap&quot;
     span_start: 100
     span_end: 450
     chord: 75
 </code></pre>
 <h2 id="ornek-konfigurasyon">Örnek Konfigürasyon</h2>
-<pre><code class="language-yaml">name: &quot;Ana Kanat&quot;
+<pre><code class="language-yaml">tag: &quot;main_wing&quot;
 type: &quot;wing&quot;
 geometry:
   blending:
@@ -1089,39 +1127,45 @@ geometry:
     continuity: &quot;G2&quot;
 
   profiles:
-    - position_x: 0        # Hücum kenarında kök profili
-      position_y: 0
-      position_z: 0
+    - position:            # Hücum kenarında kök profili
+        x: 0
+        y: 0
+        z: 0
       chord: 240
-      pitch_rotation: 2.0
+      rotation:
+        y: 2.0
       airfoil: &quot;naca2412&quot;  # Basit format
 
-    - position_x: 0        # Orta-açıklık profili
-      position_y: 400
-      position_z: 0
+    - position:            # Orta-açıklık profili
+        x: 0
+        y: 400
+        z: 0
       chord: 240
-      pitch_rotation: 2.0
+      rotation:
+        y: 2.0
       airfoil:              # Detaylı format
         type: &quot;naca&quot;
         code: &quot;2412&quot;
 
-    - position_x: 35       # Uç profili (ok açılı ve V-açılı)
-      position_y: 800
-      position_z: 35
+    - position:            # Uç profili (ok açılı ve V-açılı)
+        x: 35
+        y: 800
+        z: 35
       chord: 180
-      pitch_rotation: -1.0  # Washout
+      rotation:
+        y: -1.0  # Washout
       airfoil:
         type: &quot;naca&quot;
         code: &quot;0012&quot;
 
   control_surfaces:
-    - name: &quot;Sol Aileron&quot;
+    - tag: &quot;left_aileron&quot;
       type: &quot;aileron&quot;
       span_start: 500
       span_end: 800
       chord: 60
 
-    - name: &quot;Flap&quot;
+    - tag: &quot;flap&quot;
       type: &quot;flap&quot;
       span_start: 100
       span_end: 450

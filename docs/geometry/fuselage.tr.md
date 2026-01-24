@@ -23,9 +23,10 @@ Her kesitin aşağıdaki özellikleri vardır:
 
 | Parametre | Birim | Açıklama |
 | :--- | :--- | :--- |
-| **position_x** | `mm` | Burun ucundan boylamsal konum (zorunlu). |
-| **position_y** | `mm` | XZ-düzleminden yanal ofset (opsiyonel, varsayılan: 0). Sabit kanatlı İHA'lar tipik olarak 0 kullanır (merkez hattı). |
-| **position_z** | `mm` | XY-düzleminden dikey ofset (opsiyonel, varsayılan: 0). |
+| **position** | `object` | Kesit pozisyonu (zorunlu). |
+| **position.x** | `mm` | Burun ucundan boylamsal konum. |
+| **position.y** | `mm` | XZ-düzleminden yanal ofset (opsiyonel, varsayılan: 0). Sabit kanatlı İHA'lar tipik olarak 0 kullanır (merkez hattı). |
+| **position.z** | `mm` | XY-düzleminden dikey ofset (opsiyonel, varsayılan: 0). |
 | **profile** | `object` | Kesit şekil tanımı (zorunlu). |
 | **pitch** | `deg` | Kesit eğimi, X-eksenine göre (opsiyonel, varsayılan: 0). |
 | **roll** | `deg` | Profil rotasyonu, X-ekseni etrafında (opsiyonel, varsayılan: 0). |
@@ -88,33 +89,37 @@ geometry:
     max_degree: 3     # Kübik B-spline
   
   sections:
-    - position_x: 0
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 0
+        y: 0
+        z: 0
       profile:
         type: "circle"  # Burun ucu
         diameter: 1 
     
-    - position_x: 150
-      position_y: 0
-      position_z: 10     # Yükseltilmiş kokpit
+    - position:
+        x: 150
+        y: 0
+        z: 10     # Yükseltilmiş kokpit
       profile:
         type: "ellipse"
         width: 80
         height: 100
       pitch: 0.0
     
-    - position_x: 600
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 600
+        y: 0
+        z: 0
       profile:
         type: "ellipse"
         width: 80
         height: 100
     
-    - position_x: 1200
-      position_y: 0
-      position_z: 0
+    - position:
+        x: 1200
+        y: 0
+        z: 0
       profile:
         type: "circle"
         diameter: 20  # Kuyruk borusu

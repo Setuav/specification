@@ -31,14 +31,16 @@ Bir kanat, bir kesit (profil) listesi ile tanımlanır. Her kesit, konumunu ve y
 
 | Parametre | Birim | Açıklama |
 | :--- | :--- | :--- |
-| **position_x** | `mm` | Kanat-lokal çerçevede boylamsal konum (tipik olarak ok açısı olmayan hücum kenarı için 0, pozitif = arka). |
-| **position_y** | `mm` | Kanat kökünden açıklık yönünde konum (0 = kök, uca doğru artar). |
-| **position_z** | `mm` | Kanat referans düzleminden dikey konum (0 = referans, pozitif = yukarı). |
+| **position** | `object` | Kesit pozisyonu (zorunlu). |
+| **position.x** | `mm` | Kanat-lokal çerçevede boylamsal konum (tipik olarak ok açısı olmayan hücum kenarı için 0, pozitif = arka). |
+| **position.y** | `mm` | Kanat kökünden açıklık yönünde konum (0 = kök, uca doğru artar). |
+| **position.z** | `mm` | Kanat referans düzleminden dikey konum (0 = referans, pozitif = yukarı). |
 | **chord** | `mm` | Bu istasyondaki veter uzunluğu. |
 | **airfoil** | `str\|obj` | Kanat profili tanımı. Basit string formatı (örn: `"naca2412"`) veya detaylı obje formatı desteklenir. Detaylar için Kanat Profili Tanımı bölümüne bakın. |
-| **pitch_rotation** | `deg` | Y-ekseni etrafında rotasyon (bu istasyondaki hücum/burulma açısı, opsiyonel, varsayılan: 0). |
-| **roll_rotation** | `deg` | X-ekseni etrafında rotasyon (opsiyonel, varsayılan: 0). |
-| **yaw_rotation** | `deg` | Z-ekseni etrafında rotasyon (opsiyonel, varsayılan: 0). |
+| **rotation** | `object` | Kesit rotasyonu (opsiyonel). |
+| **rotation.x** | `deg` | X-ekseni etrafında rotasyon (roll, opsiyonel, varsayılan: 0). |
+| **rotation.y** | `deg` | Y-ekseni etrafında rotasyon (pitch/hücum/burulma açısı, opsiyonel, varsayılan: 0). |
+| **rotation.z** | `deg` | Z-ekseni etrafında rotasyon (yaw, opsiyonel, varsayılan: 0). |
 
 ### Kanat Profili Tanımı
 
@@ -135,27 +137,33 @@ geometry:
     continuity: "G2"
   
   profiles:
-    - position_x: 0        # Hücum kenarında kök profili
-      position_y: 0
-      position_z: 0
+    - position:            # Hücum kenarında kök profili
+        x: 0
+        y: 0
+        z: 0
       chord: 240
-      pitch_rotation: 2.0
+      rotation:
+        y: 2.0
       airfoil: "naca2412"  # Basit format
     
-    - position_x: 0        # Orta-açıklık profili
-      position_y: 400
-      position_z: 0
+    - position:            # Orta-açıklık profili
+        x: 0
+        y: 400
+        z: 0
       chord: 240
-      pitch_rotation: 2.0
+      rotation:
+        y: 2.0
       airfoil:              # Detaylı format
         type: "naca"
         code: "2412"
     
-    - position_x: 35       # Uç profili (ok açılı ve V-açılı)
-      position_y: 800
-      position_z: 35
+    - position:            # Uç profili (ok açılı ve V-açılı)
+        x: 35
+        y: 800
+        z: 35
       chord: 180
-      pitch_rotation: -1.0  # Washout
+      rotation:
+        y: -1.0  # Washout
       airfoil:
         type: "naca"
         code: "0012"

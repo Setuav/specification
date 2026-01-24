@@ -18,19 +18,23 @@ All attachment coordinates are relative to the `SETUAV_BODY` frame (origin at fu
 
 ### Position
 
+### Position
+
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
-| **position_x** | `mm` | Longitudinal position along fuselage (distance from nose tip). |
-| **position_y** | `mm` | Lateral offset from centerline. Typically non-zero for V-tail or asymmetric configurations. |
-| **position_z** | `mm` | Vertical offset from fuselage reference line. Positive values raise the wing. |
+| **position** | `object` | Wing attachment position (required). |
+| **position.x** | `mm` | Longitudinal position along fuselage (distance from nose tip). |
+| **position.y** | `mm` | Lateral offset from centerline. Typically non-zero for V-tail or asymmetric configurations. |
+| **position.z** | `mm` | Vertical offset from fuselage reference line. Positive values raise the wing. |
 
 ### Orientation
 
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
-| **pitch_rotation** | `deg` | Rotation around Y-axis (lateral axis). Adjusts wing incidence angle (optional, default: 0). |
-| **roll_rotation** | `deg` | Rotation around X-axis (longitudinal axis). Used for dihedral angle or V-tail configurations. Positive rotation tilts the right wing upward (optional, default: 0). |
-| **yaw_rotation** | `deg` | Rotation around Z-axis (vertical axis). Creates a global sweep effect for the entire wing (optional, default: 0). |
+| **rotation** | `object` | Wing attachment rotation (optional). |
+| **rotation.x** | `deg` | Rotation around X-axis (longitudinal axis, roll). Used for dihedral angle or V-tail configurations. Positive rotation tilts the right wing upward (optional, default: 0). |
+| **rotation.y** | `deg` | Rotation around Y-axis (lateral axis, pitch). Adjusts wing incidence angle (optional, default: 0). |
+| **rotation.z** | `deg` | Rotation around Z-axis (vertical axis, yaw). Creates a global sweep effect for the entire wing (optional, default: 0). |
 
 ### Symmetry
 
@@ -75,12 +79,14 @@ Typically, leading edges use slight positive curve (convex) while trailing edges
 wings:
   - tag: "main_wing"
     attachment:
-      position_x: 450    # 450mm from nose
-      position_y: 0      # Centerline
-      position_z: 50     # 50mm above reference
-      pitch_rotation: 0  # No incidence offset
-      roll_rotation: 2.0 # 2° dihedral
-      yaw_rotation: 0    # No global sweep
+      position:
+        x: 450    # 450mm from nose
+        y: 0      # Centerline
+        z: 50     # 50mm above reference
+      rotation:
+        x: 2.0    # 2° dihedral
+        y: 0      # No incidence offset
+        z: 0      # No global sweep
       mirror: true       # Symmetric pair
       fairing:
         scale: 1.2
@@ -94,22 +100,26 @@ wings:
         max_degree: 3
         continuity: "G2"
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 240
-          pitch_rotation: 2.0
+          rotation:
+            y: 2.0
           airfoil: "naca2412"
         # Additional profiles...
 
   - tag: "horizontal_stabilizer"
     attachment:
-      position_x: 1200   # Near tail
-      position_y: 0
-      position_z: 120
-      pitch_rotation: 0
-      roll_rotation: 0
-      yaw_rotation: 0
+      position:
+        x: 1200   # Near tail
+        y: 0
+        z: 120
+      rotation:
+        x: 0
+        y: 0
+        z: 0
       mirror: true       # Symmetric pair
       fairing:
         scale: 1.15
@@ -123,11 +133,13 @@ wings:
         max_degree: 3
         continuity: "G2"
       profiles:
-        - position_x: 0
-          position_y: 0
-          position_z: 0
+        - position:
+            x: 0
+            y: 0
+            z: 0
           chord: 150
-          pitch_rotation: 0
+          rotation:
+            y: 0
           airfoil: "naca0012"
         # Additional profiles...
 ```

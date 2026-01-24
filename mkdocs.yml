@@ -50,6 +50,7 @@ plugins:
             Motor: Motor
             Propeller: Pervane
             ESC: ESC
+            Battery: Pil
 
 nav:
   - Introduction: index.md
@@ -64,3 +65,4 @@ nav:
     - Motor: propulsion/motor.md
     - ESC: propulsion/esc.md
     - Propeller: propulsion/propeller.md
+    - Battery: propulsion/battery.md

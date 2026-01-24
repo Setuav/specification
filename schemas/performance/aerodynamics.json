@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/performance/aerodynamics.json",
+    "title": "Aerodynamic Performance Schema",
+    "type": "object",
+    "properties": {
+        "cl_max": {
+            "type": "number",
+            "description": "Maximum lift coefficient (dimensionless)"
+        },
+        "cl_max_alpha": {
+            "type": "number",
+            "description": "Angle of attack at CL max (degrees)"
+        },
+        "cd_min": {
+            "type": "number",
+            "description": "Minimum drag coefficient (dimensionless)"
+        },
+        "ld_max": {
+            "type": "number",
+            "description": "Maximum L/D ratio (dimensionless)"
+        },
+        "ld_max_alpha": {
+            "type": "number",
+            "description": "Angle of attack at L/D max (degrees)"
+        },
+        "span": {
+            "type": "number",
+            "description": "Reference span (mm)"
+        },
+        "area": {
+            "type": "number",
+            "description": "Reference area (mm^2)"
+        },
+        "aspect_ratio": {
+            "type": "number",
+            "description": "Aspect ratio (dimensionless)"
+        },
+        "mean_chord": {
+            "type": "number",
+            "description": "Mean aerodynamic chord (mm)"
+        },
+        "operating_velocity": {
+            "type": "number",
+            "description": "Analysis velocity (m/s)"
+        },
+        "reynolds_number": {
+            "type": "number",
+            "description": "Approximate Reynolds number"
+        },
+        "polars": {
+            "type": "object",
+            "properties": {
+                "alphas": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Angles of attack (degrees)"
+                },
+                "cl_values": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Lift coefficients"
+                },
+                "cd_values": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Drag coefficients"
+                },
+                "ld_values": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "L/D ratios"
+                }
+            }
+        }
+    }
+}

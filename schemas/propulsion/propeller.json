@@ -1,0 +1,107 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/propulsion/propeller.json",
+    "title": "Propeller Schema",
+    "type": "object",
+    "properties": {
+        "tag": {
+            "$ref": "../common.json#/definitions/tag"
+        },
+        "type": {
+            "const": "propeller"
+        },
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "diameter": {
+            "type": "number",
+            "minimum": 0
+        },
+        "pitch": {
+            "type": "number",
+            "minimum": 0
+        },
+        "blade_count": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "direction": {
+            "enum": [
+                "CW",
+                "CCW"
+            ]
+        },
+        "hub_diameter": {
+            "type": "number",
+            "minimum": 0
+        },
+        "hub_thickness": {
+            "type": "number",
+            "minimum": 0
+        },
+        "mass": {
+            "$ref": "../common.json#/definitions/mass"
+        },
+        "material": {
+            "type": "string"
+        },
+        "thrust_data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "rpm": {
+                        "type": "number"
+                    },
+                    "thrust_n": {
+                        "type": "number"
+                    },
+                    "torque_nm": {
+                        "type": "number"
+                    },
+                    "power_w": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "rpm",
+                    "thrust_n"
+                ]
+            }
+        },
+        "efficiency_data": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "velocity_ms": {
+                        "type": "number"
+                    },
+                    "efficiency": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                    },
+                    "advance_ratio": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "velocity_ms",
+                    "efficiency"
+                ]
+            }
+        }
+    },
+    "required": [
+        "tag",
+        "diameter",
+        "pitch",
+        "blade_count",
+        "direction",
+        "mass"
+    ]
+}

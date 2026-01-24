@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/performance/flight.json",
+    "title": "Flight Performance Schema",
+    "type": "object",
+    "properties": {
+        "stall_speed": {
+            "type": "number",
+            "description": "Stall speed (m/s)"
+        },
+        "cruise_speed": {
+            "type": "number",
+            "description": "Cruise speed (m/s)"
+        },
+        "max_speed": {
+            "type": "number",
+            "description": "Maximum achievable speed (m/s)"
+        },
+        "max_climb_rate": {
+            "type": "number",
+            "description": "Maximum rate of climb (m/s)"
+        },
+        "cruise_performance": {
+            "type": "object",
+            "properties": {
+                "power_required": {
+                    "type": "number",
+                    "description": "Power required at cruise (W)"
+                },
+                "current_draw": {
+                    "type": "number",
+                    "description": "Current draw at cruise (A)"
+                },
+                "throttle": {
+                    "type": "number",
+                    "description": "Throttle percentage at cruise (0-100)"
+                },
+                "endurance_hours": {
+                    "type": "number",
+                    "description": "Flight endurance at cruise (hours)"
+                },
+                "range_km": {
+                    "type": "number",
+                    "description": "Flight range at cruise (km)"
+                }
+            }
+        },
+        "curves": {
+            "type": "object",
+            "properties": {
+                "velocities": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Velocity points (m/s)"
+                },
+                "power_required": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Power required (W)"
+                },
+                "power_available": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Power available (W)"
+                },
+                "thrust_required": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Thrust required (N)"
+                },
+                "thrust_available": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Thrust available (N)"
+                }
+            }
+        }
+    }
+}

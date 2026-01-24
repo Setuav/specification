@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/report.json",
+    "title": "Setuav Performance Report Schema",
+    "type": "object",
+    "properties": {
+        "setuav_report": {
+            "type": "string",
+            "enum": [
+                "1.0"
+            ]
+        },
+        "design_ref": {
+            "type": "string",
+            "description": "Reference to the design file or tag"
+        },
+        "aerodynamics": {
+            "$ref": "performance/aerodynamics.json"
+        },
+        "stability": {
+            "$ref": "performance/stability.json"
+        },
+        "flight": {
+            "$ref": "performance/flight.json"
+        },
+        "propulsion": {
+            "$ref": "performance/propulsion.json"
+        }
+    },
+    "required": [
+        "setuav_report"
+    ]
+}

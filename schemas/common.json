@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://setuav.com/schemas/common.json",
+  "title": "Setuav Common Definitions",
+  "definitions": {
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number", "description": "Longitudinal position in mm" },
+        "y": { "type": "number", "description": "Lateral position in mm", "default": 0 },
+        "z": { "type": "number", "description": "Vertical position in mm", "default": 0 }
+      },
+      "required": ["x"]
+    },
+    "rotation": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number", "description": "Rotation around X-axis (roll) in degrees", "default": 0 },
+        "y": { "type": "number", "description": "Rotation around Y-axis (pitch) in degrees", "default": 0 },
+        "z": { "type": "number", "description": "Rotation around Z-axis (yaw) in degrees", "default": 0 }
+      }
+    },
+    "tag": {
+      "type": "string",
+      "description": "Unique identifier for the component"
+    },
+    "mass": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Mass in grams"
+    },
+    "placement": {
+      "type": "object",
+      "properties": {
+        "position": { "$ref": "#/definitions/position" },
+        "rotation": { "$ref": "#/definitions/rotation" }
+      }
+    }
+  }
+}

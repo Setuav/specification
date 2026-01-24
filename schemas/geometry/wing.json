@@ -1,0 +1,197 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/geometry/wing.json",
+    "title": "Wing Geometry Schema",
+    "type": "object",
+    "properties": {
+        "tag": {
+            "$ref": "../common.json#/definitions/tag"
+        },
+        "mass": {
+            "$ref": "../common.json#/definitions/mass"
+        },
+        "type": {
+            "const": "wing"
+        },
+        "geometry": {
+            "type": "object",
+            "properties": {
+                "blending": {
+                    "type": "object",
+                    "properties": {
+                        "ruled": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "max_degree": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 8,
+                            "default": 3
+                        },
+                        "continuity": {
+                            "enum": [
+                                "G0",
+                                "G1",
+                                "G2"
+                            ],
+                            "default": "G2"
+                        }
+                    }
+                },
+                "profiles": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "position": {
+                                "$ref": "../common.json#/definitions/position"
+                            },
+                            "chord": {
+                                "type": "number",
+                                "minimum": 0
+                            },
+                            "rotation": {
+                                "$ref": "../common.json#/definitions/rotation"
+                            },
+                            "airfoil": {
+                                "oneOf": [
+                                    {
+                                        "type": "string",
+                                        "description": "NACA code as string, e.g. 'naca2412'"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "enum": [
+                                                    "naca",
+                                                    "file",
+                                                    "coordinates"
+                                                ]
+                                            },
+                                            "code": {
+                                                "type": "string"
+                                            },
+                                            "path": {
+                                                "type": "string"
+                                            },
+                                            "points": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "number"
+                                                    },
+                                                    "minItems": 2,
+                                                    "maxItems": 2
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "type"
+                                        ],
+                                        "allOf": [
+                                            {
+                                                "if": {
+                                                    "properties": {
+                                                        "type": {
+                                                            "const": "naca"
+                                                        }
+                                                    }
+                                                },
+                                                "then": {
+                                                    "required": [
+                                                        "code"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "if": {
+                                                    "properties": {
+                                                        "type": {
+                                                            "const": "file"
+                                                        }
+                                                    }
+                                                },
+                                                "then": {
+                                                    "required": [
+                                                        "path"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "if": {
+                                                    "properties": {
+                                                        "type": {
+                                                            "const": "coordinates"
+                                                        }
+                                                    }
+                                                },
+                                                "then": {
+                                                    "required": [
+                                                        "points"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "position",
+                            "chord",
+                            "airfoil"
+                        ]
+                    },
+                    "minItems": 2
+                },
+                "control_surfaces": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "tag": {
+                                "$ref": "../common.json#/definitions/tag"
+                            },
+                            "type": {
+                                "enum": [
+                                    "aileron",
+                                    "flap",
+                                    "elevator",
+                                    "rudder"
+                                ]
+                            },
+                            "span_start": {
+                                "type": "number"
+                            },
+                            "span_end": {
+                                "type": "number"
+                            },
+                            "chord": {
+                                "type": "number",
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "tag",
+                            "type",
+                            "span_start",
+                            "span_end",
+                            "chord"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "profiles"
+            ]
+        }
+    },
+    "required": [
+        "tag",
+        "type",
+        "geometry"
+    ]
+}

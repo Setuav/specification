@@ -1,0 +1,107 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/propulsion/battery.json",
+    "title": "Battery Schema",
+    "type": "object",
+    "properties": {
+        "tag": {
+            "$ref": "../common.json#/definitions/tag"
+        },
+        "type": {
+            "const": "battery"
+        },
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "chemistry": {
+            "enum": [
+                "LiPo",
+                "LiHV",
+                "LiFe",
+                "Li-ion",
+                "NiMH",
+                "NiCd"
+            ]
+        },
+        "cells": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "voltage_nominal": {
+            "type": "number",
+            "minimum": 0
+        },
+        "voltage_full": {
+            "type": "number",
+            "minimum": 0
+        },
+        "voltage_cutoff": {
+            "type": "number",
+            "minimum": 0
+        },
+        "capacity": {
+            "type": "number",
+            "minimum": 0
+        },
+        "discharge_rate": {
+            "type": "number",
+            "minimum": 0
+        },
+        "discharge_burst": {
+            "type": "number",
+            "minimum": 0
+        },
+        "charge_rate": {
+            "type": "number",
+            "minimum": 0,
+            "default": 1
+        },
+        "resistance": {
+            "type": "number",
+            "minimum": 0
+        },
+        "mass": {
+            "$ref": "../common.json#/definitions/mass"
+        },
+        "dimensions": {
+            "type": "object",
+            "properties": {
+                "length": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "width": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "height": {
+                    "type": "number",
+                    "minimum": 0
+                }
+            },
+            "required": [
+                "length",
+                "width",
+                "height"
+            ]
+        },
+        "placement": {
+            "$ref": "../common.json#/definitions/placement"
+        }
+    },
+    "required": [
+        "tag",
+        "chemistry",
+        "cells",
+        "voltage_nominal",
+        "voltage_full",
+        "voltage_cutoff",
+        "capacity",
+        "discharge_rate",
+        "mass",
+        "dimensions"
+    ]
+}

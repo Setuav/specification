@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/propulsion/motor.json",
+    "title": "Motor Schema",
+    "type": "object",
+    "properties": {
+        "tag": {
+            "$ref": "../common.json#/definitions/tag"
+        },
+        "type": {
+            "const": "motor"
+        },
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "kv": {
+            "type": "number",
+            "minimum": 0
+        },
+        "voltage_min": {
+            "type": "number",
+            "minimum": 0
+        },
+        "voltage_max": {
+            "type": "number",
+            "minimum": 0
+        },
+        "current_max": {
+            "type": "number",
+            "minimum": 0
+        },
+        "resistance": {
+            "type": "number",
+            "minimum": 0
+        },
+        "no_load_current": {
+            "type": "number",
+            "minimum": 0,
+            "default": 0
+        },
+        "mass": {
+            "$ref": "../common.json#/definitions/mass"
+        },
+        "diameter": {
+            "type": "number",
+            "minimum": 0
+        },
+        "length": {
+            "type": "number",
+            "minimum": 0
+        },
+        "shaft_diameter": {
+            "type": "number",
+            "minimum": 0
+        },
+        "shaft_length": {
+            "type": "number",
+            "minimum": 0
+        },
+        "mounting_screw": {
+            "type": "string"
+        },
+        "mounting_spacing": {
+            "type": "string"
+        },
+        "esc_ref": {
+            "type": "string"
+        },
+        "propeller_ref": {
+            "type": "string"
+        },
+        "placement": {
+            "$ref": "../common.json#/definitions/placement"
+        }
+    },
+    "required": [
+        "tag",
+        "kv",
+        "voltage_min",
+        "voltage_max",
+        "current_max",
+        "resistance",
+        "mass"
+    ]
+}

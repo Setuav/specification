@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/performance/propulsion.json",
+    "title": "Propulsion Performance Schema",
+    "type": "object",
+    "properties": {
+        "static_thrust_max": {
+            "type": "number",
+            "description": "Maximum static thrust (g)"
+        },
+        "static_power_max": {
+            "type": "number",
+            "description": "Maximum static power consumption (W)"
+        },
+        "static_current_max": {
+            "type": "number",
+            "description": "Maximum static current (A)"
+        },
+        "static_efficiency": {
+            "type": "number",
+            "description": "System efficiency at max thrust (g/W)"
+        },
+        "pitch_speed": {
+            "type": "number",
+            "description": "Theoretical pitch speed (m/s)"
+        },
+        "thrust_to_weight": {
+            "type": "number",
+            "description": "Thrust to weight ratio"
+        },
+        "hover_throttle": {
+            "type": "number",
+            "description": "Throttle required for hover (0-100)"
+        },
+        "hover_time": {
+            "type": "number",
+            "description": "Estimated hover time (minutes)"
+        },
+        "curves": {
+            "type": "object",
+            "properties": {
+                "rpm": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "RPM points"
+                },
+                "thrust": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Thrust (g)"
+                },
+                "power": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Power (W)"
+                },
+                "current": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Current (A)"
+                },
+                "efficiency": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "description": "Efficiency (g/W)"
+                }
+            }
+        }
+    }
+}

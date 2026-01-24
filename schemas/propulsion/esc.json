@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://setuav.com/schemas/propulsion/esc.json",
+    "title": "ESC Schema",
+    "type": "object",
+    "properties": {
+        "tag": {
+            "$ref": "../common.json#/definitions/tag"
+        },
+        "type": {
+            "const": "esc"
+        },
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "current_max": {
+            "type": "number",
+            "minimum": 0
+        },
+        "current_burst": {
+            "type": "number",
+            "minimum": 0
+        },
+        "voltage_min": {
+            "type": "number",
+            "minimum": 0
+        },
+        "voltage_max": {
+            "type": "number",
+            "minimum": 0
+        },
+        "resistance": {
+            "type": "number",
+            "minimum": 0
+        },
+        "bec_voltage": {
+            "type": "number",
+            "minimum": 0
+        },
+        "bec_current": {
+            "type": "number",
+            "minimum": 0
+        },
+        "protocol": {
+            "enum": [
+                "PWM",
+                "OneShot125",
+                "OneShot42",
+                "MultiShot",
+                "DShot150",
+                "DShot300",
+                "DShot600",
+                "DShot1200"
+            ]
+        },
+        "firmware": {
+            "type": "string"
+        },
+        "telemetry": {
+            "type": "boolean",
+            "default": false
+        },
+        "mass": {
+            "$ref": "../common.json#/definitions/mass"
+        },
+        "dimensions": {
+            "type": "object",
+            "properties": {
+                "length": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "width": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "height": {
+                    "type": "number",
+                    "minimum": 0
+                }
+            }
+        },
+        "placement": {
+            "$ref": "../common.json#/definitions/placement"
+        }
+    },
+    "required": [
+        "tag",
+        "current_max",
+        "voltage_min",
+        "voltage_max",
+        "mass"
+    ]
+}

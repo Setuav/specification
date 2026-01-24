@@ -30,6 +30,18 @@ theme:
     - navigation.tracking
     - navigation.sections
 
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
+  - javascripts/katex.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
+
 plugins:
   - i18n:
       languages:
@@ -51,6 +63,7 @@ plugins:
             Propeller: Pervane
             ESC: ESC
             Battery: Pil
+            Mass and Additional Parts: Kütle ve Ek Parçalar
 
 nav:
   - Introduction: index.md
@@ -66,3 +79,4 @@ nav:
     - ESC: propulsion/esc.md
     - Propeller: propulsion/propeller.md
     - Battery: propulsion/battery.md
+  - Mass and Additional Parts: mass.md

@@ -41,13 +41,6 @@ Setuav Standardındaki piller, elektriksel özellikleri ve yerleşim bilgileriyl
 | **dimensions.width** | `mm` | Genişlik. |
 | **dimensions.height** | `mm` | Yükseklik/kalınlık. |
 
-### Konfigürasyon
-
-| Parametre | Tip | Açıklama |
-| :--- | :--- | :--- |
-| **connector** | `str` | Konnektör tipi (opsiyonel, örn: "XT60", "XT90", "Deans", "EC5"). |
-| **balance_connector** | `str` | Balans konnektör tipi (opsiyonel, örn: "JST-XH"). |
-
 ### Yerleşim
 
 Piller placement nesnesi kullanılarak airframe'de konumlandırılır:
@@ -86,8 +79,6 @@ batteries:
       length: 78
       width: 36
       height: 36
-    connector: "XT60"
-    balance_connector: "JST-XH"
     placement:
       position:
         x: 350
@@ -114,8 +105,6 @@ batteries:
       length: 138
       width: 43
       height: 29
-    connector: "XT90"
-    balance_connector: "JST-XH"
     placement:
       position:
         x: 420

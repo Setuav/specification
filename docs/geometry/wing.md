@@ -26,7 +26,16 @@ The entire wing is then positioned in the airframe using Wing Attachment paramet
 
 ## Parameters
 
-A wing is defined by a list of stations (profiles). Each station fully specifies its position and orientation.
+### Identification and Mass
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| **tag** | `str` | Unique identifier for the wing (e.g., "main_wing", "v_tail_left"). |
+| **mass** | `g` | Total wing mass for a single wing (optional). Note: if mirror is true in wing attachment, total mass will be 2 × mass. |
+
+### Geometry
+
+A wing geometry is defined by a list of stations (profiles). Each station fully specifies its position and orientation.
 
 ### Station Properties
 
@@ -130,6 +139,7 @@ control_surfaces:
 
 ```yaml
 tag: "main_wing"
+mass: 180  # optional
 type: "wing"
 geometry:
   blending:

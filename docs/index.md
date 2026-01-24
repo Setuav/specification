@@ -17,7 +17,7 @@ The Setuav Standard targets **fixed-wing UAV** designs and provides a comprehens
 
 - **Geometry**: Parametric definition of airframe components including fuselage, wings, tails, and control surfaces.
 - **Propulsion**: Specifications for propulsion systems (motors, ESCs, propellers) and power systems (batteries).
-- **Manufacturing**: Mapping of physical parts to weight, material properties, and assembly data.
+- **Mass**: Direct mass specifications for geometry and propulsion components, plus tracking of additional parts (electronics, landing gear, etc.).
 - **Performance**: Standardized format for storing flight performance analysis, stability results, and mission simulation data.
 
 ## Out of scope

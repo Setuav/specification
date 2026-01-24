@@ -15,7 +15,16 @@ Gövde kesitleri `SETUAV_BODY` çerçevesinde tanımlanır.
 
 ## Parametreler
 
-Gövde, kontrollü interpolasyon kullanılarak birbirine bağlanan bir dizi **kesit** (enine kesit) ile tanımlanır.
+### Tanımlama ve Kütle
+
+| Parametre | Tip | Açıklama |
+| :--- | :--- | :--- |
+| **tag** | `str` | Gövde için benzersiz tanımlayıcı (örn: "main_fuselage"). |
+| **mass** | `g` | Toplam gövde kütlesi (opsiyonel). |
+
+### Geometri
+
+Gövde geometrisi, kontrollü interpolasyon kullanılarak birbirine bağlanan bir dizi **kesit** (enine kesit) ile tanımlanır.
 
 ### Kesit Özellikleri
 
@@ -82,6 +91,7 @@ Bu parametreler, kesitlerin nihai yüzeyi oluşturmak için nasıl harmanlanaca�
 
 ```yaml
 tag: "main_fuselage"
+mass: 250  # opsiyonel
 type: "fuselage"
 geometry:
   blending:

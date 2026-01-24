@@ -15,7 +15,16 @@ The fuselage sections are defined in the `SETUAV_BODY` frame.
 
 ## Parameters
 
-The fuselage is defined by a series of **sections** (cross-sections) that are lofted together using controlled interpolation.
+### Identification and Mass
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| **tag** | `str` | Unique identifier for the fuselage (e.g., "main_fuselage"). |
+| **mass** | `g` | Total fuselage mass (optional). |
+
+### Geometry
+
+The fuselage geometry is defined by a series of **sections** (cross-sections) that are lofted together using controlled interpolation.
 
 ### Section Properties
 
@@ -82,6 +91,7 @@ These parameters control how sections are blended to create the final surface.
 
 ```yaml
 tag: "main_fuselage"
+mass: 250  # optional
 type: "fuselage"
 geometry:
   blending:

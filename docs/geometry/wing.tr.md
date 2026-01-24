@@ -25,7 +25,16 @@ Tüm kanat daha sonra Wing Attachment parametreleri kullanılarak airframe için
 
 ## Parametreler
 
-Bir kanat, bir kesit (profil) listesi ile tanımlanır. Her kesit, konumunu ve yönelimini tamamen belirtir.
+### Tanımlama ve Kütle
+
+| Parametre | Tip | Açıklama |
+| :--- | :--- | :--- |
+| **tag** | `str` | Kanat için benzersiz tanımlayıcı (örn: "main_wing", "v_tail_left"). |
+| **mass** | `g` | Tek kanat için toplam kanat kütlesi (opsiyonel). Not: kanat bağlantısında mirror true ise, toplam kütle 2 × mass olacaktır. |
+
+### Geometri
+
+Bir kanat geometrisi, bir kesit (profil) listesi ile tanımlanır. Her kesit, konumunu ve yönelimini tamamen belirtir.
 
 ### Kesit Özellikleri
 
@@ -129,6 +138,7 @@ control_surfaces:
 
 ```yaml
 tag: "main_wing"
+mass: 180  # opsiyonel
 type: "wing"
 geometry:
   blending:

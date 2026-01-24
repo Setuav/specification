@@ -41,13 +41,6 @@ Batteries in the Setuav Standard are defined independently with their electrical
 | **dimensions.width** | `mm` | Width. |
 | **dimensions.height** | `mm` | Height/thickness. |
 
-### Configuration
-
-| Parameter | Type | Description |
-| :--- | :--- | :--- |
-| **connector** | `str` | Connector type (optional, e.g., "XT60", "XT90", "Deans", "EC5"). |
-| **balance_connector** | `str` | Balance connector type (optional, e.g., "JST-XH"). |
-
 ### Placement
 
 Batteries are positioned in the airframe using the placement object:
@@ -86,8 +79,6 @@ batteries:
       length: 78
       width: 36
       height: 36
-    connector: "XT60"
-    balance_connector: "JST-XH"
     placement:
       position:
         x: 350
@@ -114,8 +105,6 @@ batteries:
       length: 138
       width: 43
       height: 29
-    connector: "XT90"
-    balance_connector: "JST-XH"
     placement:
       position:
         x: 420

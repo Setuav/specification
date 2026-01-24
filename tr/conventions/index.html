@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#temel-esaslar" class="md-skip">
+        <a href="#conventions" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -311,10 +311,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#terminoloji-normative-ve-non-normative" class="md-nav__link">
+  <a href="#terminology-normative-vs-non-normative" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Terminoloji: Normative ve Non-normative
+        Terminology: Normative vs Non-normative
       
     </span>
   </a>
@@ -322,10 +322,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#koordinat-sistemi" class="md-nav__link">
+  <a href="#coordinate-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Koordinat Sistemi
+        Coordinate System
       
     </span>
   </a>
@@ -333,10 +333,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pozisyon-ve-rotasyon-yaps" class="md-nav__link">
+  <a href="#position-and-rotation-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pozisyon ve Rotasyon Yapısı
+        Position and Rotation Structure
       
     </span>
   </a>
@@ -344,10 +344,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#birimler" class="md-nav__link">
+  <a href="#units" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Birimler
+        Units
       
     </span>
   </a>
@@ -355,10 +355,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moduler-dosyalar-ve-referanslar" class="md-nav__link">
+  <a href="#modular-files-and-references" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modüler Dosyalar ve Referanslar
+        Modular Files and References
       
     </span>
   </a>
@@ -797,10 +797,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#terminoloji-normative-ve-non-normative" class="md-nav__link">
+  <a href="#terminology-normative-vs-non-normative" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Terminoloji: Normative ve Non-normative
+        Terminology: Normative vs Non-normative
       
     </span>
   </a>
@@ -808,10 +808,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#koordinat-sistemi" class="md-nav__link">
+  <a href="#coordinate-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Koordinat Sistemi
+        Coordinate System
       
     </span>
   </a>
@@ -819,10 +819,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pozisyon-ve-rotasyon-yaps" class="md-nav__link">
+  <a href="#position-and-rotation-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pozisyon ve Rotasyon Yapısı
+        Position and Rotation Structure
       
     </span>
   </a>
@@ -830,10 +830,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#birimler" class="md-nav__link">
+  <a href="#units" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Birimler
+        Units
       
     </span>
   </a>
@@ -841,10 +841,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moduler-dosyalar-ve-referanslar" class="md-nav__link">
+  <a href="#modular-files-and-references" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modüler Dosyalar ve Referanslar
+        Modular Files and References
       
     </span>
   </a>
@@ -868,111 +868,111 @@
 
 
 
-<h1 id="temel-esaslar">Temel Esaslar</h1>
-<p>Bu bölüm, Setuav Standardı boyunca kullanılan teknik standartları tanımlar ve farklı uygulamalar arasında tutarlılık sağlar.</p>
-<h2 id="terminoloji-normative-ve-non-normative">Terminoloji: Normative ve Non-normative</h2>
+<h1 id="conventions">Conventions</h1>
+<p>This section defines the technical standards used throughout the Setuav Standard to ensures consistency across different implementations.</p>
+<h2 id="terminology-normative-vs-non-normative">Terminology: Normative vs Non-normative</h2>
 <ul>
-<li><strong>Normative</strong>: Bir dosyanın standartla uyumlu sayılması için izlenmesi zorunlu olan kurallar.</li>
-<li><strong>Non-normative</strong>: Açıklayıcı notlar, örnekler veya uygulama tavsiyeleri; bağlam sağlar ancak zorunlu değildir.</li>
+<li><strong>Normative</strong>: Mandatory rules that must be followed for a file to be considered compliant with the standard.</li>
+<li><strong>Non-normative</strong>: Explanatory notes, examples, or implementation advice that provide context but are not strictly required.</li>
 </ul>
-<h2 id="koordinat-sistemi">Koordinat Sistemi</h2>
-<p>Setuav, sabit bir gövde koordinat çerçevesi kullanır (dokümantasyonda genellikle <code>SETUAV_BODY</code> olarak anılır):</p>
+<h2 id="coordinate-system">Coordinate System</h2>
+<p>Setuav uses a fixed-body coordinate frame (often referred to as <code>SETUAV_BODY</code> in documentation):</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Eksen</th>
-<th style="text-align: left;">Yön</th>
-<th style="text-align: left;">Açıklama</th>
+<th style="text-align: left;">Axis</th>
+<th style="text-align: left;">Direction</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Origin</strong></td>
-<td style="text-align: left;">Burun Ucu</td>
-<td style="text-align: left;">Gövdenin en uç ön noktası (x=0, y=0, z=0).</td>
+<td style="text-align: left;">Nose Tip</td>
+<td style="text-align: left;">The very front point of the fuselage (x=0, y=0, z=0).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>+X</strong></td>
-<td style="text-align: left;">Arka (Aft)</td>
-<td style="text-align: left;">Burun ucundan kuyruğa doğru artar.</td>
+<td style="text-align: left;">Aft</td>
+<td style="text-align: left;">Increases from the nose tip toward the tail.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>+Y</strong></td>
-<td style="text-align: left;">Sağ</td>
-<td style="text-align: left;">Sağ taraf (sağ el kuralı).</td>
+<td style="text-align: left;">Right</td>
+<td style="text-align: left;">Starboard side (right-hand rule).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>+Z</strong></td>
-<td style="text-align: left;">Yukarı</td>
-<td style="text-align: left;">Dikey olarak yukarı doğru artar.</td>
+<td style="text-align: left;">Up</td>
+<td style="text-align: left;">Increases vertically upward.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Aynalama (Mirroring)</strong>: Varsayılan olarak, <strong>XZ-düzlemi</strong> (Y = 0) boyunca simetri varsayılır.</p>
-<h2 id="pozisyon-ve-rotasyon-yaps">Pozisyon ve Rotasyon Yapısı</h2>
-<p>Standart boyunca, bileşen pozisyonları ve rotasyonları tutarlı bir iç içe (nested) yapı kullanılarak tanımlanır:</p>
+<p><strong>Mirroring</strong>: By default, symmetry is assumed across the <strong>XZ-plane</strong> (Y = 0).</p>
+<h2 id="position-and-rotation-structure">Position and Rotation Structure</h2>
+<p>Throughout the standard, component positions and rotations are defined using a consistent nested structure:</p>
 <pre><code class="language-yaml">position:
-  x: 0    # mm, X-ekseni boyunca pozisyon
-  y: 0    # mm, Y-ekseni boyunca pozisyon
-  z: 0    # mm, Z-ekseni boyunca pozisyon
+  x: 0    # mm, position along X-axis
+  y: 0    # mm, position along Y-axis
+  z: 0    # mm, position along Z-axis
 
 rotation:
-  x: 0    # deg, X-ekseni etrafında rotasyon (roll)
-  y: 0    # deg, Y-ekseni etrafında rotasyon (pitch)
-  z: 0    # deg, Z-ekseni etrafında rotasyon (yaw)
+  x: 0    # deg, rotation around X-axis (roll)
+  y: 0    # deg, rotation around Y-axis (pitch)
+  z: 0    # deg, rotation around Z-axis (yaw)
 </code></pre>
-<p><strong>Rotasyon Konvansiyonu</strong>: Rotasyonlar her eksen etrafındaki açılar olarak belirtilir:</p>
+<p><strong>Rotation Convention</strong>: Rotations are specified as angles around each axis:</p>
 <ul>
-<li><strong>rotation.x</strong> (roll): X-ekseni (boylamsal) etrafında rotasyon</li>
-<li><strong>rotation.y</strong> (pitch): Y-ekseni (yanal) etrafında rotasyon</li>
-<li><strong>rotation.z</strong> (yaw): Z-ekseni (dikey) etrafında rotasyon</li>
+<li><strong>rotation.x</strong> (roll): Rotation around the X-axis (longitudinal)</li>
+<li><strong>rotation.y</strong> (pitch): Rotation around the Y-axis (lateral)</li>
+<li><strong>rotation.z</strong> (yaw): Rotation around the Z-axis (vertical)</li>
 </ul>
-<p>Tüm rotasyonlar sağ el kuralını takip eder.</p>
-<h2 id="birimler">Birimler</h2>
-<p>Belirsizliği önlemek için, standart bir dosyadaki tüm sayısal değerler (şemada aksi belirtilmedikçe) şu birimleri kullanmalıdır:</p>
+<p>All rotations follow the right-hand rule.</p>
+<h2 id="units">Units</h2>
+<p>To avoid ambiguity, all numeric values in a standard file must use the following units unless explicitly specified otherwise in the schema:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Nicelik</th>
-<th style="text-align: left;">Birim</th>
-<th style="text-align: left;">Sembol</th>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Symbol</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Uzunluk</td>
-<td style="text-align: left;">Milimetre</td>
+<td style="text-align: left;">Length</td>
+<td style="text-align: left;">Millimeters</td>
 <td style="text-align: left;"><code>mm</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">Açı</td>
-<td style="text-align: left;">Derece</td>
+<td style="text-align: left;">Angle</td>
+<td style="text-align: left;">Degrees</td>
 <td style="text-align: left;"><code>deg</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">Kütle</td>
-<td style="text-align: left;">Gram</td>
+<td style="text-align: left;">Mass</td>
+<td style="text-align: left;">Grams</td>
 <td style="text-align: left;"><code>g</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">Kuvvet</td>
-<td style="text-align: left;">Newton</td>
+<td style="text-align: left;">Force</td>
+<td style="text-align: left;">Newtons</td>
 <td style="text-align: left;"><code>N</code></td>
 </tr>
 <tr>
-<td style="text-align: left;">Hız</td>
-<td style="text-align: left;">Metre / saniye</td>
+<td style="text-align: left;">Velocity</td>
+<td style="text-align: left;">Meters per second</td>
 <td style="text-align: left;"><code>m/s</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="moduler-dosyalar-ve-referanslar">Modüler Dosyalar ve Referanslar</h2>
-<p>Projeler, tekrar kullanılabilirlik için birden fazla dosyaya bölünebilir.</p>
+<h2 id="modular-files-and-references">Modular Files and References</h2>
+<p>Projects can be split into multiple files for reusability.</p>
 <ul>
-<li><strong>Referans Özelliği</strong>: <code>ref</code> anahtarı harici bir dosyayı işaret etmek için kullanılır.</li>
-<li><strong>Yol Çözümleme (Path Resolution)</strong>: Yol, her zaman <strong>referansı içeren dosyanın bulunduğu dizine göre</strong> relative olarak çözülür.</li>
+<li><strong>Reference Property</strong>: The key <code>ref</code> is used to point to an external file.</li>
+<li><strong>Path Resolution</strong>: The path is always resolved <strong>relative to the directory of the file containing the reference</strong>.</li>
 </ul>
-<p>Örnek:</p>
+<p>Example:</p>
 <pre><code class="language-yaml">geometry:
   fuselage:
     ref: &quot;./parts/fuselage_v1.yaml&quot;

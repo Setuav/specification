@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#geometri-genel-baks" class="md-skip">
+        <a href="#geometry-overview" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -392,10 +392,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#temel-kavramlar" class="md-nav__link">
+  <a href="#core-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Temel Kavramlar
+        Core Concepts
       
     </span>
   </a>
@@ -403,10 +403,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bilesen-turleri" class="md-nav__link">
+  <a href="#component-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bileşen Türleri
+        Component Types
       
     </span>
   </a>
@@ -414,10 +414,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#koordinat-entegrasyonu" class="md-nav__link">
+  <a href="#coordinate-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Koordinat Entegrasyonu
+        Coordinate Integration
       
     </span>
   </a>
@@ -777,10 +777,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#temel-kavramlar" class="md-nav__link">
+  <a href="#core-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Temel Kavramlar
+        Core Concepts
       
     </span>
   </a>
@@ -788,10 +788,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bilesen-turleri" class="md-nav__link">
+  <a href="#component-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bileşen Türleri
+        Component Types
       
     </span>
   </a>
@@ -799,10 +799,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#koordinat-entegrasyonu" class="md-nav__link">
+  <a href="#coordinate-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Koordinat Entegrasyonu
+        Coordinate Integration
       
     </span>
   </a>
@@ -826,24 +826,24 @@
 
 
 
-<h1 id="geometri-genel-baks">Geometri Genel Bakış</h1>
-<p>Setuav Standardında sabit kanatlı bir İHA'nın geometrisi, bağımsız ancak birbiriyle bağlantılı bileşenler kümesi aracılığıyla tanımlanır. Bu modüler yaklaşım, kanatların, gövdelerin ve diğer yapısal elemanların birleştirilmesiyle karmaşık uçak yapılarının oluşturulmasına olanak tanır.</p>
-<h2 id="temel-kavramlar">Temel Kavramlar</h2>
-<p>Geometri sistemi şu prensiplerle tasarlanmıştır:</p>
+<h1 id="geometry-overview">Geometry Overview</h1>
+<p>The geometry of a fixed-wing UAV in the Setuav Standard is defined through a set of independent but interconnected components. This modular approach allows for complex airframes to be built by combining wings, fuselages, and other structural elements.</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<p>The geometry system is designed with the following principles:</p>
 <ul>
-<li><strong>Parametrik Tanımlama</strong>: Statik 3D örgüleri (mesh) depolamak yerine, bunları oluşturmak için gereken parametreleri depoluyoruz.</li>
-<li><strong>İstasyon Bazlı Lofting</strong>: Çoğu bileşen (kanatlar ve gövdeler), pürüzsüz yüzeyler oluşturmak için birbirine bağlanan (loft edilen) enine kesitler (istasyonlar) ile tanımlanır.</li>
-<li><strong>Referans Çerçevesi Tutarlılığı</strong>: Tüm bileşenler <code>SETUAV_BODY</code> çerçevesine göre konumlandırılır.</li>
+<li><strong>Parametric Definition</strong>: Instead of storing static 3D meshes, we store the parameters required to generate them.</li>
+<li><strong>Station-Based Lofting</strong>: Most components (wings and fuselages) are defined by cross-sections (stations) that are lofted together to create smooth surfaces.</li>
+<li><strong>Reference Frame Consistency</strong>: All components are positioned relative to the <code>SETUAV_BODY</code> frame.</li>
 </ul>
-<h2 id="bilesen-turleri">Bileşen Türleri</h2>
-<p>Aşağıdaki bölümlerde şunları inceleyeceğiz:</p>
+<h2 id="component-types">Component Types</h2>
+<p>In the following sections, we will explore:</p>
 <ol>
-<li><strong><a href="fuselage/">Gövde (Fuselage)</a></strong>: Boylamsal eksen boyunca loft edilen parametrik enine kesitler (kesitler) kullanarak ana gövdeyi tanımlama.</li>
-<li><strong><a href="wing/">Kanat (Wing)</a></strong>: Mutlak konumlandırma ile kesit bazlı bir yaklaşım kullanarak taşıma yüzeylerini, stabilizörleri ve kontrol yüzeylerini tanımlama.</li>
-<li><strong><a href="wing_attachment/">Kanat Yerleşimi (Wing Attachment)</a></strong>: Kanatları gövde üzerinde konumlandırma ve yönlendirme, aerodinamik entegrasyon için otomatik fairing oluşturma dahil.</li>
+<li><strong><a href="fuselage/">Fuselage</a></strong>: Defining the main body using parametric cross-sections (sections) lofted along the longitudinal axis.</li>
+<li><strong><a href="wing/">Wing</a></strong>: Defining lifting surfaces, stabilizers, and control surfaces using a section-based approach with absolute positioning.</li>
+<li><strong><a href="wing_attachment/">Wing Attachment</a></strong>: Positioning and orienting wings on the fuselage, including automatic fairing generation for aerodynamic integration.</li>
 </ol>
-<h2 id="koordinat-entegrasyonu">Koordinat Entegrasyonu</h2>
-<p>Tüm bileşenler <code>SETUAV_BODY</code> referans çerçevesinde konumlandırılır (orijin burun ucunda, X+ arka, Y+ sağ, Z+ yukarı). Kanatlar lokal koordinat sistemleri kullanır ve daha sonra Kanat Yerleşimi parametreleri aracılığıyla nested <code>position</code> ve <code>rotation</code> nesneleri kullanılarak yerleştirilir. Position nesnesi <code>x</code>, <code>y</code> ve <code>z</code> koordinatlarını içerirken, rotation nesnesi <code>x</code> (roll), <code>y</code> (pitch) ve <code>z</code> (yaw) açılarını içerir. Bu, nihai modelin aerodinamik ve yapısal analize hazır, birleşik bir birim olmasını sağlar.</p>
+<h2 id="coordinate-integration">Coordinate Integration</h2>
+<p>All components are positioned in the <code>SETUAV_BODY</code> reference frame (origin at nose tip, X+ aft, Y+ right, Z+ up). Wings use local coordinate systems that are then placed via Wing Attachment parameters using nested <code>position</code> and <code>rotation</code> objects. The position object contains <code>x</code>, <code>y</code>, and <code>z</code> coordinates, while the rotation object contains <code>x</code> (roll), <code>y</code> (pitch), and <code>z</code> (yaw) angles. This ensures the final model is a cohesive unit ready for aerodynamic and structural analysis.</p>
 
 
 

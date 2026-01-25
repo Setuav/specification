@@ -422,10 +422,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-sections-and-lofting" class="md-nav__link">
+  <a href="#structure-segments-and-lofts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Structure: Sections and Lofting
+        Structure: Segments and Lofts
       
     </span>
   </a>
@@ -467,10 +467,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#geometry" class="md-nav__link">
+  <a href="#geometry-segments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Geometry
+        Geometry: Segments
       
     </span>
   </a>
@@ -488,7 +488,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#profile-types" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -537,20 +542,15 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#surface-blending-parameters" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#surface-blending" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Surface Blending Parameters
+        Surface Blending
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1117,10 +1117,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-sections-and-lofting" class="md-nav__link">
+  <a href="#structure-segments-and-lofts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Structure: Sections and Lofting
+        Structure: Segments and Lofts
       
     </span>
   </a>
@@ -1162,10 +1162,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#geometry" class="md-nav__link">
+  <a href="#geometry-segments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Geometry
+        Geometry: Segments
       
     </span>
   </a>
@@ -1183,7 +1183,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#profile-types" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1232,20 +1237,15 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#surface-blending-parameters" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#surface-blending" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Surface Blending Parameters
+        Surface Blending
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1278,13 +1278,14 @@
 
 
 <h1 id="fuselage-geometry">Fuselage Geometry</h1>
-<p>The Fuselage model defines the main body of the UAV. It typically uses a section-based approach where several cross-sections are defined along the X-axis and lofted together with parametric surfaces.</p>
-<h2 id="structure-sections-and-lofting">Structure: Sections and Lofting</h2>
-<p>A fuselage is defined by a series of cross-sections (sections) at specific X-coordinates, which are lofted together using controlled interpolation. Each section includes its position, cross-section shape (profile), and orientation.</p>
+<p>The Fuselage model defines the main structural bodies of the UAV. A fuselage is defined as one or more "segments," each consisting of a series of cross-sections connected together.</p>
+<h2 id="structure-segments-and-lofts">Structure: Segments and Lofts</h2>
+<p>The fuselage structure is modular. Multiple "Segments" can be defined under a single fuselage definition. For instance, a fuselage might consist of three separate segments: "Nose Cone", "Main Tube", and "Motor Tower".</p>
+<p>Each segment contains a series of cross-sections defined along the X-axis (or any direction in space), which are connected via controlled interpolation (lofting).</p>
 <h2 id="coordinate-frame">Coordinate Frame</h2>
-<p>The fuselage sections are defined in the <code>SETUAV_BODY</code> frame.</p>
+<p>Fuselage segments and sections are defined in the <code>SETUAV_BODY</code> frame.</p>
 <ul>
-<li><strong>X-axis</strong>: Position along the fuselage (x=0 is nose tip).</li>
+<li><strong>X-axis</strong>: Longitudinal axis.</li>
 <li><strong>Y-Z plane</strong>: The plane of the cross-section.</li>
 </ul>
 <h2 id="parameters">Parameters</h2>
@@ -1306,12 +1307,38 @@
 <tr>
 <td style="text-align: left;"><strong>mass</strong></td>
 <td style="text-align: left;"><code>g</code></td>
-<td style="text-align: left;">Total fuselage mass (optional).</td>
+<td style="text-align: left;">Total fuselage mass.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="geometry">Geometry</h3>
-<p>The fuselage geometry is defined by a series of <strong>sections</strong> (cross-sections) that are lofted together using controlled interpolation.</p>
+<h3 id="geometry-segments">Geometry: Segments</h3>
+<p>The fuselage geometry is the sum of parts defined under the <code>segments</code> array. Each segment has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>tag</strong></td>
+<td style="text-align: left;"><code>str</code></td>
+<td style="text-align: left;">Segment-specific tag (e.g., "nose_cone").</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>sections</strong></td>
+<td style="text-align: left;"><code>list</code></td>
+<td style="text-align: left;">List of cross-sections forming the segment (min 2).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>blending</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Surface generation parameters specific to this segment (optional).</td>
+</tr>
+</tbody>
+</table>
 <h3 id="section-properties">Section Properties</h3>
 <p>Each section has the following properties:</p>
 <table>
@@ -1331,12 +1358,12 @@
 <tr>
 <td style="text-align: left;"><strong>position.x</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Longitudinal position from the nose tip.</td>
+<td style="text-align: left;">Longitudinal position from the nose.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>position.y</strong></td>
 <td style="text-align: left;"><code>mm</code></td>
-<td style="text-align: left;">Lateral offset from the XZ-plane (optional, default: 0). Fixed-wing UAVs typically use 0 (centerline).</td>
+<td style="text-align: left;">Lateral offset from the XZ-plane (optional, default: 0).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>position.z</strong></td>
@@ -1351,44 +1378,33 @@
 <tr>
 <td style="text-align: left;"><strong>pitch</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Section tilt relative to X-axis (optional, default: 0).</td>
+<td style="text-align: left;">Section tilt around Y-axis (optional, default: 0).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>roll</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Profile rotation about X-axis (optional, default: 0).</td>
+<td style="text-align: left;">Profile rotation around X-axis (optional, default: 0).</td>
 </tr>
 </tbody>
 </table>
-<h3 id="profile-types">Profile Types</h3>
+<h2 id="profile-types">Profile Types</h2>
+<p>Each section under <code>sections</code> must have a specific profile.</p>
 <h4 id="circle">Circle</h4>
-<p>Circular cross-section defined by diameter.</p>
-<pre><code class="language-yaml">profile:
-  type: &quot;circle&quot;
-  diameter: 80  # mm
+<pre><code class="language-yaml">profile: {type: &quot;circle&quot;, diameter: 80}
 </code></pre>
 <h4 id="ellipse">Ellipse</h4>
-<p>Elliptical cross-section with independent width and height.</p>
-<pre><code class="language-yaml">profile:
-  type: &quot;ellipse&quot;
-  width: 100   # mm
-  height: 120  # mm
+<pre><code class="language-yaml">profile: {type: &quot;ellipse&quot;, width: 100, height: 120}
 </code></pre>
 <h4 id="rectangle">Rectangle</h4>
-<p>Rectangular cross-section with optional rounded corners.</p>
-<pre><code class="language-yaml">profile:
-  type: &quot;rectangle&quot;
-  width: 100          # mm
-  height: 120         # mm
-  corner_radius: 10   # mm (optional, default: 0)
+<pre><code class="language-yaml"># Can be rounded with optional 'corner_radius'
+profile: {type: &quot;rectangle&quot;, width: 100, height: 120, corner_radius: 10}
 </code></pre>
-<h3 id="surface-blending-parameters">Surface Blending Parameters</h3>
-<p>These parameters control how sections are blended to create the final surface.</p>
+<h2 id="surface-blending">Surface Blending</h2>
+<p>These parameters control how sections within a segment are connected.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Type</th>
 <th style="text-align: left;">Default</th>
 <th style="text-align: left;">Description</th>
 </tr>
@@ -1396,69 +1412,42 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ruled</strong></td>
-<td style="text-align: left;"><code>bool</code></td>
 <td style="text-align: left;"><code>false</code></td>
-<td style="text-align: left;"><code>false</code>: Smooth approximated surface. <code>true</code>: Ruled surface (straight lines between sections).</td>
+<td style="text-align: left;">If <code>true</code>, connects sections with straight lines (ruled surface).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>max_degree</strong></td>
-<td style="text-align: left;"><code>int</code></td>
 <td style="text-align: left;"><code>3</code></td>
-<td style="text-align: left;">Maximum polynomial degree for B-spline approximation. Valid range: <code>1-8</code>. Higher values allow smoother curves.</td>
+<td style="text-align: left;">Degree of the B-spline surface (1-8).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>continuity</strong></td>
-<td style="text-align: left;"><code>enum</code></td>
 <td style="text-align: left;"><code>G2</code></td>
-<td style="text-align: left;">Target surface smoothness: <code>G0</code> (positional continuity), <code>G1</code> (tangent continuity), <code>G2</code> (curvature continuity).</td>
+<td style="text-align: left;">Surface continuity target: <code>G0</code>, <code>G1</code>, <code>G2</code>.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Determinism Guarantee</strong>: Given identical sections and blend parameters, all compliant implementations must produce surfaces with equivalent cross-sections at any given x position (within tolerance ±0.1%).</p>
 <h2 id="example-configuration">Example Configuration</h2>
-<pre><code class="language-yaml">tag: &quot;main_fuselage&quot;
-mass: 250  # optional
+<p>This example defines a Skywalker-style fuselage in two segments: Main tube and motor tower.</p>
+<pre><code class="language-yaml">tag: &quot;skywalker_X8&quot;
+mass: 450
 type: &quot;fuselage&quot;
 geometry:
-  blending:
-    ruled: false      # Smooth approximated surface
-    max_degree: 3     # Cubic B-spline
+  segments:
+    # Segment 1: Main Fuselage Line
+    - tag: &quot;main_body&quot;
+      blending: {ruled: false}
+      sections:
+        - {position: {x: 0}, profile: {type: &quot;circle&quot;, diameter: 5}}  # Pointy nose
+        - {position: {x: 200}, profile: {type: &quot;ellipse&quot;, width: 150, height: 90}} # Wide body
+        - {position: {x: 800}, profile: {type: &quot;circle&quot;, diameter: 20}} # Thin tail
 
-  sections:
-    - position:
-        x: 0
-        y: 0
-        z: 0
-      profile:
-        type: &quot;circle&quot;  # Nose tip
-        diameter: 1
-
-    - position:
-        x: 150
-        y: 0
-        z: 10     # Raised cockpit
-      profile:
-        type: &quot;ellipse&quot;
-        width: 80
-        height: 100
-      pitch: 0.0
-
-    - position:
-        x: 600
-        y: 0
-        z: 0
-      profile:
-        type: &quot;ellipse&quot;
-        width: 80
-        height: 100
-
-    - position:
-        x: 1200
-        y: 0
-        z: 0
-      profile:
-        type: &quot;circle&quot;
-        diameter: 20  # Tail boom
+    # Segment 2: Motor Tower (Extends from top of fuselage)
+    - tag: &quot;motor_tower&quot;
+      blending: {ruled: true}
+      sections:
+        - {position: {x: 600, z: 50}, profile: {type: &quot;ellipse&quot;, width: 40, height: 80}} # Tower base
+        - {position: {x: 650, z: 120}, profile: {type: &quot;circle&quot;, diameter: 40}} # Firewall
 </code></pre>
 
 

@@ -2,252 +2,252 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://setuav.github.io/specification/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/conventions/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/conventions/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/conventions/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/mass/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/mass/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/mass/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/geometry/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/geometry/fuselage/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/fuselage/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/fuselage/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/geometry/wing/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/geometry/wing_attachment/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing_attachment/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing_attachment/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/performance/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/performance/aerodynamics/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/aerodynamics/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/aerodynamics/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/performance/conditions/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/conditions/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/conditions/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/performance/flight/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/flight/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/flight/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/performance/propulsion/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/propulsion/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/propulsion/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/performance/stability/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/stability/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/stability/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/propulsion/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/propulsion/battery/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/battery/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/battery/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/propulsion/esc/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/esc/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/esc/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/propulsion/motor/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/motor/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/motor/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/propulsion/propeller/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/propeller/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/propeller/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/conventions/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/conventions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/conventions/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/mass/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/mass/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/mass/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/geometry/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/geometry/fuselage/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/fuselage/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/fuselage/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/geometry/wing/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/geometry/wing_attachment/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/geometry/wing_attachment/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/geometry/wing_attachment/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/performance/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/performance/aerodynamics/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/aerodynamics/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/aerodynamics/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/performance/conditions/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/conditions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/conditions/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/performance/flight/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/flight/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/flight/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/performance/propulsion/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/propulsion/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/propulsion/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/performance/stability/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/performance/stability/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/performance/stability/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/propulsion/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/propulsion/battery/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/battery/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/battery/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/propulsion/esc/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/esc/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/esc/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/propulsion/motor/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/motor/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/motor/"/>
     </url>
     <url>
         <loc>https://setuav.github.io/specification/tr/propulsion/propeller/</loc>
-        <lastmod>2026-01-24</lastmod>
+        <lastmod>2026-01-25</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="tr" href="https://setuav.github.io/specification/tr/propulsion/propeller/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://setuav.github.io/specification/propulsion/propeller/"/>

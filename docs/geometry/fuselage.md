@@ -1,16 +1,18 @@
 # Fuselage Geometry
 
-The Fuselage model defines the main body of the UAV. It typically uses a section-based approach where several cross-sections are defined along the X-axis and lofted together with parametric surfaces.
+The Fuselage model defines the main structural bodies of the UAV. A fuselage is defined as one or more "segments," each consisting of a series of cross-sections connected together.
 
-## Structure: Sections and Lofting
+## Structure: Segments and Lofts
 
-A fuselage is defined by a series of cross-sections (sections) at specific X-coordinates, which are lofted together using controlled interpolation. Each section includes its position, cross-section shape (profile), and orientation.
+The fuselage structure is modular. Multiple "Segments" can be defined under a single fuselage definition. For instance, a fuselage might consist of three separate segments: "Nose Cone", "Main Tube", and "Motor Tower".
+
+Each segment contains a series of cross-sections defined along the X-axis (or any direction in space), which are connected via controlled interpolation (lofting).
 
 ## Coordinate Frame
 
-The fuselage sections are defined in the `SETUAV_BODY` frame.
+Fuselage segments and sections are defined in the `SETUAV_BODY` frame.
 
-- **X-axis**: Position along the fuselage (x=0 is nose tip).
+- **X-axis**: Longitudinal axis.
 - **Y-Z plane**: The plane of the cross-section.
 
 ## Parameters
@@ -20,11 +22,17 @@ The fuselage sections are defined in the `SETUAV_BODY` frame.
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | **tag** | `str` | Unique identifier for the fuselage (e.g., "main_fuselage"). |
-| **mass** | `g` | Total fuselage mass (optional). |
+| **mass** | `g` | Total fuselage mass. |
 
-### Geometry
+### Geometry: Segments
 
-The fuselage geometry is defined by a series of **sections** (cross-sections) that are lofted together using controlled interpolation.
+The fuselage geometry is the sum of parts defined under the `segments` array. Each segment has the following properties:
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| **tag** | `str` | Segment-specific tag (e.g., "nose_cone"). |
+| **sections** | `list` | List of cross-sections forming the segment (min 2). |
+| **blending** | `object` | Surface generation parameters specific to this segment (optional). |
 
 ### Section Properties
 
@@ -33,104 +41,65 @@ Each section has the following properties:
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
 | **position** | `object` | Section position (required). |
-| **position.x** | `mm` | Longitudinal position from the nose tip. |
-| **position.y** | `mm` | Lateral offset from the XZ-plane (optional, default: 0). Fixed-wing UAVs typically use 0 (centerline). |
+| **position.x** | `mm` | Longitudinal position from the nose. |
+| **position.y** | `mm` | Lateral offset from the XZ-plane (optional, default: 0). |
 | **position.z** | `mm` | Vertical offset from the XY-plane (optional, default: 0). |
 | **profile** | `object` | Cross-section shape definition (required). |
-| **pitch** | `deg` | Section tilt relative to X-axis (optional, default: 0). |
-| **roll** | `deg` | Profile rotation about X-axis (optional, default: 0). |
+| **pitch** | `deg` | Section tilt around Y-axis (optional, default: 0). |
+| **roll** | `deg` | Profile rotation around X-axis (optional, default: 0). |
 
-### Profile Types
+## Profile Types
+
+Each section under `sections` must have a specific profile.
 
 #### Circle
-
-Circular cross-section defined by diameter.
-
 ```yaml
-profile:
-  type: "circle"
-  diameter: 80  # mm
+profile: {type: "circle", diameter: 80}
 ```
 
 #### Ellipse
-
-Elliptical cross-section with independent width and height.
-
 ```yaml
-profile:
-  type: "ellipse"
-  width: 100   # mm
-  height: 120  # mm
+profile: {type: "ellipse", width: 100, height: 120}
 ```
 
 #### Rectangle
-
-Rectangular cross-section with optional rounded corners.
-
 ```yaml
-profile:
-  type: "rectangle"
-  width: 100          # mm
-  height: 120         # mm
-  corner_radius: 10   # mm (optional, default: 0)
+# Can be rounded with optional 'corner_radius'
+profile: {type: "rectangle", width: 100, height: 120, corner_radius: 10}
 ```
 
-### Surface Blending Parameters
+## Surface Blending
 
-These parameters control how sections are blended to create the final surface.
+These parameters control how sections within a segment are connected.
 
-| Parameter | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| **ruled** | `bool` | `false` | `false`: Smooth approximated surface. `true`: Ruled surface (straight lines between sections). |
-| **max_degree** | `int` | `3` | Maximum polynomial degree for B-spline approximation. Valid range: `1-8`. Higher values allow smoother curves. |
-| **continuity** | `enum` | `G2` | Target surface smoothness: `G0` (positional continuity), `G1` (tangent continuity), `G2` (curvature continuity). |
-
-**Determinism Guarantee**: Given identical sections and blend parameters, all compliant implementations must produce surfaces with equivalent cross-sections at any given x position (within tolerance ±0.1%).
+| Parameter | Default | Description |
+| :--- | :--- | :--- |
+| **ruled** | `false` | If `true`, connects sections with straight lines (ruled surface). |
+| **max_degree** | `3` | Degree of the B-spline surface (1-8). |
+| **continuity** | `G2` | Surface continuity target: `G0`, `G1`, `G2`. |
 
 ## Example Configuration
 
+This example defines a Skywalker-style fuselage in two segments: Main tube and motor tower.
+
 ```yaml
-tag: "main_fuselage"
-mass: 250  # optional
+tag: "skywalker_X8"
+mass: 450
 type: "fuselage"
 geometry:
-  blending:
-    ruled: false      # Smooth approximated surface
-    max_degree: 3     # Cubic B-spline
-  
-  sections:
-    - position:
-        x: 0
-        y: 0
-        z: 0
-      profile:
-        type: "circle"  # Nose tip
-        diameter: 1
-    
-    - position:
-        x: 150
-        y: 0
-        z: 10     # Raised cockpit
-      profile:
-        type: "ellipse"
-        width: 80
-        height: 100
-      pitch: 0.0
-    
-    - position:
-        x: 600
-        y: 0
-        z: 0
-      profile:
-        type: "ellipse"
-        width: 80
-        height: 100
-    
-    - position:
-        x: 1200
-        y: 0
-        z: 0
-      profile:
-        type: "circle"
-        diameter: 20  # Tail boom
+  segments:
+    # Segment 1: Main Fuselage Line
+    - tag: "main_body"
+      blending: {ruled: false}
+      sections:
+        - {position: {x: 0}, profile: {type: "circle", diameter: 5}}  # Pointy nose
+        - {position: {x: 200}, profile: {type: "ellipse", width: 150, height: 90}} # Wide body
+        - {position: {x: 800}, profile: {type: "circle", diameter: 20}} # Thin tail
+
+    # Segment 2: Motor Tower (Extends from top of fuselage)
+    - tag: "motor_tower"
+      blending: {ruled: true}
+      sections:
+        - {position: {x: 600, z: 50}, profile: {type: "ellipse", width: 40, height: 80}} # Tower base
+        - {position: {x: 650, z: 120}, profile: {type: "circle", diameter: 40}} # Firewall
 ```

@@ -3,6 +3,129 @@
     "$id": "https://setuav.com/schemas/geometry/fuselage.json",
     "title": "Fuselage Geometry Schema",
     "type": "object",
+    "definitions": {
+        "blending": {
+            "type": "object",
+            "properties": {
+                "ruled": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "max_degree": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 8,
+                    "default": 3
+                },
+                "continuity": {
+                    "enum": [
+                        "G0",
+                        "G1",
+                        "G2"
+                    ],
+                    "default": "G2"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "properties": {
+                "position": {
+                    "$ref": "../common.json#/definitions/position"
+                },
+                "profile": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "enum": [
+                                "circle",
+                                "ellipse",
+                                "rectangle"
+                            ]
+                        },
+                        "diameter": {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "width": {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "height": {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        "corner_radius": {
+                            "type": "number",
+                            "minimum": 0,
+                            "default": 0
+                        }
+                    },
+                    "required": [
+                        "type"
+                    ],
+                    "allOf": [
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "circle"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "required": [
+                                    "diameter"
+                                ]
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "ellipse"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "required": [
+                                    "width",
+                                    "height"
+                                ]
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "rectangle"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "required": [
+                                    "width",
+                                    "height"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "pitch": {
+                    "type": "number",
+                    "default": 0
+                },
+                "roll": {
+                    "type": "number",
+                    "default": 0
+                }
+            },
+            "required": [
+                "position",
+                "profile"
+            ]
+        }
+    },
     "properties": {
         "tag": {
             "$ref": "../common.json#/definitions/tag"
@@ -16,134 +139,36 @@
         "geometry": {
             "type": "object",
             "properties": {
-                "blending": {
-                    "type": "object",
-                    "properties": {
-                        "ruled": {
-                            "type": "boolean",
-                            "default": false
-                        },
-                        "max_degree": {
-                            "type": "integer",
-                            "minimum": 1,
-                            "maximum": 8,
-                            "default": 3
-                        },
-                        "continuity": {
-                            "enum": [
-                                "G0",
-                                "G1",
-                                "G2"
-                            ],
-                            "default": "G2"
-                        }
-                    }
-                },
-                "sections": {
+                "segments": {
                     "type": "array",
+                    "description": "List of lofted segments that make up the fuselage.",
                     "items": {
                         "type": "object",
                         "properties": {
-                            "position": {
-                                "$ref": "../common.json#/definitions/position"
+                            "tag": {
+                                "type": "string"
                             },
-                            "profile": {
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "enum": [
-                                            "circle",
-                                            "ellipse",
-                                            "rectangle"
-                                        ]
-                                    },
-                                    "diameter": {
-                                        "type": "number",
-                                        "minimum": 0
-                                    },
-                                    "width": {
-                                        "type": "number",
-                                        "minimum": 0
-                                    },
-                                    "height": {
-                                        "type": "number",
-                                        "minimum": 0
-                                    },
-                                    "corner_radius": {
-                                        "type": "number",
-                                        "minimum": 0,
-                                        "default": 0
-                                    }
+                            "blending": {
+                                "$ref": "#/definitions/blending"
+                            },
+                            "sections": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/section"
                                 },
-                                "required": [
-                                    "type"
-                                ],
-                                "allOf": [
-                                    {
-                                        "if": {
-                                            "properties": {
-                                                "type": {
-                                                    "const": "circle"
-                                                }
-                                            }
-                                        },
-                                        "then": {
-                                            "required": [
-                                                "diameter"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "if": {
-                                            "properties": {
-                                                "type": {
-                                                    "const": "ellipse"
-                                                }
-                                            }
-                                        },
-                                        "then": {
-                                            "required": [
-                                                "width",
-                                                "height"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "if": {
-                                            "properties": {
-                                                "type": {
-                                                    "const": "rectangle"
-                                                }
-                                            }
-                                        },
-                                        "then": {
-                                            "required": [
-                                                "width",
-                                                "height"
-                                            ]
-                                        }
-                                    }
-                                ]
-                            },
-                            "pitch": {
-                                "type": "number",
-                                "default": 0
-                            },
-                            "roll": {
-                                "type": "number",
-                                "default": 0
+                                "minItems": 2
                             }
                         },
                         "required": [
-                            "position",
-                            "profile"
+                            "tag",
+                            "sections"
                         ]
                     },
-                    "minItems": 2
+                    "minItems": 1
                 }
             },
             "required": [
-                "sections"
+                "segments"
             ]
         }
     },

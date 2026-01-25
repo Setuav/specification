@@ -1,16 +1,18 @@
 # Gövde Geometrisi
 
-Gövde modeli, İHA'nın ana gövdesini tanımlar. Tipik olarak, X-ekseni boyunca tanımlanan birkaç kesitin birbirine parametrik yüzeylerle bağlandığı bir istasyon bazlı yaklaşım kullanılır.
+Gövde modeli, İHA'nın ana yapısal gövdelerini tanımlar. Gövde, bir veya daha fazla "segment" (parça) halinde tanımlanır ve her segment bir dizi kesitin birbirine bağlanmasıyla oluşur.
 
-## Yapı: Kesitler ve Birleştirme
+## Yapı: Segmentler ve Loftlar
 
-Gövde, X-ekseni boyunca belirli koordinatlarda tanımlanan bir dizi kesit (section) ile tanımlanır ve bu kesitler kontrollü interpolasyon ile birbirine bağlanır. Her kesit, konumunu, kesit şeklini (profile), ve oryantasyonunu içerir.
+Gövde yapısı modülerdir. Tek bir gövde tanımı altında birden fazla "Segment" (bölüm) tanımlanabilir. Örneğin bir gövde "Burun Konisi", "Ana Tüp" ve "Motor Kulesi" olarak üç ayrı segmentten oluşabilir.
+
+Her segment, X-ekseni boyunca (veya uzayda herhangi bir doğrultuda) tanımlanan bir dizi kesit (section) içerir ve bu kesitler kontrollü interpolasyon (loft) ile birbirine bağlanır.
 
 ## Koordinat Çerçevesi
 
-Gövde kesitleri `SETUAV_BODY` çerçevesinde tanımlanır.
+Gövde segmentleri ve kesitleri `SETUAV_BODY` çerçevesinde tanımlanır.
 
-- **X-ekseni**: Gövde boyunca mesafe (x=0 burun ucudur).
+- **X-ekseni**: Boylamsal eksen.
 - **Y-Z düzlemi**: Kesitin bulunduğu düzlem.
 
 ## Parametreler
@@ -20,11 +22,17 @@ Gövde kesitleri `SETUAV_BODY` çerçevesinde tanımlanır.
 | Parametre | Tip | Açıklama |
 | :--- | :--- | :--- |
 | **tag** | `str` | Gövde için benzersiz tanımlayıcı (örn: "main_fuselage"). |
-| **mass** | `g` | Toplam gövde kütlesi (opsiyonel). |
+| **mass** | `g` | Toplam gövde kütlesi. |
 
-### Geometri
+### Geometri: Segmentler
 
-Gövde geometrisi, kontrollü interpolasyon kullanılarak birbirine bağlanan bir dizi **kesit** (enine kesit) ile tanımlanır.
+Gövde geometrisi, `segments` dizisi altında tanımlanan parçaların toplamıdır. Her segmentin aşağıdaki özellikleri vardır:
+
+| Parametre | Tip | Açıklama |
+| :--- | :--- | :--- |
+| **tag** | `str` | Segmente özgü etiket (örn: "nose_cone"). |
+| **sections** | `list` | Segmenti oluşturan kesitlerin listesi (en az 2 adet). |
+| **blending** | `object` | Bu segmente özel yüzey oluşturma parametreleri (opsiyonel). |
 
 ### Kesit Özellikleri
 
@@ -34,103 +42,64 @@ Her kesitin aşağıdaki özellikleri vardır:
 | :--- | :--- | :--- |
 | **position** | `object` | Kesit pozisyonu (zorunlu). |
 | **position.x** | `mm` | Burun ucundan boylamsal konum. |
-| **position.y** | `mm` | XZ-düzleminden yanal ofset (opsiyonel, varsayılan: 0). Sabit kanatlı İHA'lar tipik olarak 0 kullanır (merkez hattı). |
+| **position.y** | `mm` | XZ-düzleminden yanal ofset (opsiyonel, varsayılan: 0). |
 | **position.z** | `mm` | XY-düzleminden dikey ofset (opsiyonel, varsayılan: 0). |
 | **profile** | `object` | Kesit şekil tanımı (zorunlu). |
-| **pitch** | `deg` | Kesit eğimi, X-eksenine göre (opsiyonel, varsayılan: 0). |
+| **pitch** | `deg` | Kesit eğimi, Y-ekseni etrafında (opsiyonel, varsayılan: 0). |
 | **roll** | `deg` | Profil rotasyonu, X-ekseni etrafında (opsiyonel, varsayılan: 0). |
 
-### Profil Tipleri
+## Profil Tipleri
 
-#### Circle
+`sections` altındaki her kesit belirli bir profile sahip olmalıdır.
 
-Çap ile tanımlanan dairesel kesit.
-
+#### Circle (Daire)
 ```yaml
-profile:
-  type: "circle"
-  diameter: 80  # mm
+profile: {type: "circle", diameter: 80}
 ```
 
-#### Ellipse
-
-Bağımsız genişlik ve yüksekliğe sahip eliptik kesit.
-
+#### Ellipse (Elips)
 ```yaml
-profile:
-  type: "ellipse"
-  width: 100   # mm
-  height: 120  # mm
+profile: {type: "ellipse", width: 100, height: 120}
 ```
 
-#### Rectangle
-
-Opsiyonel yuvarlatılmış köşelere sahip dikdörtgen kesit.
-
+#### Rectangle (Dikdörtgen)
 ```yaml
-profile:
-  type: "rectangle"
-  width: 100          # mm
-  height: 120         # mm
-  corner_radius: 10   # mm (opsiyonel, varsayılan: 0)
+# Opsiyonel 'corner_radius' ile yuvarlatılabilir
+profile: {type: "rectangle", width: 100, height: 120, corner_radius: 10}
 ```
 
-### Yüzey Birleştirme Parametreleri
+## Yüzey Birleştirme (Blending)
 
-Bu parametreler, kesitlerin nihai yüzeyi oluşturmak için nasıl harmanlanacağını kontrol eder.
+Bu parametreler, segment içindeki kesitlerin nasıl birbirine bağlanacağını kontrol eder.
 
-| Parametre | Tip | Varsayılan | Açıklama |
-| :--- | :--- | :--- | :--- |
-| **ruled** | `bool` | `false` | `false`: Düzgün yaklaşık yüzey. `true`: Çizgisel yüzey (kesitler arası düz çizgiler). |
-| **max_degree** | `int` | `3` | B-spline yaklaşımı için maksimum polinom derecesi. Geçerli aralık: `1-8`. Yüksek değerler daha düzgün eğrilere izin verir. |
-| **continuity** | `enum` | `G2` | Hedef yüzey düzgünlüğü: `G0` (konum sürekliliği), `G1` (teğet sürekliliği), `G2` (eğrilik sürekliliği). |
-
-**Determinizm Garantisi**: Aynı kesitler ve blend parametreleri verildiğinde, tüm uyumlu implementasyonlar verilen herhangi bir x pozisyonunda eşdeğer enine kesitlere sahip yüzeyler üretmelidir (±%0.1 tolerans dahilinde).
+| Parametre | Varsayılan | Açıklama |
+| :--- | :--- | :--- |
+| **ruled** | `false` | `true` ise kesitler arası düz çizgilerle (cetvel yüzey) bağlanır. |
+| **max_degree** | `3` | B-spline yüzeyin derecesi (1-8 arası). |
+| **continuity** | `G2` | Yüzey süreklilik hedefi: `G0`, `G1`, `G2`. |
 
 ## Örnek Konfigürasyon
 
+Bu örnek, bir Skywalker gövdesini iki segment halinde tanımlar: Ana tüp ve motor kulesi.
+
 ```yaml
-tag: "main_fuselage"
-mass: 250  # opsiyonel
+tag: "skywalker_X8"
+mass: 450
 type: "fuselage"
 geometry:
-  blending:
-    ruled: false      # Düzgün yaklaşık yüzey
-    max_degree: 3     # Kübik B-spline
-  
-  sections:
-    - position:
-        x: 0
-        y: 0
-        z: 0
-      profile:
-        type: "circle"  # Burun ucu
-        diameter: 1 
-    
-    - position:
-        x: 150
-        y: 0
-        z: 10     # Yükseltilmiş kokpit
-      profile:
-        type: "ellipse"
-        width: 80
-        height: 100
-      pitch: 0.0
-    
-    - position:
-        x: 600
-        y: 0
-        z: 0
-      profile:
-        type: "ellipse"
-        width: 80
-        height: 100
-    
-    - position:
-        x: 1200
-        y: 0
-        z: 0
-      profile:
-        type: "circle"
-        diameter: 20  # Kuyruk borusu
+  segments:
+    # 1. Segment: Ana Gövde Hattı
+    - tag: "main_body"
+      blending: {ruled: false}
+      sections:
+        - {position: {x: 0}, profile: {type: "circle", diameter: 5}}  # Sivri burun
+        - {position: {x: 200}, profile: {type: "ellipse", width: 150, height: 90}} # Geniş gövde
+        - {position: {x: 800}, profile: {type: "circle", diameter: 20}} # İnce kuyruk
+
+    # 2. Segment: Motor Kulesi (Gövdenin üstünden çıkar)
+    - tag: "motor_tower"
+      blending: {ruled: true}
+      sections:
+        - {position: {x: 600, z: 50}, profile: {type: "ellipse", width: 40, height: 80}} # Kule tabanı
+        - {position: {x: 650, z: 120}, profile: {type: "circle", diameter: 40}} # Firewall
 ```

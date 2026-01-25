@@ -6,15 +6,17 @@ airframe:
     mass: 350
     type: "fuselage"
     geometry:
-      blending:
-        ruled: false
-      sections:
-        - position: {x: 0, y: 0, z: 0}
-          profile: {type: "circle", diameter: 20}
-        - position: {x: 200, y: 0, z: 0}
-          profile: {type: "ellipse", width: 80, height: 100}
-        - position: {x: 800, y: 0, z: 0}
-          profile: {type: "circle", diameter: 10}
+      segments:
+        - tag: "main_body"
+          blending:
+            ruled: false
+          sections:
+            - position: {x: 0, y: 0, z: 0}
+              profile: {type: "circle", diameter: 20}
+            - position: {x: 200, y: 0, z: 0}
+              profile: {type: "ellipse", width: 80, height: 100}
+            - position: {x: 800, y: 0, z: 0}
+              profile: {type: "circle", diameter: 10}
 
   wings:
     - tag: "wing_main"

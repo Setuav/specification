@@ -37,10 +37,7 @@
                         ]
                     }
                 }
-            },
-            "required": [
-                "fuselage"
-            ]
+            }
         },
         "propulsion": {
             "type": "object",

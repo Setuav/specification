@@ -4,7 +4,7 @@
     "title": "Setuav Design Schema",
     "type": "object",
     "properties": {
-        "version": {
+        "setuav": {
             "type": "string",
             "enum": [
                 "1.0"
@@ -94,7 +94,7 @@
         }
     },
     "required": [
-        "version",
+        "setuav",
         "airframe"
     ]
 }

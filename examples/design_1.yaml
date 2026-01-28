@@ -1,5 +1,7 @@
 setuav: '1.0'
 airframe:
+  name: Untitled
+  description: ''
   fuselage:
     tag: fuselage
     type: fuselage
@@ -81,6 +83,9 @@ airframe:
           x: 1.0
           y: 0.0
           z: 0.0
+      blending:
+        max_degree: 3
+        continuity: G2
     attachment:
       position:
         x: 320.0
@@ -88,8 +93,8 @@ airframe:
         z: 20.0
       rotation:
         x: 0.0
-        y: 0.0
-        z: 0.0
+        y: 0
+        z: 0
       mirror: true
   - tag: stabilizer
     type: wing
@@ -115,6 +120,9 @@ airframe:
           x: 0.0
           y: 0.0
           z: 0.0
+      blending:
+        max_degree: 3
+        continuity: G2
     attachment:
       position:
         x: 830.0
@@ -122,145 +130,179 @@ airframe:
         z: 40.0
       rotation:
         x: 35.0
-        y: 0.0
-        z: 0.0
+        y: 0
+        z: 0
       mirror: true
 propulsion:
-  propulsion_type: electric
-  count: 2
-  airframe_weight: 4000.0
-  motor:
-    id: f8165a92
+  motors:
+  - tag: motor_1
+    type: motor
+    id: 8bd4d212
     manufacturer: SunnySky
     model: X2820 KV860 V3 3-4S
-    geometry:
-      stator_diameter: 28.0
-      stator_height: 6.0
-      shaft_diameter: 5.0
-      shaft_length: 10.0
-      body_diameter: 35.0
-      body_height: 15.0
-      mounting_hole_pattern: 19.0
-      mounting_hole_count: 4
-      mounting_hole_diameter: 3.0
-      prop_adapter_type: M5
-      prop_adapter_diameter: 8.0
-    electrical:
-      kv: 860.0
-      no_load_current: 1.3
-      internal_resistance: 0.0258
-      max_current: 65.0
-      max_current_burst: 40.0
-      max_power: 960.0
-      min_voltage: 7.4
-      max_voltage: 22.2
-      pole_count: 14
-      timing_degrees: 15.0
-    performance:
-      efficiency_peak: 0.85
-      efficiency_cruise: 0.8
-      thrust_static_max: 0.0
-      reference_prop: ''
+    kv: 860.0
+    voltage_min: 7.4
+    voltage_max: 22.2
+    current_max: 65.0
+    resistance: 0.0258
+    no_load_current: 1.3
+    mass: 143.2
+    diameter: 35.0
+    length: 15.0
+    shaft_diameter: 5.0
+    shaft_length: 10.0
+    propeller_ref: main_prop
     weight: 143.2
     notes: ''
     datasheet_url: ''
     image_url: ''
     favorite: false
-    tags:
-    - imported
-    - rcplanes_db
-    created_at: '2026-01-21T02:34:11.644359'
-    modified_at: '2026-01-21T02:34:11.644363'
-  esc:
-    id: 3ff055e7
+    tags: []
+    created_at: '2026-01-28T14:18:25.808675'
+    modified_at: '2026-01-28T14:18:25.808689'
+  - tag: motor_2
+    type: motor
+    id: 8bd4d212
+    manufacturer: SunnySky
+    model: X2820 KV860 V3 3-4S
+    kv: 860.0
+    voltage_min: 7.4
+    voltage_max: 22.2
+    current_max: 65.0
+    resistance: 0.0258
+    no_load_current: 1.3
+    mass: 143.2
+    diameter: 35.0
+    length: 15.0
+    shaft_diameter: 5.0
+    shaft_length: 10.0
+    propeller_ref: main_prop
+    weight: 143.2
+    notes: ''
+    datasheet_url: ''
+    image_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.808675'
+    modified_at: '2026-01-28T14:18:25.808689'
+  escs:
+  - tag: esc_1
+    type: esc
+    id: 06c59fba
     manufacturer: Hobbywing
     model: Skywalker 50A
-    geometry:
+    current_max: 50.0
+    current_burst: 65.0
+    voltage_min: 7.4
+    voltage_max: 25.2
+    resistance: 0.01
+    bec_voltage: 5.0
+    bec_current: 3.0
+    protocol: PWM
+    telemetry: false
+    mass: 35.0
+    dimensions:
       length: 50.0
       width: 25.0
       height: 10.0
-      motor_wire_length: 150.0
-      motor_wire_gauge: 14
-      power_wire_length: 150.0
-      power_wire_gauge: 12
-    electrical:
-      continuous_current: 50.0
-      burst_current: 65.0
-      min_cells: 2
-      max_cells: 6
-      bec_enabled: true
-      bec_voltage: 5.0
-      bec_current: 3.0
-      bec_type: switching
-      pwm_frequency: 8.0
-      pwm_protocol: PWM
     weight: 35.0
     notes: ''
     datasheet_url: ''
     favorite: false
     tags: []
-    created_at: '2026-01-21T03:07:50.782420'
-    modified_at: '2026-01-21T03:08:32.684155'
-  battery:
-    id: 8b776a3e
-    manufacturer: Generic
-    model: 4S 4000mah 45c
-    chemistry: LiPo
-    geometry:
-      length: 105.0
-      width: 35.0
-      height: 25.0
-      lead_length: 100.0
-      lead_gauge: 12
-      connector_type: XT60
-      balance_connector: JST-XH
-    electrical:
-      cell_count: 4
-      parallel_count: 1
-      capacity: 4000.0
-      cell_voltage_nominal: 3.7
-      cell_voltage_max: 4.2
-      cell_voltage_min: 3.3
-      cell_voltage_storage: 3.8
-      discharge_rate: 45.0
-      discharge_rate_burst: 50.0
-      charge_rate: 2.0
-      internal_resistance: 5.0
-    weight: 400.0
+    created_at: '2026-01-28T14:18:25.808807'
+    modified_at: '2026-01-28T14:18:25.808812'
+  - tag: esc_2
+    type: esc
+    id: 06c59fba
+    manufacturer: Hobbywing
+    model: Skywalker 50A
+    current_max: 50.0
+    current_burst: 65.0
+    voltage_min: 7.4
+    voltage_max: 25.2
+    resistance: 0.01
+    bec_voltage: 5.0
+    bec_current: 3.0
+    protocol: PWM
+    telemetry: false
+    mass: 35.0
+    dimensions:
+      length: 50.0
+      width: 25.0
+      height: 10.0
+    weight: 35.0
     notes: ''
     datasheet_url: ''
     favorite: false
     tags: []
-    created_at: '2026-01-21T03:06:02.678428'
-    modified_at: '2026-01-21T03:06:41.076911'
-  propeller:
-    id: 6b3e483c
-    manufacturer: APC Propellers
-    model: APC 12x6E
-    prop_type: fixed
-    material: composite
-    geometry:
-      diameter: 12
-      pitch: 6.0
-      blade_count: 2
-      blade_chord_max: 25.0
-      blade_thickness: 2.0
-      hub_diameter: 8.0
-      hub_thickness: 5.0
-      shaft_hole: 5.0
-    performance:
-      efficiency_static: 0.65
-      efficiency_cruise: 0.75
-      efficiency_peak: 0.8
-      max_rpm: 15000.0
-      ct_static: 0.09523888888888889
-      cp_static: 0.033411111111111114
-    weight: 15.0
+    created_at: '2026-01-28T14:18:25.808807'
+    modified_at: '2026-01-28T14:18:25.808812'
+  batteries:
+  - tag: main_battery
+    type: battery
+    id: 4e53cf95
+    manufacturer: Generic
+    model: 4S 4000mah 45c
+    chemistry: LiPo
+    cells: 4
+    voltage_nominal: 14.8
+    voltage_full: 16.8
+    voltage_cutoff: 13.2
+    capacity: 4000.0
+    discharge_rate: 45.0
+    discharge_burst: 50.0
+    charge_rate: 2.0
+    resistance: 5.0
+    mass: 400.0
+    dimensions:
+      length: 105.0
+      width: 35.0
+      height: 25.0
     notes: ''
     datasheet_url: ''
     favorite: false
-    tags:
-    - imported
-    - apc_db
-    created_at: '2026-01-21T03:04:40.346760'
-    modified_at: '2026-01-21T03:04:40.346765'
+    tags: []
+    created_at: '2026-01-28T14:18:25.808909'
+    modified_at: '2026-01-28T14:18:25.808914'
+  propellers:
+  - tag: propeller_1
+    type: propeller
+    id: 37a5bd4e
+    manufacturer: APC Propellers
+    model: APC 12x6E
+    diameter: 12.0
+    pitch: 6.0
+    blade_count: 2
+    direction: CW
+    hub_diameter: 8.0
+    hub_thickness: 5.0
+    mass: 15.0
+    material: composite
+    prop_type: fixed
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.809007'
+    modified_at: '2026-01-28T14:18:25.809012'
+  - tag: propeller_2
+    type: propeller
+    id: 37a5bd4e
+    manufacturer: APC Propellers
+    model: APC 12x6E
+    diameter: 12.0
+    pitch: 6.0
+    blade_count: 2
+    direction: CW
+    hub_diameter: 8.0
+    hub_thickness: 5.0
+    mass: 15.0
+    material: composite
+    prop_type: fixed
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.809007'
+    modified_at: '2026-01-28T14:18:25.809012'

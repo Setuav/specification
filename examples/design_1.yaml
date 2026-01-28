@@ -1,6 +1,6 @@
 setuav: '1.0'
 airframe:
-  name: Untitled
+  name: FixedWing
   description: ''
   fuselage:
     tag: fuselage

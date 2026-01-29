@@ -126,7 +126,7 @@ airframe:
     attachment:
       position:
         x: 830.0
-        y: 30.0
+        y: 35.0
         z: 40.0
       rotation:
         x: 35.0

@@ -1,304 +1,129 @@
 setuav: '1.0'
 airframe:
-  setuav: '1.0'
-  airframe:
-    fuselage:
-      tag: fuselage
-      type: fuselage
-      geometry:
-        segments:
-        - tag: main
-          sections:
-          - position:
-              x: 0.0
-              y: 0.0
-              z: -25.0
-            profile:
-              type: circle
-              diameter: 15.0
-          - position:
-              x: 90.0
-              y: 0.0
-              z: -15.0
-            profile:
-              type: circle
-              diameter: 80.0
-          - position:
-              x: 350.0
-              y: 0.0
-              z: 0.0
-            profile:
-              type: circle
-              diameter: 130.0
-          - position:
-              x: 600.0
-              y: 0.0
-              z: 0.0
-            profile:
-              type: circle
-              diameter: 110.0
-          - position:
-              x: 1000.0
-              y: 0.0
-              z: 25.0
-            profile:
-              type: circle
-              diameter: 10.0
-          blending:
-            max_degree: 4
-            continuity: G0
-    wings:
-    - tag: main_wing
-      type: wing
-      geometry:
-        profiles:
-        - airfoil: NACA6414
-          chord: 265.0
-          position:
+  fuselage:
+    tag: fuselage
+    type: fuselage
+    geometry:
+      segments:
+      - tag: main
+        sections:
+        - position:
             x: 0.0
             y: 0.0
-            z: 0.0
-          rotation:
-            x: 0.0
+            z: -25.0
+          profile:
+            type: circle
+            diameter: 15.0
+        - position:
+            x: 90.0
+            y: 0.0
+            z: -15.0
+          profile:
+            type: circle
+            diameter: 80.0
+        - position:
+            x: 350.0
             y: 0.0
             z: 0.0
-        - airfoil: NACA4412
-          chord: 220.0
-          position:
-            x: 5.0
-            y: 400.0
-            z: 6.98
-          rotation:
-            x: 1.0
+          profile:
+            type: circle
+            diameter: 130.0
+        - position:
+            x: 600.0
             y: 0.0
             z: 0.0
-        - airfoil: NACA2412
-          chord: 150.0
-          position:
-            x: 41.0
-            y: 700.0
-            z: 17.48
-          rotation:
-            x: 1.0
+          profile:
+            type: circle
+            diameter: 110.0
+        - position:
+            x: 1000.0
             y: 0.0
-            z: 0.0
-      attachment:
+            z: 25.0
+          profile:
+            type: circle
+            diameter: 10.0
+        blending:
+          max_degree: 4
+          continuity: G0
+  wings:
+  - tag: main_wing
+    type: wing
+    geometry:
+      profiles:
+      - airfoil: NACA6414
+        chord: 265.0
         position:
-          x: 320.0
-          y: 70.0
-          z: 20.0
+          x: 0.0
+          y: 0.0
+          z: 0.0
         rotation:
           x: 0.0
           y: 0.0
           z: 0.0
-        mirror: true
-    - tag: stabilizer
-      type: wing
-      geometry:
-        profiles:
-        - airfoil: NACA2312
-          chord: 145.0
-          position:
-            x: 0.0
-            y: 0.0
-            z: 0.0
-          rotation:
-            x: 0.0
-            y: 0.0
-            z: 0.0
-        - airfoil: NACA0012
-          chord: 80.0
-          position:
-            x: 20.0
-            y: 200.0
-            z: 0.0
-          rotation:
-            x: 0.0
-            y: 0.0
-            z: 0.0
-      attachment:
+      - airfoil: NACA4412
+        chord: 220.0
         position:
-          x: 830.0
-          y: 35.0
-          z: 40.0
+          x: 5.0
+          y: 400.0
+          z: 6.98
         rotation:
-          x: 35.0
+          x: 1.0
           y: 0.0
           z: 0.0
-        mirror: true
-  propulsion:
-    motors:
-    - tag: motor_1
-      type: motor
-      id: 8bd4d212
-      manufacturer: SunnySky
-      model: X2820 KV860 V3 3-4S
-      kv: 860.0
-      voltage_min: 7.4
-      voltage_max: 22.2
-      current_max: 65.0
-      resistance: 0.0258
-      no_load_current: 1.3
-      mass: 143.2
-      diameter: 35.0
-      length: 15.0
-      shaft_diameter: 5.0
-      shaft_length: 10.0
-      propeller_ref: main_prop
-      weight: 143.2
-      notes: ''
-      datasheet_url: ''
-      image_url: ''
-      favorite: false
-      tags: []
-      created_at: '2026-01-28T14:18:25.808675'
-      modified_at: '2026-01-28T14:18:25.808689'
-    - tag: motor_2
-      type: motor
-      id: 8bd4d212
-      manufacturer: SunnySky
-      model: X2820 KV860 V3 3-4S
-      kv: 860.0
-      voltage_min: 7.4
-      voltage_max: 22.2
-      current_max: 65.0
-      resistance: 0.0258
-      no_load_current: 1.3
-      mass: 143.2
-      diameter: 35.0
-      length: 15.0
-      shaft_diameter: 5.0
-      shaft_length: 10.0
-      propeller_ref: main_prop
-      weight: 143.2
-      notes: ''
-      datasheet_url: ''
-      image_url: ''
-      favorite: false
-      tags: []
-      created_at: '2026-01-28T14:18:25.808675'
-      modified_at: '2026-01-28T14:18:25.808689'
-    escs:
-    - tag: esc_1
-      type: esc
-      id: 06c59fba
-      manufacturer: Hobbywing
-      model: Skywalker 50A
-      current_max: 50.0
-      current_burst: 65.0
-      voltage_min: 7.4
-      voltage_max: 25.2
-      resistance: 0.01
-      bec_voltage: 5.0
-      bec_current: 3.0
-      protocol: PWM
-      telemetry: false
-      mass: 35.0
-      dimensions:
-        length: 50.0
-        width: 25.0
-        height: 10.0
-      weight: 35.0
-      notes: ''
-      datasheet_url: ''
-      favorite: false
-      tags: []
-      created_at: '2026-01-28T14:18:25.808807'
-      modified_at: '2026-01-28T14:18:25.808812'
-    - tag: esc_2
-      type: esc
-      id: 06c59fba
-      manufacturer: Hobbywing
-      model: Skywalker 50A
-      current_max: 50.0
-      current_burst: 65.0
-      voltage_min: 7.4
-      voltage_max: 25.2
-      resistance: 0.01
-      bec_voltage: 5.0
-      bec_current: 3.0
-      protocol: PWM
-      telemetry: false
-      mass: 35.0
-      dimensions:
-        length: 50.0
-        width: 25.0
-        height: 10.0
-      weight: 35.0
-      notes: ''
-      datasheet_url: ''
-      favorite: false
-      tags: []
-      created_at: '2026-01-28T14:18:25.808807'
-      modified_at: '2026-01-28T14:18:25.808812'
-    batteries:
-    - tag: main_battery
-      type: battery
-      id: 4e53cf95
-      manufacturer: Generic
-      model: 4S 4000mah 45c
-      chemistry: LiPo
-      cells: 4
-      voltage_nominal: 14.8
-      voltage_full: 16.8
-      voltage_cutoff: 13.2
-      capacity: 4000.0
-      discharge_rate: 45.0
-      discharge_burst: 50.0
-      charge_rate: 2.0
-      resistance: 5.0
-      mass: 400.0
-      dimensions:
-        length: 105.0
-        width: 35.0
-        height: 25.0
-      notes: ''
-      datasheet_url: ''
-      favorite: false
-      tags: []
-      created_at: '2026-01-28T14:18:25.808909'
-      modified_at: '2026-01-28T14:18:25.808914'
-    propellers:
-    - tag: propeller_1
-      type: propeller
-      id: 37a5bd4e
-      manufacturer: APC Propellers
-      model: APC 12x6E
-      diameter: 12.0
-      pitch: 6.0
-      blade_count: 2
-      direction: CW
-      hub_diameter: 8.0
-      hub_thickness: 5.0
-      mass: 15.0
-      material: composite
-      prop_type: fixed
-      notes: ''
-      datasheet_url: ''
-      favorite: false
-      tags: []
-      created_at: '2026-01-28T14:18:25.809007'
-      modified_at: '2026-01-28T14:18:25.809012'
-    - tag: propeller_2
-      type: propeller
-      id: 37a5bd4e
-      manufacturer: APC Propellers
-      model: APC 12x6E
-      diameter: 12.0
-      pitch: 6.0
-      blade_count: 2
-      direction: CW
-      hub_diameter: 8.0
-      hub_thickness: 5.0
-      mass: 15.0
-      material: composite
-      prop_type: fixed
-      notes: ''
-      datasheet_url: ''
-      favorite: false
-      tags: []
-      created_at: '2026-01-28T14:18:25.809007'
-      modified_at: '2026-01-28T14:18:25.809012'
+      - airfoil: NACA2412
+        chord: 150.0
+        position:
+          x: 41.0
+          y: 700.0
+          z: 17.48
+        rotation:
+          x: 1.0
+          y: 0.0
+          z: 0.0
+    attachment:
+      position:
+        x: 320.0
+        y: 70.0
+        z: 20.0
+      rotation:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      mirror: true
+  - tag: stabilizer
+    type: wing
+    geometry:
+      profiles:
+      - airfoil: NACA2312
+        chord: 145.0
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        rotation:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+      - airfoil: NACA0012
+        chord: 80.0
+        position:
+          x: 20.0
+          y: 200.0
+          z: 0.0
+        rotation:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+    attachment:
+      position:
+        x: 830.0
+        y: 35.0
+        z: 40.0
+      rotation:
+        x: 35.0
+        y: 0.0
+        z: 0.0
+      mirror: true
 propulsion:
   motors:
   - tag: motor_1
@@ -351,47 +176,6 @@ propulsion:
     tags: []
     created_at: '2026-01-28T14:18:25.808675'
     modified_at: '2026-01-28T14:18:25.808689'
-  propellers:
-  - tag: propeller_1
-    type: propeller
-    id: 37a5bd4e
-    manufacturer: APC Propellers
-    model: APC 12x6E
-    diameter: 12.0
-    pitch: 6.0
-    blade_count: 2
-    direction: CW
-    hub_diameter: 8.0
-    hub_thickness: 5.0
-    mass: 15.0
-    material: composite
-    prop_type: fixed
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.809007'
-    modified_at: '2026-01-28T14:18:25.809012'
-  - tag: propeller_2
-    type: propeller
-    id: 37a5bd4e
-    manufacturer: APC Propellers
-    model: APC 12x6E
-    diameter: 12.0
-    pitch: 6.0
-    blade_count: 2
-    direction: CW
-    hub_diameter: 8.0
-    hub_thickness: 5.0
-    mass: 15.0
-    material: composite
-    prop_type: fixed
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.809007'
-    modified_at: '2026-01-28T14:18:25.809012'
   escs:
   - tag: esc_1
     type: esc
@@ -472,3 +256,44 @@ propulsion:
     tags: []
     created_at: '2026-01-28T14:18:25.808909'
     modified_at: '2026-01-28T14:18:25.808914'
+  propellers:
+  - tag: propeller_1
+    type: propeller
+    id: 37a5bd4e
+    manufacturer: APC Propellers
+    model: APC 12x6E
+    diameter: 12.0
+    pitch: 6.0
+    blade_count: 2
+    direction: CW
+    hub_diameter: 8.0
+    hub_thickness: 5.0
+    mass: 15.0
+    material: composite
+    prop_type: fixed
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.809007'
+    modified_at: '2026-01-28T14:18:25.809012'
+  - tag: propeller_2
+    type: propeller
+    id: 37a5bd4e
+    manufacturer: APC Propellers
+    model: APC 12x6E
+    diameter: 12.0
+    pitch: 6.0
+    blade_count: 2
+    direction: CW
+    hub_diameter: 8.0
+    hub_thickness: 5.0
+    mass: 15.0
+    material: composite
+    prop_type: fixed
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.809007'
+    modified_at: '2026-01-28T14:18:25.809012'

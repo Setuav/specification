@@ -50,7 +50,7 @@ airframe:
     type: wing
     geometry:
       profiles:
-      - airfoil: NACA6414
+      - airfoil: '6414'
         chord: 265.0
         position:
           x: 0.0
@@ -63,9 +63,9 @@ airframe:
       - airfoil: NACA4412
         chord: 220.0
         position:
-          x: 5.0
-          y: 400.0
-          z: 6.98
+          x: 42.05220452979716
+          y: 400.03906283207215
+          z: 6.982707815557133
         rotation:
           x: 1.0
           y: 0.0
@@ -73,9 +73,9 @@ airframe:
       - airfoil: NACA2412
         chord: 150.0
         position:
-          x: 41.0
-          y: 700.0
-          z: 17.48
+          x: 105.8404286869708
+          y: 699.9562500205028
+          z: 17.456046775977676
         rotation:
           x: 1.0
           y: 0.0
@@ -94,7 +94,7 @@ airframe:
     type: wing
     geometry:
       profiles:
-      - airfoil: NACA2312
+      - airfoil: '0012'
         chord: 145.0
         position:
           x: 0.0
@@ -107,7 +107,7 @@ airframe:
       - airfoil: NACA0012
         chord: 80.0
         position:
-          x: 20.0
+          x: 72.79404685324047
           y: 200.0
           z: 0.0
         rotation:
@@ -143,7 +143,6 @@ propulsion:
     shaft_diameter: 5.0
     shaft_length: 10.0
     propeller_ref: main_prop
-    weight: 143.2
     notes: ''
     datasheet_url: ''
     image_url: ''
@@ -168,7 +167,6 @@ propulsion:
     shaft_diameter: 5.0
     shaft_length: 10.0
     propeller_ref: main_prop
-    weight: 143.2
     notes: ''
     datasheet_url: ''
     image_url: ''
@@ -176,86 +174,6 @@ propulsion:
     tags: []
     created_at: '2026-01-28T14:18:25.808675'
     modified_at: '2026-01-28T14:18:25.808689'
-  escs:
-  - tag: esc_1
-    type: esc
-    id: 06c59fba
-    manufacturer: Hobbywing
-    model: Skywalker 50A
-    current_max: 50.0
-    current_burst: 65.0
-    voltage_min: 7.4
-    voltage_max: 25.2
-    resistance: 0.01
-    bec_voltage: 5.0
-    bec_current: 3.0
-    protocol: PWM
-    telemetry: false
-    mass: 35.0
-    dimensions:
-      length: 50.0
-      width: 25.0
-      height: 10.0
-    weight: 35.0
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.808807'
-    modified_at: '2026-01-28T14:18:25.808812'
-  - tag: esc_2
-    type: esc
-    id: 06c59fba
-    manufacturer: Hobbywing
-    model: Skywalker 50A
-    current_max: 50.0
-    current_burst: 65.0
-    voltage_min: 7.4
-    voltage_max: 25.2
-    resistance: 0.01
-    bec_voltage: 5.0
-    bec_current: 3.0
-    protocol: PWM
-    telemetry: false
-    mass: 35.0
-    dimensions:
-      length: 50.0
-      width: 25.0
-      height: 10.0
-    weight: 35.0
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.808807'
-    modified_at: '2026-01-28T14:18:25.808812'
-  batteries:
-  - tag: main_battery
-    type: battery
-    id: 4e53cf95
-    manufacturer: Generic
-    model: 4S 4000mah 45c
-    chemistry: LiPo
-    cells: 4
-    voltage_nominal: 14.8
-    voltage_full: 16.8
-    voltage_cutoff: 13.2
-    capacity: 4000.0
-    discharge_rate: 45.0
-    discharge_burst: 50.0
-    charge_rate: 2.0
-    resistance: 5.0
-    mass: 400.0
-    dimensions:
-      length: 105.0
-      width: 35.0
-      height: 25.0
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.808909'
-    modified_at: '2026-01-28T14:18:25.808914'
   propellers:
   - tag: propeller_1
     type: propeller
@@ -297,3 +215,81 @@ propulsion:
     tags: []
     created_at: '2026-01-28T14:18:25.809007'
     modified_at: '2026-01-28T14:18:25.809012'
+  escs:
+  - tag: esc_1
+    type: esc
+    id: 06c59fba
+    manufacturer: Hobbywing
+    model: Skywalker 50A
+    current_max: 50.0
+    current_burst: 65.0
+    voltage_min: 7.4
+    voltage_max: 25.2
+    resistance: 0.01
+    bec_voltage: 5.0
+    bec_current: 3.0
+    protocol: PWM
+    telemetry: false
+    mass: 35.0
+    dimensions:
+      length: 50.0
+      width: 25.0
+      height: 10.0
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.808807'
+    modified_at: '2026-01-28T14:18:25.808812'
+  - tag: esc_2
+    type: esc
+    id: 06c59fba
+    manufacturer: Hobbywing
+    model: Skywalker 50A
+    current_max: 50.0
+    current_burst: 65.0
+    voltage_min: 7.4
+    voltage_max: 25.2
+    resistance: 0.01
+    bec_voltage: 5.0
+    bec_current: 3.0
+    protocol: PWM
+    telemetry: false
+    mass: 35.0
+    dimensions:
+      length: 50.0
+      width: 25.0
+      height: 10.0
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.808807'
+    modified_at: '2026-01-28T14:18:25.808812'
+  batteries:
+  - tag: main_battery
+    type: battery
+    id: 4e53cf95
+    manufacturer: Generic
+    model: 4S 4000mah 45c
+    chemistry: LiPo
+    cells: 4
+    voltage_nominal: 14.8
+    voltage_full: 16.8
+    voltage_cutoff: 13.2
+    capacity: 4000.0
+    discharge_rate: 45.0
+    discharge_burst: 50.0
+    charge_rate: 2.0
+    resistance: 5.0
+    mass: 400.0
+    dimensions:
+      length: 105.0
+      width: 35.0
+      height: 25.0
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags: []
+    created_at: '2026-01-28T14:18:25.808909'
+    modified_at: '2026-01-28T14:18:25.808914'

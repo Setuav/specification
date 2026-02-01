@@ -10,24 +10,80 @@
         },
         "cruise_speed": {
             "type": "number",
-            "description": "Cruise speed (m/s)"
+            "description": "Cruise speed - best range speed (m/s)"
         },
         "max_speed": {
             "type": "number",
-            "description": "Maximum achievable speed (m/s)"
+            "description": "Maximum achievable speed where thrust=drag (m/s)"
         },
         "max_climb_rate": {
             "type": "number",
             "description": "Maximum rate of climb (m/s)"
         },
+        "optimal_speeds": {
+            "type": "object",
+            "description": "Optimal flight speeds for different objectives",
+            "properties": {
+                "best_endurance": {
+                    "type": "number",
+                    "description": "Speed for minimum power / max loiter time (m/s)"
+                },
+                "best_range": {
+                    "type": "number",
+                    "description": "Speed for maximum range (m/s)"
+                },
+                "best_climb": {
+                    "type": "number",
+                    "description": "Speed for maximum rate of climb - Vy (m/s)"
+                },
+                "best_ld": {
+                    "type": "number",
+                    "description": "Speed for maximum lift-to-drag ratio (m/s)"
+                }
+            }
+        },
+        "performance_metrics": {
+            "type": "object",
+            "description": "Key performance metrics",
+            "properties": {
+                "max_ld_ratio": {
+                    "type": "number",
+                    "description": "Maximum lift-to-drag ratio"
+                },
+                "glide_ratio": {
+                    "type": "number",
+                    "description": "Glide ratio (same as max L/D for unpowered glide)"
+                },
+                "best_climb_angle_deg": {
+                    "type": "number",
+                    "description": "Best climb angle (degrees)"
+                },
+                "min_power_required": {
+                    "type": "number",
+                    "description": "Minimum power required for level flight (W)"
+                },
+                "max_range_km": {
+                    "type": "number",
+                    "description": "Maximum achievable range at best range speed (km)"
+                },
+                "max_endurance_hours": {
+                    "type": "number",
+                    "description": "Maximum achievable endurance at best endurance speed (hours)"
+                }
+            }
+        },
         "cruise_performance": {
             "type": "object",
             "properties": {
-                "power_required": {
+                "speed": {
+                    "type": "number",
+                    "description": "Cruise speed used for calculations (m/s)"
+                },
+                "power": {
                     "type": "number",
                     "description": "Power required at cruise (W)"
                 },
-                "current_draw": {
+                "current": {
                     "type": "number",
                     "description": "Current draw at cruise (A)"
                 },
@@ -35,11 +91,11 @@
                     "type": "number",
                     "description": "Throttle percentage at cruise (0-100)"
                 },
-                "endurance_hours": {
+                "endurance": {
                     "type": "number",
                     "description": "Flight endurance at cruise (hours)"
                 },
-                "range_km": {
+                "range": {
                     "type": "number",
                     "description": "Flight range at cruise (km)"
                 }
@@ -50,38 +106,38 @@
             "properties": {
                 "velocities": {
                     "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
+                    "items": { "type": "number" },
                     "description": "Velocity points (m/s)"
                 },
                 "power_required": {
                     "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "description": "Power required (W)"
+                    "items": { "type": "number" },
+                    "description": "Power required curve (W)"
                 },
                 "power_available": {
                     "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "description": "Power available (W)"
+                    "items": { "type": "number" },
+                    "description": "Power available curve (W)"
                 },
                 "thrust_required": {
                     "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "description": "Thrust required (N)"
+                    "items": { "type": "number" },
+                    "description": "Thrust required curve (N)"
                 },
                 "thrust_available": {
                     "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "description": "Thrust available (N)"
+                    "items": { "type": "number" },
+                    "description": "Thrust available curve (N)"
+                },
+                "range": {
+                    "type": "array",
+                    "items": { "type": "number" },
+                    "description": "Estimated range curve (km)"
+                },
+                "rate_of_climb": {
+                    "type": "array",
+                    "items": { "type": "number" },
+                    "description": "Rate of climb curve (m/s)"
                 }
             }
         }

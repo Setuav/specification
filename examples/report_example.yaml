@@ -42,18 +42,33 @@ flight:
   cruise_speed: 16.0
   max_speed: 28.0
   max_climb_rate: 5.5
+  optimal_speeds:
+    best_endurance: 14.2
+    best_range: 16.0
+    best_climb: 15.5
+    best_ld: 15.0
+  performance_metrics:
+    max_ld_ratio: 18.2
+    glide_ratio: 18.2
+    best_climb_angle_deg: 12.5
+    min_power_required: 95
+    max_range_km: 32.0
+    max_endurance_hours: 1.1
   cruise_performance:
-    power_required: 110
-    current_draw: 7.4
+    speed: 16.0
+    power: 110
+    current: 7.4
     throttle: 45
-    endurance_hours: 0.9
-    range_km: 25.0
+    endurance: 0.9
+    range: 25.0
   curves:
     velocities: [10, 15, 20, 25, 30]
     power_required: [150, 100, 140, 220, 350]
     power_available: [450, 430, 410, 380, 350]
     thrust_required: [12, 8, 9, 13, 20]
     thrust_available: [30, 25, 20, 15, 10]
+    range: [15, 25, 22, 18, 12]
+    rate_of_climb: [4.5, 5.5, 4.0, 2.8, 0.5]
 
 propulsion:
   static_thrust_max: 1800

@@ -50,7 +50,7 @@ airframe:
     type: wing
     geometry:
       profiles:
-      - airfoil: '6414'
+      - airfoil: NACA6414
         chord: 265.0
         position:
           x: 0.0
@@ -94,7 +94,7 @@ airframe:
     type: wing
     geometry:
       profiles:
-      - airfoil: '0012'
+      - airfoil: NACA0012
         chord: 145.0
         position:
           x: 0.0
@@ -267,29 +267,29 @@ propulsion:
     created_at: '2026-01-28T14:18:25.808807'
     modified_at: '2026-01-28T14:18:25.808812'
   batteries:
-  - tag: main_battery
+  - tag: battery
     type: battery
-    id: 4e53cf95
+    id: 8b776a3e
     manufacturer: Generic
-    model: 4S 4000mah 45c
+    model: 4S 8000mah 65c
     chemistry: LiPo
     cells: 4
     voltage_nominal: 14.8
     voltage_full: 16.8
     voltage_cutoff: 13.2
-    capacity: 4000.0
-    discharge_rate: 45.0
+    capacity: 8000.0
+    discharge_rate: 25.0
     discharge_burst: 50.0
     charge_rate: 2.0
     resistance: 5.0
     mass: 400.0
     dimensions:
-      length: 105.0
-      width: 35.0
-      height: 25.0
+      length: 0.0
+      width: 0.0
+      height: 0.0
     notes: ''
     datasheet_url: ''
     favorite: false
     tags: []
-    created_at: '2026-01-28T14:18:25.808909'
-    modified_at: '2026-01-28T14:18:25.808914'
+    created_at: '2026-01-21T03:06:02.678428'
+    modified_at: '2026-02-01T00:29:01.819852'

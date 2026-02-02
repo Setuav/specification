@@ -6,18 +6,18 @@
     "position": {
       "type": "object",
       "properties": {
-        "x": { "type": "number", "description": "Longitudinal position in mm" },
-        "y": { "type": "number", "description": "Lateral position in mm", "default": 0 },
-        "z": { "type": "number", "description": "Vertical position in mm", "default": 0 }
+        "x": { "type": "number", "description": "mm, position along X-axis", "default": 0 },
+        "y": { "type": "number", "description": "mm, position along Y-axis", "default": 0 },
+        "z": { "type": "number", "description": "mm, position along Z-axis", "default": 0 }
       },
       "required": ["x"]
     },
     "rotation": {
       "type": "object",
       "properties": {
-        "x": { "type": "number", "description": "Rotation around X-axis (roll) in degrees", "default": 0 },
-        "y": { "type": "number", "description": "Rotation around Y-axis (pitch) in degrees", "default": 0 },
-        "z": { "type": "number", "description": "Rotation around Z-axis (yaw) in degrees", "default": 0 }
+        "x": { "type": "number", "description": "deg, rotation around X-axis (roll)", "default": 0 },
+        "y": { "type": "number", "description": "deg, rotation around Y-axis (pitch)", "default": 0 },
+        "z": { "type": "number", "description": "deg, rotation around Z-axis (yaw)", "default": 0 }
       }
     },
     "tag": {

@@ -47,53 +47,6 @@
         },
         "material": {
             "type": "string"
-        },
-        "thrust_data": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "rpm": {
-                        "type": "number"
-                    },
-                    "thrust_n": {
-                        "type": "number"
-                    },
-                    "torque_nm": {
-                        "type": "number"
-                    },
-                    "power_w": {
-                        "type": "number"
-                    }
-                },
-                "required": [
-                    "rpm",
-                    "thrust_n"
-                ]
-            }
-        },
-        "efficiency_data": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "velocity_ms": {
-                        "type": "number"
-                    },
-                    "efficiency": {
-                        "type": "number",
-                        "minimum": 0,
-                        "maximum": 1
-                    },
-                    "advance_ratio": {
-                        "type": "number"
-                    }
-                },
-                "required": [
-                    "velocity_ms",
-                    "efficiency"
-                ]
-            }
         }
     },
     "required": [

@@ -13,7 +13,7 @@ airframe:
             z: -25.0
           profile:
             type: circle
-            diameter: 15.0
+            diameter: 12.0
         - position:
             x: 90.0
             y: 0.0
@@ -50,36 +50,36 @@ airframe:
     type: wing
     geometry:
       profiles:
-      - airfoil: NACA6414
-        chord: 265.0
-        position:
+      - position:
           x: 0.0
           y: 0.0
           z: 0.0
+        chord: 265.0
         rotation:
           x: 0.0
           y: 0.0
           z: 0.0
-      - airfoil: NACA4412
-        chord: 220.0
-        position:
+        airfoil: '6414'
+      - position:
           x: 42.05220452979716
           y: 400.03906283207215
           z: 6.982707815557133
+        chord: 220.0
         rotation:
           x: 1.0
           y: 0.0
           z: 0.0
-      - airfoil: NACA2412
-        chord: 150.0
-        position:
+        airfoil: '4412'
+      - position:
           x: 105.8404286869708
           y: 699.9562500205028
           z: 17.456046775977676
+        chord: 150.0
         rotation:
           x: 1.0
           y: 0.0
           z: 0.0
+        airfoil: '2412'
     attachment:
       position:
         x: 320.0
@@ -90,30 +90,31 @@ airframe:
         y: 0.0
         z: 0.0
       mirror: true
+      fairing: null
   - tag: stabilizer
     type: wing
     geometry:
       profiles:
-      - airfoil: NACA0012
-        chord: 145.0
-        position:
+      - position:
           x: 0.0
           y: 0.0
           z: 0.0
+        chord: 145.0
         rotation:
           x: 0.0
           y: 0.0
           z: 0.0
-      - airfoil: NACA0012
-        chord: 80.0
-        position:
+        airfoil: '0012'
+      - position:
           x: 72.79404685324047
           y: 200.0
           z: 0.0
+        chord: 80.0
         rotation:
           x: 0.0
           y: 0.0
           z: 0.0
+        airfoil: '0012'
     attachment:
       position:
         x: 830.0
@@ -124,172 +125,132 @@ airframe:
         y: 0.0
         z: 0.0
       mirror: true
+      fairing: null
 propulsion:
   motors:
   - tag: motor_1
     type: motor
-    id: 8bd4d212
-    manufacturer: SunnySky
-    model: X2820 KV860 V3 3-4S
     kv: 860.0
     voltage_min: 7.4
     voltage_max: 22.2
     current_max: 65.0
     resistance: 0.0258
-    no_load_current: 1.3
     mass: 143.2
+    manufacturer: SunnySky
+    model: X2820 KV860 V3 3-4S
+    no_load_current: 1.3
     diameter: 35.0
     length: 15.0
     shaft_diameter: 5.0
     shaft_length: 10.0
     propeller_ref: main_prop
-    notes: ''
-    datasheet_url: ''
-    image_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.808675'
-    modified_at: '2026-01-28T14:18:25.808689'
   - tag: motor_2
     type: motor
-    id: 8bd4d212
-    manufacturer: SunnySky
-    model: X2820 KV860 V3 3-4S
     kv: 860.0
     voltage_min: 7.4
     voltage_max: 22.2
     current_max: 65.0
     resistance: 0.0258
-    no_load_current: 1.3
     mass: 143.2
+    manufacturer: SunnySky
+    model: X2820 KV860 V3 3-4S
+    no_load_current: 1.3
     diameter: 35.0
     length: 15.0
     shaft_diameter: 5.0
     shaft_length: 10.0
     propeller_ref: main_prop
-    notes: ''
-    datasheet_url: ''
-    image_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.808675'
-    modified_at: '2026-01-28T14:18:25.808689'
-  propellers:
-  - tag: propeller_1
-    type: propeller
-    id: 37a5bd4e
-    manufacturer: APC Propellers
-    model: APC 12x6E
-    diameter: 12.0
-    pitch: 6.0
-    blade_count: 2
-    direction: CW
-    hub_diameter: 8.0
-    hub_thickness: 5.0
-    mass: 15.0
-    material: composite
-    prop_type: fixed
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.809007'
-    modified_at: '2026-01-28T14:18:25.809012'
-  - tag: propeller_2
-    type: propeller
-    id: 37a5bd4e
-    manufacturer: APC Propellers
-    model: APC 12x6E
-    diameter: 12.0
-    pitch: 6.0
-    blade_count: 2
-    direction: CW
-    hub_diameter: 8.0
-    hub_thickness: 5.0
-    mass: 15.0
-    material: composite
-    prop_type: fixed
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.809007'
-    modified_at: '2026-01-28T14:18:25.809012'
   escs:
-  - tag: esc_1
+  - tag: esc
     type: esc
-    id: 06c59fba
+    current_max: 60.0
+    voltage_min: 6.6
+    voltage_max: 25.200000000000003
+    mass: 35.0
     manufacturer: Hobbywing
-    model: Skywalker 50A
-    current_max: 50.0
-    current_burst: 65.0
-    voltage_min: 7.4
-    voltage_max: 25.2
+    model: Skywalker 60A
+    current_burst: 70.0
     resistance: 0.01
     bec_voltage: 5.0
     bec_current: 3.0
-    protocol: PWM
-    telemetry: false
-    mass: 35.0
     dimensions:
       length: 50.0
       width: 25.0
       height: 10.0
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.808807'
-    modified_at: '2026-01-28T14:18:25.808812'
-  - tag: esc_2
+  - tag: esc
     type: esc
-    id: 06c59fba
+    current_max: 60.0
+    voltage_min: 6.6
+    voltage_max: 25.200000000000003
+    mass: 35.0
     manufacturer: Hobbywing
-    model: Skywalker 50A
-    current_max: 50.0
-    current_burst: 65.0
-    voltage_min: 7.4
-    voltage_max: 25.2
+    model: Skywalker 60A
+    current_burst: 70.0
     resistance: 0.01
     bec_voltage: 5.0
     bec_current: 3.0
-    protocol: PWM
-    telemetry: false
-    mass: 35.0
     dimensions:
       length: 50.0
       width: 25.0
       height: 10.0
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags: []
-    created_at: '2026-01-28T14:18:25.808807'
-    modified_at: '2026-01-28T14:18:25.808812'
   batteries:
   - tag: battery
     type: battery
-    id: 8b776a3e
-    manufacturer: Generic
-    model: 4S 8000mah 65c
     chemistry: LiPo
     cells: 4
     voltage_nominal: 14.8
     voltage_full: 16.8
     voltage_cutoff: 13.2
     capacity: 8000.0
-    discharge_rate: 25.0
-    discharge_burst: 50.0
-    charge_rate: 2.0
-    resistance: 5.0
+    discharge_rate: 65.0
     mass: 400.0
     dimensions:
       length: 0.0
       width: 0.0
       height: 0.0
+    manufacturer: Generic
+    model: 4S 8000mah 65c
+    discharge_burst: 50.0
+    charge_rate: 2.0
+    resistance: 5.0
+  propellers:
+  - tag: propeller
+    type: propeller
+    id: a7b5e9b3
+    manufacturer: APC Propellers
+    model: APC 13x65E
+    diameter: 13.0
+    pitch: 6.5
+    blade_count: 2
+    direction: CW
+    mass: 15.0
+    material: composite
+    prop_type: fixed
     notes: ''
     datasheet_url: ''
     favorite: false
-    tags: []
-    created_at: '2026-01-21T03:06:02.678428'
-    modified_at: '2026-02-01T00:29:01.819852'
+    tags:
+    - imported
+    - apc_db
+    created_at: '2026-01-21T03:04:40.348135'
+    modified_at: '2026-01-21T03:04:40.348140'
+  - tag: propeller
+    type: propeller
+    id: a7b5e9b3
+    manufacturer: APC Propellers
+    model: APC 13x65E
+    diameter: 13.0
+    pitch: 6.5
+    blade_count: 2
+    direction: CW
+    mass: 15.0
+    material: composite
+    prop_type: fixed
+    notes: ''
+    datasheet_url: ''
+    favorite: false
+    tags:
+    - imported
+    - apc_db
+    created_at: '2026-01-21T03:04:40.348135'
+    modified_at: '2026-01-21T03:04:40.348140'

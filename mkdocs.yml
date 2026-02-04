@@ -70,7 +70,7 @@ plugins:
             Performance and Analysis Reports: Performans ve Analiz Raporları
             Analysis Conditions: Analiz Koşulları
             Aerodynamics: Aerodinamik
-            Stability: Stabilite
+
             Flight Performance: Uçuş Performansı
             Propulsion Performance: İtki Performansı
 
@@ -93,6 +93,6 @@ nav:
     - Overview: performance/index.md
     - Analysis Conditions: performance/conditions.md
     - Aerodynamics: performance/aerodynamics.md
-    - Stability: performance/stability.md
+
     - Flight Performance: performance/flight.md
     - Propulsion Performance: performance/propulsion.md

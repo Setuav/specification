@@ -12,7 +12,7 @@ A Setuav performance report (`report.json` schema) consists of five main compone
 
 1.  **Analysis Conditions (`conditions`)**: The physical (mass, CG) and atmospheric (altitude, temperature) environment in which the analysis was performed.
 2.  **Aerodynamics (`aerodynamics`)**: Basic aerodynamic coefficients and polars.
-3.  **Stability (`stability`)**: Static stability metrics and derivatives.
+
 4.  **Flight Performance (`flight`)**: Speeds, climb rates, range, and endurance.
 5.  **Propulsion Performance (`propulsion`)**: Static thrust, power consumption, and efficiency.
 

@@ -45,8 +45,10 @@ Each section has the following properties:
 | **position.y** | `mm` | Lateral offset from the XZ-plane (optional, default: 0). |
 | **position.z** | `mm` | Vertical offset from the XY-plane (optional, default: 0). |
 | **profile** | `object` | Cross-section shape definition (required). |
-| **pitch** | `deg` | Section tilt around Y-axis (optional, default: 0). |
-| **roll** | `deg` | Profile rotation around X-axis (optional, default: 0). |
+| **rotation** | `object` | Section properties (optional). |
+| **rotation.x** | `deg` | Rotation around X-axis (roll, optional, default: 0). |
+| **rotation.y** | `deg` | Rotation around Y-axis (pitch, optional, default: 0). |
+| **rotation.z** | `deg` | Rotation around Z-axis (yaw, optional, default: 0). |
 
 ## Profile Types
 

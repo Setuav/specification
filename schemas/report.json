@@ -47,9 +47,7 @@
         "aerodynamics": {
             "$ref": "https://setuav.com/schemas/performance/aerodynamics.json"
         },
-        "stability": {
-            "$ref": "https://setuav.com/schemas/performance/stability.json"
-        },
+
         "flight": {
             "$ref": "https://setuav.com/schemas/performance/flight.json"
         },

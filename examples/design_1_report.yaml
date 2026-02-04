@@ -219,17 +219,7 @@ aerodynamics:
     - 4.6465647092778735
     - 4.205610088292338
     - 3.804676058142649
-stability:
-  neutral_point_x: 393.71212965275276
-  static_margin: 42.058522536003366
-  trim_alpha: null
-  trim_elevator: 0.0
-  derivatives:
-    cm_alpha: -0.03368192484516569
-    cl_alpha: 0.08008347134955335
-    cn_beta: 0.0006798574488990968
-    cl_beta: -0.00040017288136857075
-    cy_beta: -0.0015421164865336047
+
 flight:
   stall_speed: 5.045144570583636
   cruise_speed: 6.558687941758727

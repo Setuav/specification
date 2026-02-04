@@ -12,7 +12,7 @@ Bir Setuav performans raporu (`report.json` şeması), beş ana bileşenden olu�
 
 1.  **Analiz Koşulları (`conditions`)**: Analizin yapıldığı fiziksel (kütle, CG) ve atmosferik (irtifa, sıcaklık) ortam.
 2.  **Aerodinamik (`aerodynamics`)**: Temel aerodinamik katsayılar ve polarlar.
-3.  **Stabilite (`stability`)**: Statik stabilite metrikleri ve türevler.
+
 4.  **Uçuş Performansı (`flight`)**: Hızlar, tırmanma oranları, menzil ve dayanım.
 5.  **İtki Performansı (`propulsion`)**: Statik itki, güç tüketimi ve verimlilik.
 

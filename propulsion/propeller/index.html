@@ -649,17 +649,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -704,58 +693,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#performance-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Performance Data
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#thrust-data-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Thrust Data Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#efficiency-data-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Efficiency Data Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#propeller-mounting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Propeller Mounting
-      
-    </span>
-  </a>
   
 </li>
       
@@ -984,34 +923,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/stability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Stability
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../performance/flight/" class="md-nav__link">
         
   
@@ -1095,17 +1006,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1150,58 +1050,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#performance-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Performance Data
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#thrust-data-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Thrust Data Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#efficiency-data-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Efficiency Data Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#propeller-mounting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Propeller Mounting
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1234,9 +1084,7 @@
 
 
 <h1 id="propeller">Propeller</h1>
-<p>This section defines fixed-pitch propellers used in UAV propulsion systems. Propellers are specified by their geometric properties and performance characteristics.</p>
-<h2 id="overview">Overview</h2>
-<p>Propellers in the Setuav Standard are defined independently and referenced by motors. The propeller definition includes geometric specifications needed for performance analysis and compatibility verification.</p>
+<p>Fixed-pitch propeller specification for UAV propulsion systems.</p>
 <h2 id="parameters">Parameters</h2>
 <h3 id="identification">Identification</h3>
 <table>
@@ -1256,12 +1104,12 @@
 <tr>
 <td style="text-align: left;"><strong>manufacturer</strong></td>
 <td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">Manufacturer name (optional, e.g., "APC", "Graupner").</td>
+<td style="text-align: left;">Manufacturer name (optional, e.g., "APC", "GemFan").</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>model</strong></td>
 <td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">Model designation (optional, e.g., "9x4.5", "10x7E").</td>
+<td style="text-align: left;">Model designation (optional, e.g., "10x4.5MR", "10x7E").</td>
 </tr>
 </tbody>
 </table>
@@ -1277,23 +1125,23 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>diameter</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
+<td style="text-align: left;"><code>inches</code></td>
 <td style="text-align: left;">Propeller diameter (tip to tip).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>pitch</strong></td>
-<td style="text-align: left;"><code>mm</code></td>
+<td style="text-align: left;"><code>inches</code></td>
 <td style="text-align: left;">Propeller pitch (theoretical advance per revolution).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>blade_count</strong></td>
 <td style="text-align: left;"><code>int</code></td>
-<td style="text-align: left;">Number of blades (typically 2, 3, or 4).</td>
+<td style="text-align: left;">Number of blades.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>direction</strong></td>
 <td style="text-align: left;"><code>enum</code></td>
-<td style="text-align: left;">Rotation direction: <code>CW</code> (clockwise) or <code>CCW</code> (counter-clockwise) when viewed from behind.</td>
+<td style="text-align: left;">Rotation direction: <code>CW</code> or <code>CCW</code> when viewed from behind.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>hub_diameter</strong></td>
@@ -1325,141 +1173,33 @@
 <tr>
 <td style="text-align: left;"><strong>material</strong></td>
 <td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">Material type (optional, e.g., "carbon_fiber", "nylon", "wood").</td>
+<td style="text-align: left;">Material type (optional, e.g., "Carbon Fiber", "Plastic", "Wood").</td>
 </tr>
 </tbody>
 </table>
-<h3 id="performance-data">Performance Data</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>thrust_data</strong></td>
-<td style="text-align: left;"><code>array</code></td>
-<td style="text-align: left;">Thrust curve data points (optional). Array of <code>{rpm, thrust_n, torque_nm, power_w}</code> objects.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>efficiency_data</strong></td>
-<td style="text-align: left;"><code>array</code></td>
-<td style="text-align: left;">Efficiency data points (optional). Array of <code>{velocity_ms, efficiency, advance_ratio}</code> objects.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="thrust-data-structure">Thrust Data Structure</h4>
-<p>Each thrust data point contains:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Unit</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>rpm</strong></td>
-<td style="text-align: left;"><code>RPM</code></td>
-<td style="text-align: left;">Rotational speed.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>thrust_n</strong></td>
-<td style="text-align: left;"><code>N</code></td>
-<td style="text-align: left;">Thrust force produced.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>torque_nm</strong></td>
-<td style="text-align: left;"><code>Nm</code></td>
-<td style="text-align: left;">Torque required.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>power_w</strong></td>
-<td style="text-align: left;"><code>W</code></td>
-<td style="text-align: left;">Power consumption.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="efficiency-data-structure">Efficiency Data Structure</h4>
-<p>Each efficiency data point contains:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Unit</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>velocity_ms</strong></td>
-<td style="text-align: left;"><code>m/s</code></td>
-<td style="text-align: left;">Flight velocity.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>efficiency</strong></td>
-<td style="text-align: left;"><code>-</code></td>
-<td style="text-align: left;">Propulsive efficiency (0-1).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>advance_ratio</strong></td>
-<td style="text-align: left;"><code>-</code></td>
-<td style="text-align: left;">Advance ratio (J = V / (n * D)).</td>
-</tr>
-</tbody>
-</table>
-<h2 id="propeller-mounting">Propeller Mounting</h2>
-<p>Propellers are mounted on motors and do not have independent placement. The propeller position and orientation are determined by its parent motor's placement.</p>
 <h2 id="example-configuration">Example Configuration</h2>
 <pre><code class="language-yaml">propellers:
   - tag: &quot;main_prop&quot;
     manufacturer: &quot;APC&quot;
-    model: &quot;9x4.5&quot;
-    diameter: 228.6  # 9 inches = 228.6mm
-    pitch: 114.3     # 4.5 inches = 114.3mm
+    model: &quot;10x4.5MR&quot;
+    diameter: 10.0
+    pitch: 4.5
     blade_count: 2
     direction: &quot;CW&quot;
-    mass: 8
-    material: &quot;nylon&quot;
+    mass: 12
+    material: &quot;Plastic&quot;
 
   - tag: &quot;pusher_prop&quot;
-    manufacturer: &quot;Graupner&quot;
-    model: &quot;10x7E&quot;
-    diameter: 254
-    pitch: 177.8
+    manufacturer: &quot;GemFan&quot;
+    model: &quot;10x7&quot;
+    diameter: 10.0
+    pitch: 7.0
     blade_count: 2
     direction: &quot;CCW&quot;
-    mass: 12
-    material: &quot;carbon_fiber&quot;
+    mass: 15
+    material: &quot;Carbon Fiber&quot;
     hub_diameter: 8
     hub_thickness: 6
-
-  - tag: &quot;efficiency_prop&quot;
-    manufacturer: &quot;APC&quot;
-    model: &quot;11x5.5E&quot;
-    diameter: 279.4
-    pitch: 139.7
-    blade_count: 2
-    direction: &quot;CW&quot;
-    mass: 15
-    material: &quot;carbon_fiber&quot;
-    thrust_data:
-      - rpm: 5000
-        thrust_n: 2.5
-        torque_nm: 0.08
-        power_w: 41.9
-      - rpm: 6000
-        thrust_n: 3.6
-        torque_nm: 0.11
-        power_w: 69.1
-      - rpm: 7000
-        thrust_n: 4.9
-        torque_nm: 0.15
-        power_w: 110.0
 </code></pre>
 
 

@@ -1006,34 +1006,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/stability/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Stability
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../performance/flight/" class="md-nav__link">
         
   
@@ -1376,14 +1348,24 @@
 <td style="text-align: left;">Cross-section shape definition (required).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>pitch</strong></td>
-<td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Section tilt around Y-axis (optional, default: 0).</td>
+<td style="text-align: left;"><strong>rotation</strong></td>
+<td style="text-align: left;"><code>object</code></td>
+<td style="text-align: left;">Section properties (optional).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>roll</strong></td>
+<td style="text-align: left;"><strong>rotation.x</strong></td>
 <td style="text-align: left;"><code>deg</code></td>
-<td style="text-align: left;">Profile rotation around X-axis (optional, default: 0).</td>
+<td style="text-align: left;">Rotation around X-axis (roll, optional, default: 0).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rotation.y</strong></td>
+<td style="text-align: left;"><code>deg</code></td>
+<td style="text-align: left;">Rotation around Y-axis (pitch, optional, default: 0).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rotation.z</strong></td>
+<td style="text-align: left;"><code>deg</code></td>
+<td style="text-align: left;">Rotation around Z-axis (yaw, optional, default: 0).</td>
 </tr>
 </tbody>
 </table>

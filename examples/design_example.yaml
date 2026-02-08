@@ -69,12 +69,16 @@ propulsion:
       mass: 350
       type: "battery"
       chemistry: "LiPo"
-      cells: 4
-      capacity: 4000
-      voltage_nominal: 14.8
-      voltage_full: 16.8
-      voltage_cutoff: 12.0
-      discharge_rate: 30
+      cells_series: 4
+      cells_parallel: 1
+      cell_voltage_nominal: 3.7
+      cell_voltage_full: 4.2
+      cell_voltage_cutoff: 3.0
+      cell_capacity: 4000
+      cell_discharge_rate: 30
+      cell_discharge_burst: 60
+      cell_charge_rate: 2
+      cell_resistance: 10
       dimensions: {length: 140, width: 45, height: 40}
       placement:
         position: {x: 250, y: 0, z: 0}

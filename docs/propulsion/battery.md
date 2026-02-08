@@ -1,10 +1,15 @@
 # Battery
 
-This section defines batteries used to power UAV propulsion and avionics systems. Batteries are specified by their electrical characteristics, chemistry type, and physical properties.
+This section defines batteries used to power UAV propulsion and avionics systems. Battery electrical data is specified at **cell level** and combined with series/parallel topology.
 
 ## Overview
 
-Batteries in the Setuav Standard are defined independently with their electrical specifications and placement information. The battery definition includes capacity, voltage characteristics, discharge capabilities, and physical properties needed for power system design and weight distribution.
+In the Setuav Standard, battery electrical properties are defined per cell, then pack behavior is derived from:
+
+- `cells_series` (S)
+- `cells_parallel` (P)
+
+This avoids inconsistent pack-level voltage/capacity combinations.
 
 ## Parameters
 
@@ -12,31 +17,32 @@ Batteries in the Setuav Standard are defined independently with their electrical
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
-| **tag** | `str` | Unique identifier for the battery (e.g., "main_battery", "aux_battery"). |
-| **manufacturer** | `str` | Manufacturer name (optional, e.g., "Tattu", "Turnigy", "GensAce"). |
-| **model** | `str` | Model designation (optional, e.g., "R-Line 4S 1550mAh", "Graphene 3S 5000mAh"). |
+| **tag** | `str` | Unique identifier for the battery (e.g., `main_battery`). |
+| **manufacturer** | `str` | Manufacturer name (optional). |
+| **model** | `str` | Model designation (optional). |
 
-### Electrical Characteristics
+### Cell-Level Electrical Characteristics
 
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
-| **chemistry** | `enum` | Battery chemistry: `LiPo`, `LiHV`, `LiFe`, `Li-ion`, `NiMH`, `NiCd`. |
-| **cells** | `int` | Number of cells in series (e.g., 3 for 3S, 4 for 4S). |
-| **voltage_nominal** | `V` | Nominal voltage (typically cells × 3.7V for LiPo, cells × 3.8V for LiHV). |
-| **voltage_full** | `V` | Fully charged voltage (typically cells × 4.2V for LiPo, cells × 4.35V for LiHV). |
-| **voltage_cutoff** | `V` | Minimum safe discharge voltage (typically cells × 3.0V for LiPo). |
-| **capacity** | `mAh` | Battery capacity in milliamp-hours. |
-| **discharge_rate** | `C` | Maximum continuous discharge rate (e.g., 75 for 75C). |
-| **discharge_burst** | `C` | Maximum burst discharge rate (optional, typically 10-30 seconds). |
-| **charge_rate** | `C` | Maximum charge rate (optional, default: 1C). |
-| **resistance** | `mΩ` | Internal resistance (optional). |
+| **chemistry** | `enum` | Cell chemistry: `LiPo`, `LiHV`, `LiFe`, `Li-ion`, `NiMH`, `NiCd`. |
+| **cells_series** | `int` | Number of cells in series (S). |
+| **cells_parallel** | `int` | Number of cells in parallel (P). |
+| **cell_voltage_nominal** | `V` | Nominal voltage per cell. |
+| **cell_voltage_full** | `V` | Fully charged voltage per cell. |
+| **cell_voltage_cutoff** | `V` | Minimum safe voltage per cell. |
+| **cell_capacity** | `mAh` | Capacity per cell. |
+| **cell_discharge_rate** | `C` | Continuous discharge rate per cell. |
+| **cell_discharge_burst** | `C` | Burst discharge rate per cell (optional). |
+| **cell_charge_rate** | `C` | Maximum charge rate per cell (optional, default: 1C). |
+| **cell_resistance** | `mΩ` | Internal resistance per cell (optional). |
 
 ### Physical Properties
 
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
-| **mass** | `g` | Battery mass. |
-| **dimensions** | `object` | Physical dimensions. |
+| **mass** | `g` | Battery pack mass. |
+| **dimensions** | `object` | Physical pack dimensions. |
 | **dimensions.length** | `mm` | Length. |
 | **dimensions.width** | `mm` | Width. |
 | **dimensions.height** | `mm` | Height/thickness. |
@@ -48,14 +54,17 @@ Batteries are positioned in the airframe using the placement object:
 | Parameter | Unit | Description |
 | :--- | :--- | :--- |
 | **placement** | `object` | Battery placement in airframe (optional). |
-| **placement.position** | `object` | Battery position in SETUAV_BODY frame. |
-| **placement.position.x** | `mm` | Longitudinal position (distance from nose tip). |
-| **placement.position.y** | `mm` | Lateral position (0 = centerline, positive = right). |
-| **placement.position.z** | `mm` | Vertical position (positive = up). |
-| **placement.rotation** | `object` | Battery orientation. |
-| **placement.rotation.x** | `deg` | Rotation around X-axis (roll, optional, default: 0). |
-| **placement.rotation.y** | `deg` | Rotation around Y-axis (pitch, optional, default: 0). |
-| **placement.rotation.z** | `deg` | Rotation around Z-axis (yaw, optional, default: 0). |
+| **placement.position.x/y/z** | `mm` | Battery position in `SETUAV_BODY` frame. |
+| **placement.rotation.x/y/z** | `deg` | Battery orientation (optional). |
+
+## Derived Pack Values (Informative)
+
+These are derived by analysis tools and should not be stored as primary battery fields:
+
+- `pack_voltage_nominal = cells_series * cell_voltage_nominal`
+- `pack_voltage_full = cells_series * cell_voltage_full`
+- `pack_voltage_cutoff = cells_series * cell_voltage_cutoff`
+- `pack_capacity = cells_parallel * cell_capacity`
 
 ## Example Configuration
 
@@ -63,17 +72,18 @@ Batteries are positioned in the airframe using the placement object:
 batteries:
   - tag: "main_battery"
     manufacturer: "Tattu"
-    model: "R-Line 4S 1550mAh"
+    model: "R-Line LiHV"
     chemistry: "LiHV"
-    cells: 4
-    voltage_nominal: 15.2
-    voltage_full: 17.4
-    voltage_cutoff: 12.0
-    capacity: 1550
-    discharge_rate: 95
-    discharge_burst: 190
-    charge_rate: 5
-    resistance: 12
+    cells_series: 4
+    cells_parallel: 1
+    cell_voltage_nominal: 3.8
+    cell_voltage_full: 4.35
+    cell_voltage_cutoff: 3.0
+    cell_capacity: 1550
+    cell_discharge_rate: 95
+    cell_discharge_burst: 190
+    cell_charge_rate: 5
+    cell_resistance: 12
     mass: 185
     dimensions:
       length: 78
@@ -88,18 +98,19 @@ batteries:
         x: 0
         y: 0
         z: 0
-  
+
   - tag: "long_range_battery"
     manufacturer: "Turnigy"
-    model: "Graphene 3S 5000mAh"
+    model: "Graphene LiPo"
     chemistry: "LiPo"
-    cells: 3
-    voltage_nominal: 11.1
-    voltage_full: 12.6
-    voltage_cutoff: 9.0
-    capacity: 5000
-    discharge_rate: 45
-    discharge_burst: 90
+    cells_series: 3
+    cells_parallel: 1
+    cell_voltage_nominal: 3.7
+    cell_voltage_full: 4.2
+    cell_voltage_cutoff: 3.0
+    cell_capacity: 5000
+    cell_discharge_rate: 45
+    cell_discharge_burst: 90
     mass: 382
     dimensions:
       length: 138

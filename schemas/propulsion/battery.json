@@ -26,40 +26,44 @@
                 "NiCd"
             ]
         },
-        "cells": {
+        "cells_series": {
             "type": "integer",
             "minimum": 1
         },
-        "voltage_nominal": {
+        "cells_parallel": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "cell_voltage_nominal": {
             "type": "number",
             "minimum": 0
         },
-        "voltage_full": {
+        "cell_voltage_full": {
             "type": "number",
             "minimum": 0
         },
-        "voltage_cutoff": {
+        "cell_voltage_cutoff": {
             "type": "number",
             "minimum": 0
         },
-        "capacity": {
+        "cell_capacity": {
             "type": "number",
             "minimum": 0
         },
-        "discharge_rate": {
+        "cell_discharge_rate": {
             "type": "number",
             "minimum": 0
         },
-        "discharge_burst": {
+        "cell_discharge_burst": {
             "type": "number",
             "minimum": 0
         },
-        "charge_rate": {
+        "cell_charge_rate": {
             "type": "number",
             "minimum": 0,
             "default": 1
         },
-        "resistance": {
+        "cell_resistance": {
             "type": "number",
             "minimum": 0
         },
@@ -95,12 +99,13 @@
     "required": [
         "tag",
         "chemistry",
-        "cells",
-        "voltage_nominal",
-        "voltage_full",
-        "voltage_cutoff",
-        "capacity",
-        "discharge_rate",
+        "cells_series",
+        "cells_parallel",
+        "cell_voltage_nominal",
+        "cell_voltage_full",
+        "cell_voltage_cutoff",
+        "cell_capacity",
+        "cell_discharge_rate",
         "mass",
         "dimensions"
     ]

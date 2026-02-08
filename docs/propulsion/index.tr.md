@@ -17,7 +17,7 @@ Setuav Standardında sabit kanatlı bir İHA'nın itki sistemi, itki üreten ve 
 1. **Motor**: KV değeri, maksimum akım, direnç ve verimlilik verilerini içeren fırçasız DC motorlar.
 2. **ESC (Elektronik Hız Kontrolörü)**: Motor hızını düzenleyen elektronik kontrolörler, akım limitleri, voltaj aralığı ve protokol desteğini içerir.
 3. **Pervane**: Çap, hatve ve performans verileri (itki ve tork eğrileri) ile tanımlanan sabit hatveli pervaneler.
-4. **Batarya**: Kapasite, voltaj, boşaltma oranları ve ağırlık bilgileriyle lityum-polimer (LiPo) veya diğer batarya türleri.
+4. **Batarya**: Hücre seviyesi elektriksel veriler ve S/P topolojisi (`cells_series`, `cells_parallel`) ile tanımlanan batarya paketleri.
 
 ## Sistem Entegrasyonu
 
@@ -38,4 +38,4 @@ Tüm itki özellikleri SI birimlerini kullanır:
 - Kütle: gram (g) veya kilogram (kg)
 - İtki: Newton (N)
 - Hız: RPM (dakikadaki devir sayısı)
-- Kapasite: miliamper-saat (mAh) veya amper-saat (Ah)
+- Kapasite: mAh, hücre başına (`cell_capacity`) tanımlanır

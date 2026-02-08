@@ -17,7 +17,7 @@ The propulsion system includes the following component categories:
 1. **Motor**: Brushless DC motors with specifications including KV rating, maximum current, resistance, and efficiency data.
 2. **ESC (Electronic Speed Controller)**: Electronic controllers that regulate motor speed, including current limits, voltage range, and protocol support.
 3. **Propeller**: Fixed-pitch propellers defined by diameter, pitch, and performance data (thrust and torque curves).
-4. **Battery**: Lithium-polymer (LiPo) or other battery types with capacity, voltage, discharge ratings, and weight.
+4. **Battery**: Battery packs defined from cell-level electrical properties and S/P topology (`cells_series`, `cells_parallel`), plus physical pack data.
 
 ## System Integration
 
@@ -38,4 +38,4 @@ All propulsion specifications use SI units:
 - Mass: grams (g) or kilograms (kg)
 - Thrust: Newtons (N)
 - Speed: RPM (revolutions per minute)
-- Capacity: milliamp-hours (mAh) or amp-hours (Ah)
+- Capacity: milliamp-hours (mAh), defined per cell (`cell_capacity`)

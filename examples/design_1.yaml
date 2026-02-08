@@ -198,12 +198,16 @@ propulsion:
   - tag: battery
     type: battery
     chemistry: LiPo
-    cells: 4
-    voltage_nominal: 14.8
-    voltage_full: 16.8
-    voltage_cutoff: 13.2
-    capacity: 8000.0
-    discharge_rate: 65.0
+    cells_series: 4
+    cells_parallel: 2
+    cell_voltage_nominal: 3.7
+    cell_voltage_full: 4.2
+    cell_voltage_cutoff: 3.3
+    cell_capacity: 4000.0
+    cell_discharge_rate: 65.0
+    cell_discharge_burst: 120.0
+    cell_charge_rate: 2.0
+    cell_resistance: 2.5
     mass: 400.0
     dimensions:
       length: 0.0
@@ -211,9 +215,6 @@ propulsion:
       height: 0.0
     manufacturer: Generic
     model: 4S 8000mah 65c
-    discharge_burst: 50.0
-    charge_rate: 2.0
-    resistance: 5.0
   propellers:
   - tag: propeller
     type: propeller

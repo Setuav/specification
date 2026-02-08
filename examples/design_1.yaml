@@ -1,4 +1,6 @@
 setuav: '1.0'
+name: Fixed Wing
+description: Example
 airframe:
   fuselage:
     tag: fuselage
@@ -165,74 +167,78 @@ propulsion:
   - tag: esc
     type: esc
     current_max: 60.0
-    voltage_min: 6.6
-    voltage_max: 25.200000000000003
-    mass: 35.0
-    manufacturer: Hobbywing
-    model: Skywalker 60A
+    voltage_min: 7.4
+    voltage_max: 25.2
+    mass: 38.0
+    manufacturer: Generic
+    model: Generic ESC 60A
     current_burst: 70.0
-    resistance: 0.01
+    resistance: 0.005
     bec_voltage: 5.0
-    bec_current: 3.0
+    bec_current: 5.0
+    protocol: PWM
+    firmware: Generic
     dimensions:
-      length: 50.0
-      width: 25.0
-      height: 10.0
+      length: 55.0
+      width: 24.0
+      height: 11.0
   - tag: esc
     type: esc
     current_max: 60.0
-    voltage_min: 6.6
-    voltage_max: 25.200000000000003
-    mass: 35.0
-    manufacturer: Hobbywing
-    model: Skywalker 60A
+    voltage_min: 7.4
+    voltage_max: 25.2
+    mass: 38.0
+    manufacturer: Generic
+    model: Generic ESC 60A
     current_burst: 70.0
-    resistance: 0.01
+    resistance: 0.005
     bec_voltage: 5.0
-    bec_current: 3.0
+    bec_current: 5.0
+    protocol: PWM
+    firmware: Generic
     dimensions:
-      length: 50.0
-      width: 25.0
-      height: 10.0
+      length: 55.0
+      width: 24.0
+      height: 11.0
   batteries:
-  - tag: battery
+  - tag: battery_cell
     type: battery
     chemistry: LiPo
     cells_series: 4
-    cells_parallel: 2
+    cells_parallel: 1
     cell_voltage_nominal: 3.7
     cell_voltage_full: 4.2
     cell_voltage_cutoff: 3.3
-    cell_capacity: 4000.0
-    cell_discharge_rate: 65.0
-    cell_discharge_burst: 120.0
-    cell_charge_rate: 2.0
-    cell_resistance: 2.5
-    mass: 400.0
+    cell_capacity: 10000.0
+    cell_discharge_rate: 55.0
+    mass: 240.5
     dimensions:
-      length: 0.0
-      width: 0.0
-      height: 0.0
+      length: 138.6
+      width: 83.6
+      height: 9.4
     manufacturer: Generic
-    model: 4S 8000mah 65c
+    model: LiPo 10000mAh - 55/80C
+    cell_discharge_burst: 80.0
+    cell_charge_rate: 2.0
+    cell_resistance: 0.818
   propellers:
   - tag: propeller
     type: propeller
     diameter: 13.0
-    pitch: 6.5
+    pitch: 5.5
     blade_count: 2
     direction: CW
     mass: 15.0
     manufacturer: APC Propellers
-    model: APC 13x65E
+    model: APC 13x55E
     material: composite
   - tag: propeller
     type: propeller
     diameter: 13.0
-    pitch: 6.5
+    pitch: 5.5
     blade_count: 2
     direction: CW
     mass: 15.0
     manufacturer: APC Propellers
-    model: APC 13x65E
+    model: APC 13x55E
     material: composite

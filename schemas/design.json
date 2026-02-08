@@ -16,6 +16,9 @@
                 "fuselage": {
                     "$ref": "https://setuav.com/schemas/geometry/fuselage.json"
                 },
+                "mass": {
+                    "$ref": "https://setuav.com/schemas/common.json#/definitions/mass"
+                },
                 "wings": {
                     "type": "array",
                     "items": {

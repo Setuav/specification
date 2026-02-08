@@ -45,6 +45,7 @@ airframe:
         blending:
           max_degree: 4
           continuity: G0
+  mass: 4500.0
   wings:
   - tag: main_wing
     type: wing
@@ -216,41 +217,21 @@ propulsion:
   propellers:
   - tag: propeller
     type: propeller
-    id: a7b5e9b3
-    manufacturer: APC Propellers
-    model: APC 13x65E
     diameter: 13.0
     pitch: 6.5
     blade_count: 2
     direction: CW
     mass: 15.0
+    manufacturer: APC Propellers
+    model: APC 13x65E
     material: composite
-    prop_type: fixed
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags:
-    - imported
-    - apc_db
-    created_at: '2026-01-21T03:04:40.348135'
-    modified_at: '2026-01-21T03:04:40.348140'
   - tag: propeller
     type: propeller
-    id: a7b5e9b3
-    manufacturer: APC Propellers
-    model: APC 13x65E
     diameter: 13.0
     pitch: 6.5
     blade_count: 2
     direction: CW
     mass: 15.0
+    manufacturer: APC Propellers
+    model: APC 13x65E
     material: composite
-    prop_type: fixed
-    notes: ''
-    datasheet_url: ''
-    favorite: false
-    tags:
-    - imported
-    - apc_db
-    created_at: '2026-01-21T03:04:40.348135'
-    modified_at: '2026-01-21T03:04:40.348140'

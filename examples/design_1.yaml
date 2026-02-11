@@ -16,13 +16,17 @@ airframe:
           profile:
             type: circle
             diameter: 12.0
+          rotation:
+            x: 0.0
+            y: -15.0
+            z: 0.0
         - position:
             x: 90.0
             y: 0.0
             z: -15.0
           profile:
             type: circle
-            diameter: 80.0
+            diameter: 75.0
         - position:
             x: 350.0
             y: 0.0
@@ -33,10 +37,10 @@ airframe:
         - position:
             x: 600.0
             y: 0.0
-            z: 0.0
+            z: 10.0
           profile:
             type: circle
-            diameter: 110.0
+            diameter: 100.0
         - position:
             x: 1000.0
             y: 0.0
@@ -62,11 +66,11 @@ airframe:
           x: 0.0
           y: 0.0
           z: 0.0
-        airfoil: '6414'
+        airfoil: '4412'
       - position:
           x: 42.05220452979716
-          y: 400.03906283207215
-          z: 6.982707815557133
+          y: 399.85626989034023
+          z: 13.963288630670638
         chord: 220.0
         rotation:
           x: 1.0
@@ -74,9 +78,9 @@ airframe:
           z: 0.0
         airfoil: '4412'
       - position:
-          x: 105.8404286869708
-          y: 699.9562500205028
-          z: 17.456046775977676
+          x: 105.8191730308038
+          y: 699.1254849682875
+          z: 34.89023075390823
         chord: 150.0
         rotation:
           x: 1.0
@@ -102,7 +106,7 @@ airframe:
           x: 0.0
           y: 0.0
           z: 0.0
-        chord: 145.0
+        chord: 160.0
         rotation:
           x: 0.0
           y: 0.0
@@ -120,11 +124,11 @@ airframe:
         airfoil: '0012'
     attachment:
       position:
-        x: 830.0
-        y: 35.0
-        z: 40.0
+        x: 820.0
+        y: 26.0
+        z: 42.0
       rotation:
-        x: 35.0
+        x: 36.0
         y: 0.0
         z: 0.0
       mirror: true

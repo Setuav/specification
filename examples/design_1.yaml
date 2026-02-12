@@ -68,19 +68,19 @@ airframe:
           z: 0.0
         airfoil: '4412'
       - position:
-          x: 42.05220452979716
-          y: 399.85626989034023
-          z: 13.963288630670638
+          x: 39.369898586665805
+          y: 450.0
+          z: 0.0
         chord: 220.0
         rotation:
           x: 1.0
           y: 0.0
           z: 0.0
-        airfoil: '4412'
+        airfoil: '6412'
       - position:
-          x: 105.8191730308038
-          y: 699.1254849682875
-          z: 34.89023075390823
+          x: 103.13686708767244
+          y: 749.8172481057287
+          z: 10.469849010750291
         chord: 150.0
         rotation:
           x: 1.0
@@ -90,14 +90,13 @@ airframe:
     attachment:
       position:
         x: 320.0
-        y: 70.0
+        y: 40.0
         z: 20.0
       rotation:
         x: 0.0
         y: 0.0
         z: 0.0
       mirror: true
-      fairing: null
   - tag: stabilizer
     type: wing
     geometry:
@@ -125,14 +124,13 @@ airframe:
     attachment:
       position:
         x: 820.0
-        y: 26.0
-        z: 42.0
+        y: 22.0
+        z: 30.0
       rotation:
-        x: 36.0
-        y: 0.0
-        z: 0.0
+        x: 38.0
+        y: -3.0
+        z: -7.0
       mirror: true
-      fairing: null
 propulsion:
   motors:
   - tag: motor_1
@@ -229,20 +227,20 @@ propulsion:
   - tag: propeller
     type: propeller
     diameter: 13.0
-    pitch: 5.5
+    pitch: 6.5
     blade_count: 2
     direction: CW
     mass: 15.0
     manufacturer: APC Propellers
-    model: APC 13x55E
+    model: APC 13x65E
     material: composite
   - tag: propeller
     type: propeller
     diameter: 13.0
-    pitch: 5.5
+    pitch: 6.5
     blade_count: 2
     direction: CW
     mass: 15.0
     manufacturer: APC Propellers
-    model: APC 13x55E
+    model: APC 13x65E
     material: composite

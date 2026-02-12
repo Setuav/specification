@@ -16,7 +16,7 @@ In the following sections, we will explore:
 
 1. **[Fuselage](fuselage.md)**: Defining the main body using parametric cross-sections (sections) lofted along the longitudinal axis.
 2. **[Wing](wing.md)**: Defining lifting surfaces, stabilizers, and control surfaces using a section-based approach with absolute positioning.
-3. **[Wing Attachment](wing_attachment.md)**: Positioning and orienting wings on the fuselage, including automatic fairing generation for aerodynamic integration.
+3. **[Wing Attachment](wing_attachment.md)**: Positioning and orienting wings on the fuselage.
 
 ## Coordinate Integration
 

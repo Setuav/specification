@@ -16,7 +16,7 @@ Aşağıdaki bölümlerde şunları inceleyeceğiz:
 
 1. **[Gövde (Fuselage)](fuselage.md)**: Boylamsal eksen boyunca loft edilen parametrik enine kesitler (kesitler) kullanarak ana gövdeyi tanımlama.
 2. **[Kanat (Wing)](wing.md)**: Mutlak konumlandırma ile kesit bazlı bir yaklaşım kullanarak taşıma yüzeylerini, stabilizörleri ve kontrol yüzeylerini tanımlama.
-3. **[Kanat Yerleşimi (Wing Attachment)](wing_attachment.md)**: Kanatları gövde üzerinde konumlandırma ve yönlendirme, aerodinamik entegrasyon için otomatik fairing oluşturma dahil.
+3. **[Kanat Yerleşimi (Wing Attachment)](wing_attachment.md)**: Kanatları gövde üzerinde konumlandırma ve yönlendirme.
 
 ## Koordinat Entegrasyonu
 

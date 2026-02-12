@@ -13,38 +13,6 @@
         "mirror": {
             "type": "boolean",
             "default": false
-        },
-        "fairing": {
-            "type": "object",
-            "properties": {
-                "scale": {
-                    "type": "number",
-                    "minimum": 1.1,
-                    "maximum": 1.4,
-                    "default": 1.2
-                },
-                "leading_curve": {
-                    "type": "number",
-                    "minimum": -1.0,
-                    "maximum": 1.0,
-                    "default": 0.3
-                },
-                "trailing_curve": {
-                    "type": "number",
-                    "minimum": -1.0,
-                    "maximum": 1.0,
-                    "default": -0.2
-                },
-                "continuity": {
-                    "enum": [
-                        "G0",
-                        "G1",
-                        "G2"
-                    ],
-                    "default": "G2"
-                }
-            },
-            "additionalProperties": false
         }
     },
     "required": [

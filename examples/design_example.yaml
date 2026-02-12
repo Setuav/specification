@@ -26,8 +26,6 @@ airframe:
         position: {x: 350, y: 0, z: 50}
         rotation: {x: 2.0, y: 0, z: 0}
         mirror: true
-        fairing:
-          scale: 1.2
       geometry:
         profiles:
           - position: {x: 0, y: 0, z: 0}

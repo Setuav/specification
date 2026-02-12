@@ -1,6 +1,6 @@
 # Kanat Yerleşimi
 
-Bu bölüm, kanatların gövdeye nasıl bağlandığını, konumlarını, yönelimlerini ve opsiyonel aerodinamik fairing'lerini tanımlar.
+Bu bölüm, kanatların gövdeye nasıl bağlandığını, konumlarını, yönelimlerini ve simetri ayarlarını tanımlar.
 
 ## Genel Bakış
 
@@ -40,37 +40,6 @@ Tüm yerleşim koordinatları `SETUAV_BODY` çerçevesine göre tanımlanır (ba
 | :--- | :--- | :--- |
 | **mirror** | `bool` | `true` ise, kanat XZ-düzlemi (Y=0) boyunca aynalanararak simetrik bir çift oluşturulur. `false` ise, sadece tek bir kanat yerleştirilir. |
 
-## Kanat-Gövde Bağlantısı (Fairing)
-
-Bir **fairing**, kanat kökünü gövdeye yumuşak bir şekilde harmanlayan aerodinamik bir geçiş yüzeyidir ve müdahale sürtünmesini (interference drag) azaltır.
-
-### Fairing Parametreleri
-
-| Parametre | Tip | Varsayılan | Açıklama |
-| :--- | :--- | :--- | :--- |
-| **scale** | `float` | `1.2` | Fairing profili için tekdüze ölçekleme faktörü. Aralık: 1.1-1.4. |
-| **leading_curve** | `float` | `0.3` | Hücum kenarı eğriliği: pozitif = dışbükey (dışa eğri), negatif = içbükey (içe eğri), 0 = doğrusal. Aralık: -1.0 ile 1.0. |
-| **trailing_curve** | `float` | `-0.2` | Firar kenarı eğriliği: pozitif = dışbükey (dışa eğri), negatif = içbükey (içe eğri), 0 = doğrusal. Aralık: -1.0 ile 1.0. |
-| **continuity** | `str` | `G2` | Yüzey sürekliliği: `G0` (konumsal), `G1` (teğet), veya `G2` (eğrilik). |
-
-### Fairing Geometrisi
-
-Fairing otomatik olarak şu şekilde oluşturulur:
-
-1. Kanat kök profili çıkarılır
-2. `scale` faktörü ile ölçeklenir ve gövde ile kesişecek şekilde konumlandırılır
-3. Hücum ve firar kenarlarında dışbükey (dışa) veya içbükey (içe) geçişler oluşturmak için eğrilik kontrolü uygulanır
-4. Belirtilen süreklilik ile profiller arası loft oluşturulur
-5. Sonuç gövde yüzeyine göre kesilir
-
-**Eğrilik Kontrolü**:
-
-- **Pozitif eğri** (0 ile 1.0): Dışbükey geçiş, dışa eğri - girişim direncini azaltır
-- **Negatif eğri** (-1.0 ile 0): İçbükey geçiş, içe eğri - daha yumuşak entegrasyon sağlar
-- **Sıfır eğri**: Doğrusal geçiş
-
-Tipik olarak, hücum kenarları hafif pozitif eğri (dışbükey) kullanırken, firar kenarları optimal aerodinamik için hafif negatif eğri (içbükey) kullanır.
-
 ## Örnek Konfigürasyon
 
 ```yaml
@@ -86,12 +55,7 @@ wings:
         y: 0      # Hücum açısı ofseti yok
         z: 0      # Global ok açısı yok
       mirror: true       # Simetrik çift
-      fairing:
-        scale: 1.2
-        leading_curve: 0.3
-        trailing_curve: -0.2
-        continuity: "G2"
-    
+
     geometry:
       blending:
         ruled: false
@@ -119,12 +83,7 @@ wings:
         y: 0
         z: 0
       mirror: true       # Simetrik çift
-      fairing:
-        scale: 1.15
-        leading_curve: 0.2
-        trailing_curve: -0.15
-        continuity: "G1"
-    
+
     geometry:
       blending:
         ruled: false

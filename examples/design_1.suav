@@ -244,3 +244,7 @@ propulsion:
     manufacturer: APC Propellers
     model: APC 13x65E
     material: composite
+additional_parts:
+- tag: Autopilot
+  mass: 80.0
+  description: Autopilot

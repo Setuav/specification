@@ -51,7 +51,7 @@ airframe:
         blending:
           max_degree: 4
           continuity: G0
-  mass: 4500.0
+  mass: 2500.0
   wings:
   - tag: main_wing
     type: wing

@@ -49,9 +49,9 @@ airframe:
             type: circle
             diameter: 10.0
         blending:
-          max_degree: 4
+          max_degree: 1
           continuity: G0
-  mass: 2500.0
+    mass: 750.0
   wings:
   - tag: main_wing
     type: wing
@@ -87,6 +87,7 @@ airframe:
           y: 0.0
           z: 0.0
         airfoil: '2412'
+    mass: 750.0
     attachment:
       position:
         x: 320.0
@@ -121,6 +122,7 @@ airframe:
           y: 0.0
           z: 0.0
         airfoil: '0012'
+    mass: 250.0
     attachment:
       position:
         x: 820.0
